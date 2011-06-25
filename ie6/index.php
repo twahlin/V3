@@ -1,0 +1,1 @@
+IE6 isn't too hot
