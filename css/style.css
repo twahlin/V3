@@ -1,0 +1,530 @@
+/* line 1, ../sass/_reset.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 1, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 1, ../sass/_reset.scss */
+body {
+  line-height: 1em;
+}
+
+/* line 1, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 1, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 1, ../sass/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 1, ../sass/_reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 1, ../sass/_reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 1, ../sass/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 1, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 1, ../sass/_reset.scss */
+input, textarea {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 3, ../sass/_reset.scss */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 5, ../sass/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 9, ../sass/_reset.scss */
+* {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 5, ../sass/_320.scss */
+html {
+  background: #eeeeee url("../images/bg_light_source.jpg") top no-repeat;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+/*Opera Fix for sticky footer*/
+/* line 12, ../sass/_320.scss */
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+/* line 21, ../sass/_320.scss */
+a,
+a:visited {
+  color: #6caddf;
+}
+
+/*------------------------------------------------------------------
+Sticky Footer
+------------------------------------------------------------------*/
+/* line 29, ../sass/_320.scss */
+#page_wrap {
+  background: url('../images/bg_noise_transparent.png?1309026321') center;
+  min-height: 100%;
+}
+
+/* line 34, ../sass/_320.scss */
+#page_content {
+  overflow: auto;
+  padding-bottom: 150px;
+}
+
+/*------------------------------------------------------------------
+Header / Logo
+------------------------------------------------------------------*/
+/* line 42, ../sass/_320.scss */
+.before_header {
+  background: #666;
+  border-bottom: 1px solid #444;
+  display: block;
+  color: #f0f0f0;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 1;
+  background: -moz-linear-gradient(center top, #707070, #5c5c5c);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #707070), color-stop(1, #5c5c5c));
+  background-image: -o-linear-gradient(#707070, #5c5c5c);
+  -pie-background: linear-gradient(#707070, #5c5c5c);
+  behavior: url(/PIE.htc);
+}
+
+/* line 77, ../sass/_320.scss */
+.before_header ul {
+  display: none;
+}
+
+/* line 81, ../sass/_320.scss */
+header {
+  background: white url("../images/bg_diagonal_lines.png") center;
+  position: relative;
+}
+
+/* line 86, ../sass/_320.scss */
+h1 {
+  cursor: pointer;
+  height: 90px;
+  left: 50%;
+  margin: -45px 0 0 -45px;
+  position: absolute;
+  top: 50%;
+  width: 90px;
+  z-index: 1;
+  border-radius: 80px;
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  behavior: url(/PIE.htc);
+}
+
+/* line 103, ../sass/_320.scss */
+h1 a {
+  background: #fff;
+  box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2);
+  border-radius: 45px;
+  display: block;
+  height: 90px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -6666px;
+  width: 90px;
+  background: -moz-linear-gradient(center bottom, #dddddd, white);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dddddd), color-stop(1, white));
+  background-image: -o-linear-gradient(white, #dddddd);
+  -pie-background: linear-gradient(#ffffff, #dddddd);
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2);
+  -o-box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2);
+  -webkit-box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2);
+  behavior: url(/PIE.htc);
+}
+
+/* line 139, ../sass/_320.scss */
+h1 a:hover,
+h1 a:focus {
+  background: #f0f0f0;
+  box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2), 2px 4px 20px rgba(108, 173, 223, 0.5), -9px -4px 20px rgba(108, 173, 223, 0.25);
+  background: -moz-linear-gradient(center bottom, #c8c8c8, white);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c8c8c8), color-stop(1, white));
+  -webkit-box-shadow: 0 5px 5px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.2), 2px 4px 20px rgba(108, 173, 223, 0.5), -9px -4px 20px rgba(108, 173, 223, 0.25);
+  -moz-transition: all 0.3s ease-in 0s;
+  background-image: -o-linear-gradient(white, #c8c8c8);
+  -pie-background: linear-gradient(#ffffff, #c8c8c8);
+  behavior: url(/PIE.htc);
+}
+
+/* line 172, ../sass/_320.scss */
+h1 a:active {
+  margin-top: 1px;
+  box-shadow: 0 3px 3px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.1), 2px 4px 25px rgba(108, 173, 223, 0.65), 2px -4px 25px rgba(108, 173, 223, 0.25), 0 0 40px rgba(108, 173, 223, 0.1), -9px -4px 30px rgba(108, 173, 223, 0.4);
+  -webkit-box-shadow: 0 3px 3px rgba(34, 34, 34, 0.7), 0 0 5px rgba(34, 34, 34, 0.1), 2px 4px 25px rgba(108, 173, 223, 0.65), 2px -4px 25px rgba(108, 173, 223, 0.25), 0 0 40px rgba(108, 173, 223, 0.1), -9px -4px 30px rgba(108, 173, 223, 0.4);
+  behavior: url(/PIE.htc);
+}
+
+/* line 193, ../sass/_320.scss */
+h1 a span {
+  background: url("../images/png_master_sprite.png") 17px 28px;
+  border-radius: 45px;
+  display: block;
+  position: relative;
+  height: 90px;
+  width: 90px;
+  behavior: url(/PIE.htc);
+}
+
+/*------------------------------------------------------------------
+Navigation
+------------------------------------------------------------------*/
+/* line 209, ../sass/_320.scss */
+.navigation {
+  border-top: 1px solid #6caddf;
+  border-bottom: 1px solid #6caddf;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6);
+  font-family: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 50px;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px white;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6);
+  behavior: url(/PIE.htc);
+}
+
+/* line 227, ../sass/_320.scss */
+.navigation nav ul {
+  display: block;
+  overflow: hidden;
+  width: 50%;
+}
+
+/* line 233, ../sass/_320.scss */
+.navigation nav .left {
+  float: left;
+}
+
+/* line 237, ../sass/_320.scss */
+.navigation nav .right {
+  float: right;
+  text-align: right;
+}
+
+/* line 242, ../sass/_320.scss */
+.navigation nav ul li {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+/* line 247, ../sass/_320.scss */
+.navigation nav .left li {
+  border-right: 1px solid #c9c9c9;
+}
+
+/* line 251, ../sass/_320.scss */
+.navigation nav .right li {
+  border-left: 1px solid #fff;
+}
+
+/* line 256, ../sass/_320.scss */
+.navigation nav ul .nav_1,
+.navigation nav ul .nav_4 {
+  border-top: 0;
+}
+
+/* line 261, ../sass/_320.scss */
+.navigation nav ul .nav_3,
+.navigation nav ul .nav_6 {
+  border-bottom: 0;
+}
+
+/* line 266, ../sass/_320.scss */
+.navigation nav ul li a,
+.navigation nav ul li a:visited {
+  background: #f0f0f0;
+  display: block;
+  height: 50px;
+  text-shadow: 0 1px 1px #fff;
+  background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1, rgba(255, 255, 255, 0.1)), color-stop(0, rgba(0, 0, 0, 0.1)));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+/* line 288, ../sass/_320.scss */
+.navigation nav ul li a:hover,
+.navigation nav ul li a:focus {
+  background-color: #f0f0f0;
+  background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1, rgba(255, 255, 255, 0.15)), color-stop(0, rgba(0, 0, 0, 0.15)));
+}
+
+/* line 305, ../sass/_320.scss */
+.navigation nav ul li a:active {
+  padding-top: 1px;
+  height: 49px;
+  background: -moz-linear-gradient(center bottom, rgba(200, 200, 200, 0.15), rgba(55, 55, 55, 0.15));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(200, 200, 200, 0.15)), color-stop(1, rgba(55, 55, 55, 0.15)));
+  behavior: url(/PIE.htc);
+}
+
+/* line 325, ../sass/_320.scss */
+.navigation nav .left li a {
+  padding-left: 20px;
+}
+
+/* line 329, ../sass/_320.scss */
+.navigation nav .right li a {
+  padding-right: 20px;
+}
+
+/*------------------------------------------------------------------
+post_sep
+------------------------------------------------------------------*/
+/* line 337, ../sass/_320.scss */
+.post_sep {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  height: 17px;
+  position: relative;
+}
+
+/* line 344, ../sass/_320.scss */
+.post_sep:after {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  content: "";
+  display: block;
+  height: 17px;
+}
+
+/* line 353, ../sass/_320.scss */
+.post_sep a,
+.post_sep a:visited {
+  background: #c8c7c7;
+  border-radius: 100px;
+  box-shadow: inset 0 1px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  position: absolute;
+  height: 0;
+  margin-left: -15px;
+  overflow: hidden;
+  padding-top: 30px;
+  left: 50%;
+  top: -8px;
+  width: 30px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  behavior: url(/PIE.htc);
+}
+
+/* line 372, ../sass/_320.scss */
+.post_sep a:hover,
+.post_sep a:focus {
+  background: #ccc;
+  box-shadow: inset 0 1px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  -webkit-box-shadow: inset 0 1px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  behavior: url(/PIE.htc);
+}
+
+/* line 381, ../sass/_320.scss */
+.post_sep_inner a:active {
+  margin-top: 1px;
+  box-shadow: inset 0 2px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  -webkit-box-shadow: inset 0 2px 1px rgba(68, 68, 68, 0.75), 0 1px 1px #eeeeee;
+  behavior: url(/PIE.htc);
+}
+
+/*------------------------------------------------------------------
+Footer
+------------------------------------------------------------------*/
+/* line 394, ../sass/_320.scss */
+footer {
+  background: white url("../images/bg_diagonal_lines.png") center;
+  border-top: 1px solid #6caddf;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6);
+  clear: both;
+  font-size: 16px;
+  height: 70px;
+  margin-top: -71px;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 1px 1px white;
+  webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6);
+  behavior: url(PIE.htc);
+}
+
+/* line 411, ../sass/_320.scss */
+.footer_wrap {
+  height: 70px;
+  padding: 0 20px 0 20px;
+  background: -moz-linear-gradient(center bottom, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(255, 255, 255, 0.1)));
+  behavior: url(/PIE.htc);
+}
+
+/* line 430, ../sass/_320.scss */
+.resize_icon {
+  display: none;
+}
+
+/* line 432, ../sass/_320.scss */
+footer .copyright {
+  clear: both;
+  color: #666;
+  font-size: 12px;
+  padding-top: 18px;
+  text-shadow: 0 1px 1px white;
+}
+
+/* line 440, ../sass/_320.scss */
+footer .footer_nav {
+  float: left;
+  font-size: 11px;
+  padding-top: 6px;
+  text-shadow: 0 1px 1px white;
+}
+
+/* line 447, ../sass/_320.scss */
+footer .footer_nav li {
+  float: left;
+  border-right: 1px solid #6caddf;
+  border-left: 1px solid #fff;
+  padding: 0 8px 0 8px;
+}
+
+/* line 454, ../sass/_320.scss */
+footer .footer_nav li:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+/* line 459, ../sass/_320.scss */
+footer .footer_nav li:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+/* line 465, ../sass/_320.scss */
+footer .footer_nav li a,
+footer .footer_nav li a:visited {
+  color: #6caddf;
+}
+
+/* line 471, ../sass/_320.scss */
+footer .footer_nav li a:hover,
+footer .footer_nav li a:focus,
+footer .footer_nav li a:active {
+  color: #6caddf;
+  border-bottom: 1px dotted #6caddf;
+}
+
+/*------------------------------------------------------------------
+Individual work
+------------------------------------------------------------------*/
+/* line 480, ../sass/_320.scss */
+.FPO_individual_port aside h3 {
+  color: #444;
+  font-family: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 60px;
+  padding-left: 20px;
+  text-align: left;
+  text-shadow: 0 2px 2px white;
+}
+
+/* line 491, ../sass/_320.scss */
+.FPO_individual_port aside ul {
+  border-top: 1px solid #bbb;
+  font-size: 14px;
+  margin: 0 20px;
+  text-shadow: 0 1px 1px white;
+}
+
+/* line 498, ../sass/_320.scss */
+.FPO_individual_port aside ul li {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #bbb;
+}
+
+/* line 503, ../sass/_320.scss */
+.FPO_individual_port section ul {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 509, ../sass/_320.scss */
+.FPO_individual_port section ul li {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 20px;
+  padding: 1%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* line 519, ../sass/_320.scss */
+.FPO_individual_port section ul li img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}

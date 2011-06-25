@@ -1,8 +1,42 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+//------------------------------------------------------------------
+//Helpers
+//------------------------------------------------------------------
 
+@import "compass/css3/pie";
+@import "compass/css3";
+$pie-behavior: url("/PIE.htc");
+
+//------------------------------------------------------------------
+//Variables
+//------------------------------------------------------------------
+
+//Mixins
+$png_master_sprite: image-url('png_master_sprite.png');
+
+//Typography
+$proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
+
+//Colors
 $blue: #6caddf;
 
-* { color: $blue; }
+//------------------------------------------------------------------
+//Media Queries
+//------------------------------------------------------------------
+@import "_reset.scss";
+@import "_320.scss";
+
+@media only screen and (min-width: 480px) {
+	@import "_480.scss";	
+}/*/mediaquery*/
+
+@media only screen and (min-width: 768px) {	
+	@import "_768.scss";	
+}/*/mediaquery*/
+
+@media only screen and (min-width: 992px) {
+	@import "_992.scss";	
+}/*/mediaquery*/
+
+@media only screen and (min-width: 1150px) {
+	@import "_1150.scss";	
+}/*/mediaquery*/
