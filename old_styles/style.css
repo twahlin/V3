@@ -664,7 +664,7 @@ Individual work
         transition: margin .1s ease-in, opacity .2s ease-in;        
     }
     
-    .before_header ul li.linkedin a { background-position: -75px 0px; }
+    .before_header ul li.linkedin a { background-position: -200px 0px; }
     .before_header ul li.facebook a { background-position: -104px 0px; }
     .before_header ul li.flickr a { background-position: -133px 0px; }
     .before_header ul li.twitter a { background-position: -162px 0px;}

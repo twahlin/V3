@@ -70,7 +70,7 @@ h1 {
 	cursor: pointer;
     height: 90px;
     left: 50%;
-    margin: -45px 0 0 -45px;    
+    margin: -50px 0 0 -50px;    
     position: absolute;
     top: 50%;
     width: 90px;
@@ -84,11 +84,11 @@ h1 {
 h1 a {
     background: #fff;
     display: block;
-    height: 90px;
+    height: 100px;
     overflow: hidden;
     position: relative;
     text-indent: -6666px;
-    width: 90px;
+    width: 100px;
     
 	@include background(linear-gradient(rgba(white, 1), rgba(221,221,221, 1)));
 	@include border-radius(80px);
@@ -122,12 +122,13 @@ h1 a:active {
 }
 
 h1 a span {
-    background: image-url('png_master_sprite.png') 17px 28px;     
-    border-radius: 45px;
+    background: image-url('png_master_sprite.png') 18px 31px;     
     display: block;
 	position: relative;
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
+    
+    @include border-radius(50px);
     
 	@include pie-element(relative);
 }
