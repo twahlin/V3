@@ -1,1 +1,9 @@
-* {color: aqua;}
+.main_content_outer,
+.before_header,
+.navigation,
+.footer_wrap {
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+
+.before_header ul { margin-right: 5%; }

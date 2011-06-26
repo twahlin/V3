@@ -700,10 +700,18 @@ footer .footer_nav li a:active {
   .before_header ul li a:hover {
     margin-top: 3px;
     opacity: 1;
-    -moz-transition: margin .1s ease-in, opacity .2s ease-in;
-    -webkit-transition: margin .1s ease-in, opacity .2s ease-in;
-    -o-transition: margin .1s ease-in, opacity .2s ease-in;
-    transition: margin .1s ease-in, opacity .2s ease-in;
+    -moz-transition-property: margin;
+    -webkit-transition-property: margin;
+    -o-transition-property: margin;
+    transition-property: margin;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
   }
 
   /* line 58, ../sass/_768.scss */
@@ -770,36 +778,42 @@ footer .footer_nav li a:active {
   .navigation {
     height: 50px;
     padding: 0 3%;
-    background: -moz-linear-gradient(center bottom, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(255, 255, 255, 0.1)));
-    behavior: url(/PIE.htc);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    background: -ms-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    -pie-background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    behavior: url("/PIE.htc");
+    position: relative;
   }
 
-  /* line 93, ../sass/_768.scss */
+  /* line 82, ../sass/_768.scss */
   .navigation nav .left,
   .navigation nav .right {
     text-align: center;
     width: 40%;
   }
 
-  /* line 98, ../sass/_768.scss */
+  /* line 87, ../sass/_768.scss */
   .navigation nav .left {
     margin-left: -2px;
   }
 
-  /* line 100, ../sass/_768.scss */
+  /* line 89, ../sass/_768.scss */
   .navigation nav .right {
     margin-right: -2px;
   }
 
-  /* line 103, ../sass/_768.scss */
+  /* line 92, ../sass/_768.scss */
   .navigation nav .left li,
   .navigation nav .right li {
     border: 0;
     display: inline;
   }
 
-  /* line 109, ../sass/_768.scss */
+  /* line 98, ../sass/_768.scss */
   .navigation nav .left .nav_1,
   .navigation nav .right .nav_4 {
     display: block;
@@ -807,7 +821,7 @@ footer .footer_nav li a:active {
     text-align: left;
   }
 
-  /* line 116, ../sass/_768.scss */
+  /* line 105, ../sass/_768.scss */
   .navigation nav .left .nav_3,
   .navigation nav .right .nav_6 {
     display: block;
@@ -815,7 +829,7 @@ footer .footer_nav li a:active {
     text-align: right;
   }
 
-  /* line 128, ../sass/_768.scss */
+  /* line 117, ../sass/_768.scss */
   .navigation nav .left li a,
   .navigation nav .right li a,
   .navigation nav .left li a:visited,
@@ -823,9 +837,7 @@ footer .footer_nav li a:active {
   .navigation nav .left li a:active,
   .navigation nav .right li a:active {
     background: #eee;
-    border-radius: 4px;
     border: 1px solid #fff;
-    box-shadow: inset 0 1px 3px #a2a2a2, 0 1px 0px #f0f0f0;
     display: inline;
     font-weight: 600;
     font-size: 14px;
@@ -834,15 +846,28 @@ footer .footer_nav li a:active {
     letter-spacing: 0;
     padding: 8px 12px 4px 12px;
     position: relative;
-    background: -moz-linear-gradient(center top, white 45%, #f0f0f0 65%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.45, white), color-stop(0.65, #f0f0f0));
-    -webkit-box-shadow: inset 0 1px 3px #a2a2a2, 0 1px 0px #f0f0f0;
-    background-image: -o-linear-gradient(white, #f0f0f0);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f0f0f0));
+    background: -webkit-linear-gradient(#ffffff, #f0f0f0);
+    background: -moz-linear-gradient(#ffffff, #f0f0f0);
+    background: -o-linear-gradient(#ffffff, #f0f0f0);
+    background: -ms-linear-gradient(#ffffff, #f0f0f0);
     -pie-background: linear-gradient(#ffffff, #f0f0f0);
-    behavior: url(/PIE.htc);
+    background: linear-gradient(#ffffff, #f0f0f0);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: inset #a2a2a2 0 1px 3px, #f0f0f0 0 1px 0px;
+    -webkit-box-shadow: inset #a2a2a2 0 1px 3px, #f0f0f0 0 1px 0px;
+    -o-box-shadow: inset #a2a2a2 0 1px 3px, #f0f0f0 0 1px 0px;
+    box-shadow: inset #a2a2a2 0 1px 3px, #f0f0f0 0 1px 0px;
+    behavior: url("/PIE.htc");
+    position: relative;
   }
 
-  /* line 168, ../sass/_768.scss */
+  /* line 141, ../sass/_768.scss */
   .navigation nav .left li a:hover,
   .navigation nav .right li a:hover,
   .navigation nav .left li a:focus,
@@ -850,72 +875,266 @@ footer .footer_nav li a:active {
   .navigation nav .left li a:active,
   .navigation nav .right li a:active {
     background: #ccc;
-    background: -moz-linear-gradient(center top, #f5f5f5 45%, #e6e6e6 65%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.45, #f5f5f5), color-stop(0.65, #e6e6e6));
-    background-image: -o-linear-gradient(#f5f5f5, #e6e6e6);
-    -pie-background: linear-gradient(#f5f5f5, #e6e6e6);
-    behavior: url(/PIE.htc);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(45%, #f5f5f5), color-stop(65%, #e6e6e6));
+    background: -webkit-linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    background: -moz-linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    background: -o-linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    background: -ms-linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    -pie-background: linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    background: linear-gradient(#f5f5f5 45%, #e6e6e6 65%);
+    behavior: url("/PIE.htc");
+    position: relative;
   }
 
-  /* line 191, ../sass/_768.scss */
+  /* line 150, ../sass/_768.scss */
   .navigation nav .left li a:active,
   .navigation nav .right li a:active {
-    /*        THIS NEEDS SOMETING*/
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(45%, #ebebeb), color-stop(65%, #dcdcdc));
+    background: -webkit-linear-gradient(#ebebeb 45%, #dcdcdc 65%);
+    background: -moz-linear-gradient(#ebebeb 45%, #dcdcdc 65%);
+    background: -o-linear-gradient(#ebebeb 45%, #dcdcdc 65%);
+    background: -ms-linear-gradient(#ebebeb 45%, #dcdcdc 65%);
+    -pie-background: linear-gradient(#ebebeb 45%, #dcdcdc 65%);
+    background: linear-gradient(#ebebeb 45%, #dcdcdc 65%);
   }
 
-  /* line 200, ../sass/_768.scss */
+  /* line 159, ../sass/_768.scss */
   body.home .navigation nav .left li.nav_1 a,
   body.about .navigation nav .left li.nav_2 a,
   body.category-work .navigation nav .left li.nav_3 a,
   body.goods .navigation nav .right li.nav_4 a,
   body.category-blog .navigation nav .right li.nav_5 a,
   body.contact .navigation nav .right li.nav_6 a {
-    box-shadow: inset 0 1px 3px #486e8c, inset 0 3px 3px rgba(72, 110, 140, 0.2);
-    color: #fff;
-    text-shadow: 0 1px 1px #335d7d, 0 0 10px rgba(51, 93, 125, 0.75);
     background: #6caddf;
+    color: #fff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(45%, rgba(134, 198, 247, 0.8)), color-stop(65%, rgba(108, 173, 223, 0.8)));
+    background: -webkit-linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
     background: -moz-linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.45, rgba(134, 198, 247, 0.8)), color-stop(0.65, rgba(108, 173, 223, 0.8)));
+    background: -o-linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
+    background: -ms-linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
+    -pie-background: linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
+    background: linear-gradient(rgba(134, 198, 247, 0.8) 45%, rgba(108, 173, 223, 0.8) 65%);
+    -moz-box-shadow: inset #486e8c 0 1px 3px, inset rgba(72, 110, 140, 0.2) 0 3px 3px;
+    -webkit-box-shadow: inset #486e8c 0 1px 3px, inset rgba(72, 110, 140, 0.2) 0 3px 3px;
+    -o-box-shadow: inset #486e8c 0 1px 3px, inset rgba(72, 110, 140, 0.2) 0 3px 3px;
+    box-shadow: inset #486e8c 0 1px 3px, inset rgba(72, 110, 140, 0.2) 0 3px 3px;
+    text-shadow: #335d7d 0 1px 1px, rgba(51, 93, 125, 0.75) 0 0 10px;
+    behavior: url("/PIE.htc");
+    position: relative;
   }
 
   /*------------------------------------------------------------------
   Main Content
   ------------------------------------------------------------------*/
-  /* line 224, ../sass/_768.scss */
+  /* line 174, ../sass/_768.scss */
   .main_content_outer {
     padding-left: 3%;
     padding-right: 3%;
   }
 
-  /* line 229, ../sass/_768.scss */
+  /* line 179, ../sass/_768.scss */
   .main_content {
     background: #e2e2e2;
     background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    behavior: url(/PIE.htc);
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+    behavior: url("/PIE.htc");
+    position: relative;
   }
 
   /*------------------------------------------------------------------
   Footer
   ------------------------------------------------------------------*/
-  /* line 242, ../sass/_768.scss */
+  /* line 191, ../sass/_768.scss */
   .footer_wrap {
     padding: 0 3% 0 3%;
   }
 }
 /*/mediaquery*/
 @media only screen and (min-width: 992px) {
-  /* line 1, ../sass/_992.scss */
-  * {
-    color: aqua;
+  /* line 4, ../sass/_992.scss */
+  .main_content_outer,
+  .before_header,
+  .navigation,
+  .footer_wrap {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* line 9, ../sass/_992.scss */
+  .before_header ul {
+    margin-right: 5%;
   }
 }
 /*/mediaquery*/
 @media only screen and (min-width: 1150px) {
-  /* line 1, ../sass/_1150.scss */
-  * {
-    color: red;
+  /* line 4, ../sass/_1150.scss */
+  .logo_wrap,
+  .main_content_outer,
+  .navigation,
+  .footer_wrap {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  /* line 9, ../sass/_1150.scss */
+  .max_width {
+    margin: 0 auto;
+    max-width: 1382px;
+  }
+
+  /* line 17, ../sass/_1150.scss */
+  .logo_wrap {
+    margin: 0 auto;
+    max-width: 1382px;
+  }
+
+  /* line 22, ../sass/_1150.scss */
+  .logo_inner_wrap {
+    position: relative;
+  }
+
+  /* line 26, ../sass/_1150.scss */
+  h1 {
+    top: 23px;
+    left: 0;
+    margin-right: 0;
+  }
+
+  /* line 32, ../sass/_1150.scss */
+  nav {
+    margin-right: -2px;
+  }
+
+  /* line 36, ../sass/_1150.scss */
+  .navigation .max_width nav {
+    float: right;
+    display: block;
+    overflow: visible;
+  }
+
+  /* line 44, ../sass/_1150.scss */
+  .navigation .max_width nav ul,
+  .navigation .max_width nav .left,
+  .navigation .max_width nav .right {
+    float: left;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+  }
+
+  /* line 51, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left {
+    width: 223px;
+  }
+
+  /* line 55, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right {
+    width: 241px;
+  }
+
+  /* line 64, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_1,
+  .navigation .max_width nav ul.left li.nav_2,
+  .navigation .max_width nav ul.left li.nav_3,
+  .navigation .max_width nav ul.right li.nav_4,
+  .navigation .max_width nav ul.right li.nav_5,
+  .navigation .max_width nav ul.right li.nav_6 {
+    float: left;
+    text-align: center;
+  }
+
+  /* line 69, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_1 {
+    margin-right: 5px;
+  }
+
+  /* line 70, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_2 {
+    margin-right: 5px;
+  }
+
+  /* line 72, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right li.nav_4 {
+    margin-right: 5px;
+  }
+
+  /* line 73, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right li.nav_5 {
+    margin-right: 5px;
+  }
+
+  /* line 81, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_1 a,
+  .navigation .max_width nav ul.left li.nav_2 a,
+  .navigation .max_width nav ul.left li.nav_3 a,
+  .navigation .max_width nav ul.right li.nav_4 a,
+  .navigation .max_width nav ul.right li.nav_5 a,
+  .navigation .max_width nav ul.right li.nav_6 a {
+    display: block;
+    line-height: 32px;
+    margin-top: 9px;
+    padding: 0;
+    height: 29px;
+  }
+
+  /* line 89, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_1 a {
+    width: 65px;
+  }
+
+  /* line 90, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_2 a {
+    width: 71px;
+  }
+
+  /* line 91, ../sass/_1150.scss */
+  .navigation .max_width nav ul.left li.nav_3 a {
+    width: 66px;
+  }
+
+  /* line 92, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right li.nav_4 a {
+    width: 74px;
+  }
+
+  /* line 93, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right li.nav_5 a {
+    width: 61px;
+  }
+
+  /* line 94, ../sass/_1150.scss */
+  .navigation .max_width nav ul.right li.nav_6 a {
+    width: 90px;
+  }
+
+  /* line 96, ../sass/_1150.scss */
+  .before_header {
+    padding: 0 7%;
+    max-width: 1382px;
+    margin: 0 auto;
+  }
+
+  /* line 102, ../sass/_1150.scss */
+  .before_header ul {
+    float: right;
+    position: relative;
+    margin-right: -2px;
+  }
+
+  /* line 108, ../sass/_1150.scss */
+  .before_header_inner {
+    position: relative;
+  }
+
+  /* line 112, ../sass/_1150.scss */
+  .charter {
+    font-size: 11px;
+    position: absolute;
+    left: 58px;
+    top: 54px;
   }
 }
 /*/mediaquery*/

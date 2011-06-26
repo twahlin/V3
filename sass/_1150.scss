@@ -1,1 +1,117 @@
-* {color: red;}
+.logo_wrap,
+.main_content_outer,
+.navigation,
+.footer_wrap {
+    padding-left: 7%;
+    padding-right: 7%; 
+}
+
+.max_width {
+    margin: 0 auto;
+    max-width: 1382px;
+}
+
+//------------------------------------------------------------------
+//Navigation
+//------------------------------------------------------------------
+.logo_wrap {
+    margin: 0 auto;        
+    max-width: 1382px;
+}
+
+.logo_inner_wrap {
+    position: relative;
+}
+
+h1 {
+    top: 23px;
+    left: 0;
+    margin-right: 0;
+}
+
+nav {
+    margin-right: -2px;
+}
+
+.navigation .max_width nav {
+    float: right;
+    display: block;
+    overflow: visible;
+}
+
+.navigation .max_width nav ul,
+.navigation .max_width nav .left,
+.navigation .max_width nav .right {
+    float: left;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+}
+
+.navigation .max_width nav ul.left {
+    width: 223px;
+}
+
+.navigation .max_width nav ul.right {
+    width: 241px;
+}
+
+.navigation .max_width nav ul.left li.nav_1, 
+.navigation .max_width nav ul.left li.nav_2,
+.navigation .max_width nav ul.left li.nav_3,
+.navigation .max_width nav ul.right li.nav_4,
+.navigation .max_width nav ul.right li.nav_5, 
+.navigation .max_width nav ul.right li.nav_6 {
+    float: left;
+    text-align: center;
+}
+
+.navigation .max_width nav ul.left li.nav_1 { margin-right: 5px; }
+.navigation .max_width nav ul.left li.nav_2 { margin-right: 5px; }
+.navigation .max_width nav ul.left li.nav_3 {}
+.navigation .max_width nav ul.right li.nav_4 {margin-right: 5px;}
+.navigation .max_width nav ul.right li.nav_5 {margin-right: 5px;}
+.navigation .max_width nav ul.right li.nav_6 {}
+
+.navigation .max_width nav ul.left li.nav_1 a, 
+.navigation .max_width nav ul.left li.nav_2 a,
+.navigation .max_width nav ul.left li.nav_3 a,
+.navigation .max_width nav ul.right li.nav_4 a,
+.navigation .max_width nav ul.right li.nav_5 a, 
+.navigation .max_width nav ul.right li.nav_6 a {
+    display: block;
+    line-height: 32px;
+    margin-top: 9px;
+    padding: 0;
+    height: 29px;
+}
+
+.navigation .max_width nav ul.left li.nav_1 a { width: 65px; }
+.navigation .max_width nav ul.left li.nav_2 a { width: 71px; }
+.navigation .max_width nav ul.left li.nav_3 a { width: 66px; }
+.navigation .max_width nav ul.right li.nav_4 a { width: 74px; }
+.navigation .max_width nav ul.right li.nav_5 a { width: 61px; } 
+.navigation .max_width nav ul.right li.nav_6 a { width: 90px; }    
+
+.before_header {
+    padding: 0 7%;
+    max-width: 1382px;
+    margin: 0 auto;
+}
+
+.before_header ul {
+    float: right;
+    position: relative;
+    margin-right: -2px;
+}
+
+.before_header_inner {
+    position: relative;
+}
+
+.charter {
+    font-size: 11px;
+    position: absolute;
+    left: 58px;
+    top: 54px;
+}

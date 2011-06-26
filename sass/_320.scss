@@ -122,7 +122,7 @@ h1 a:active {
 }
 
 h1 a span {
-    background: $png_master_sprite 17px 28px;     
+    background: image-url('png_master_sprite.png') 17px 28px;     
     border-radius: 45px;
     display: block;
 	position: relative;

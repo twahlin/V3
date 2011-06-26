@@ -47,12 +47,12 @@
 }
 
 .before_header ul li a:hover {
-margin-top: 3px;
-opacity: 1;
--moz-transition: margin .1s ease-in, opacity .2s ease-in;
--webkit-transition: margin .1s ease-in, opacity .2s ease-in;
--o-transition: margin .1s ease-in, opacity .2s ease-in;
-transition: margin .1s ease-in, opacity .2s ease-in;        
+	margin-top: 3px;
+	opacity: 1;
+
+	@include transition-property(margin);
+	@include transition-duration(0.1s);
+	@include transition-timing-function(ease-in); 
 }
 
 .before_header ul li.linkedin a { background-position: -75px 0px; }
@@ -70,29 +70,18 @@ transition: margin .1s ease-in, opacity .2s ease-in;
 .before_header ul li.dribbble a:hover { background-position: -220px -48px; }                   
 
 .navigation {
-height: 50px;
-padding: 0 3%;
+	height: 50px;
+	padding: 0 3%;
 
-background: -moz-linear-gradient(
-center bottom,
-rgba(0, 0, 0, .10),
-rgba(255, 255, 255, .10)
-);
-background: -webkit-gradient(
-linear,
-left bottom,
-left top,
-color-stop(0, rgba(0,0,0, .10)),
-color-stop(1, rgba(255,255,255, .10))
-);
+	@include background(linear-gradient(rgba(white, .10), rgba(black, .10)));
 
-behavior: url(/PIE.htc);
+	@include pie-element(relative);
 }
 
 .navigation nav .left,
 .navigation nav .right {
-text-align: center;
-width: 40%;    
+	text-align: center;
+	width: 40%;    
 }
 
 .navigation nav .left { margin-left: -2px; }
@@ -101,22 +90,22 @@ width: 40%;
 
 .navigation nav .left li,
 .navigation nav .right li {
-border: 0;
-display: inline;        
+	border: 0;
+	display: inline;        
 }
 
 .navigation nav .left .nav_1,
 .navigation nav .right .nav_4 {
-display: block;
-float: left;
-text-align: left;
+	display: block;
+	float: left;
+	text-align: left;
 }
 
 .navigation nav .left .nav_3,
 .navigation nav .right .nav_6 {
-display: block;
-float: right;
-text-align: right;
+	display: block;
+	float: right;
+	text-align: right;
 }
 
 
@@ -126,38 +115,22 @@ text-align: right;
 .navigation nav .right li a:visited,
 .navigation nav .left li a:active,
 .navigation nav .right li a:active {
-background: #eee;
-border-radius: 4px;
-border: 1px solid #fff;
-box-shadow: inset 0 1px 3px rgba(162, 162, 162, 1), 0 1px 0px rgba(240, 240, 240, 1);
-display: inline;
-font-weight: 600;
-font-size: 14px;
-height: auto;
-line-height: 53px;
-letter-spacing: 0;
-padding: 8px 12px 4px 12px;
-position: relative;
+	background: #eee;
+	border: 1px solid #fff;
+	display: inline;
+	font-weight: 600;
+	font-size: 14px;
+	height: auto;
+	line-height: 53px;
+	letter-spacing: 0;
+	padding: 8px 12px 4px 12px;
+	position: relative;
 
-background: -moz-linear-gradient(
-center top,
-rgba(255, 255, 255, 1) 45%,
-rgba(240, 240, 240, 1) 65%   
-);
-background: -webkit-gradient(
-linear,
-left top,
-left bottom,
-color-stop(0.45, rgba(255,255,255, 1)),
-color-stop(0.65, rgba(240,240,240, 1))
-);
+	@include background(linear-gradient(rgba(white, 1), rgba(240,240,240, 1)));
+	@include border-radius(4px);
+	@include box-shadow(inset rgba(162, 162, 162, 1) 0 1px 3px, rgba(240, 240, 240, 1) 0 1px 0px);
 
--webkit-box-shadow: inset 0 1px 3px rgba(162, 162, 162, 1), 0 1px 0px rgba(240, 240, 240, 1);
-
-background-image: -o-linear-gradient(rgba(255,255,255, 1),rgba(240,240,240, 1));
--pie-background: linear-gradient(rgba(255,255,255, 1), rgba(240,240,240, 1));
-
-behavior: url(/PIE.htc);
+	@include pie-element(relative);
 }
 
 .navigation nav .left li a:hover,
@@ -166,30 +139,16 @@ behavior: url(/PIE.htc);
 .navigation nav .right li a:focus,
 .navigation nav .left li a:active,
 .navigation nav .right li a:active {
-background: #ccc;
+	background: #ccc;
 
-background: -moz-linear-gradient(
-center top,
-rgba(245, 245, 245, 1) 45%,
-rgba(230, 230, 230, 1) 65%   
-);
-background: -webkit-gradient(
-linear,
-left top,
-left bottom,
-color-stop(0.45, rgba(245,245,245, 1)),
-color-stop(0.65, rgba(230,230,230, 1))
-);
+	@include background(linear-gradient(rgba(245,245,245, 1.0) 45%, rgba(230,230,230, 1.0) 65%));
 
-background-image: -o-linear-gradient(rgba(245,245,245, 1),rgba(230,230,230, 1));
--pie-background: linear-gradient(rgba(245,245,245, 1), rgba(230,230,230, 1));
-
-behavior: url(/PIE.htc);
+	@include pie-element(relative);
 }
 
 .navigation nav .left li a:active,
 .navigation nav .right li a:active {
-/*        THIS NEEDS SOMETING*/
+	@include background(linear-gradient(rgba(235,235,235, 1.0) 45%, rgba(220,220,220, 1.0) 65%));
 }
 
 body.home .navigation nav .left li.nav_1 a,
@@ -198,23 +157,14 @@ body.category-work .navigation nav .left li.nav_3 a,
 body.goods .navigation nav .right li.nav_4 a,
 body.category-blog .navigation nav .right li.nav_5 a,
 body.contact .navigation nav .right li.nav_6 a {
-box-shadow: inset 0 1px 3px rgba(72, 110, 140, 1), inset 0 3px 3px rgba(72, 110, 140, .2);
-color: #fff;
-text-shadow: 0 1px 1px rgba(51, 93, 125, 1), 0 0 10px rgba(51, 93, 125, .75);
+	background: #6caddf;
+	color: #fff;
 
-background: #6caddf;
-
-background: -moz-linear-gradient(
-rgba(134, 198, 247, .8) 45%,
-rgba(108, 173, 223, .8) 65%
-);
-background: -webkit-gradient(
-linear,
-left top,
-left bottom,
-color-stop(0.45, rgba(134,198,247, .8)),
-color-stop(0.65, rgba(108,173,223, .8))
-);
+	@include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
+	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
+	
+	@include pie-element(relative);
 }
 
 /*------------------------------------------------------------------
@@ -222,23 +172,22 @@ Main Content
 ------------------------------------------------------------------*/
 
 .main_content_outer {
-padding-left: 3%;
-padding-right: 3%;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 .main_content {
-background: #e2e2e2;
-background: rgba(255, 255, 255, .5);
-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	background: #e2e2e2;
+	background: rgba(255, 255, 255, .5);
 
--webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);  
+	@include box-shadow(rgba(0, 0, 0, .2) 0 0 5px);
 
-behavior: url(/PIE.htc);
+	@include pie-element(relative);
 }
 
 /*------------------------------------------------------------------
 Footer
 ------------------------------------------------------------------*/
 .footer_wrap {
-padding: 0 3% 0 3%;
+	padding: 0 3% 0 3%;
 }
