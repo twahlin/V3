@@ -51,7 +51,7 @@ a:visited {
     text-align: center;
     text-transform: uppercase;
     position: relative;
-    z-index: 1;
+    z-index: 101;
 
     @include background(linear-gradient(rgba(112,112,112, 1), rgba(92,92,92, 1)));
  	@include text-shadow(rgba(black, 1) 0 -1px 1px);
@@ -74,7 +74,7 @@ h1 {
     position: absolute;
     top: 50%;
     width: 90px;
-    z-index: 1;
+    z-index: 101;
     
 	@include border-radius(80px);
 	
@@ -149,6 +149,7 @@ h1 a span {
     line-height: 50px;
     overflow: hidden;
     text-transform: uppercase;
+    z-index: 100;
     
 	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);    
 	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
@@ -225,6 +226,46 @@ h1 a span {
 .navigation nav .right li a {
     padding-right: 20px;
 }
+
+//------------------------------------------------------------------
+//Hero Slider
+//------------------------------------------------------------------
+
+/* this changes the height of the master slideshow.*/
+.dummy_slide {
+    height: 400px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.hero_slider li {
+    display: block;
+}
+
+.hero_slider li .slide_wrap {
+    height: 400px;
+}
+
+.hero_slider .first .slide_wrap {
+    background: aqua;
+}
+
+.hero_slider .second .slide_wrap {
+    background: yellow;
+}
+
+.hero_slider {
+  width:auto !important;
+  position:relative !important;
+  overflow:visible !important;
+}
+.hero_slider li{
+  width:auto !important;
+  position: relative !important;
+  height: 0 !important;
+}
+
+
 
 //------------------------------------------------------------------
 //post_sep

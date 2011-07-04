@@ -25,6 +25,14 @@ jQuery(document).ready(function($){
     window.onload = externalLinks;
     //end external links
 
+    //start hero slider
+    $('.hero_slider').cycle({
+		fx: 'fade',
+        timeout: 5000,
+        pager: '#slides_nav li'
+	});
+    //end hero slider
+
     // $(function(){
     //     var doc_height = $(document).height();
     //     $(".main_content").css("height", doc_height);

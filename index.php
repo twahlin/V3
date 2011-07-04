@@ -6,6 +6,24 @@
  */
 
 get_header(); ?>
+<div class="hero_slider_wrap">
+<ul class="hero_slider">
+    <li class="first">
+        <div class="slide_wrap">
+            <p>hi</p>
+        </div>
+    </li>
+    <li class="second">
+        <div class="slide_wrap">
+            <p>hi</p>
+        </div>
+    </li>  
+</ul>
+<div class="dummy_slide"><!-- sets height for responsive slideshow --></div>
+<ul id="slides_nav">
+</ul>
+</div>
+
 
 <div class="FPO_individual_port">
 <aside>

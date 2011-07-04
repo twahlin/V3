@@ -24,16 +24,16 @@ $blue: #6caddf;
 
 @media only screen and (min-width: 480px) {
 	@import "_480.scss";	
-}/*/mediaquery*/
+}
 
 @media only screen and (min-width: 768px) {	
 	@import "_768.scss";	
-}/*/mediaquery*/
+}
 
 @media only screen and (min-width: 992px) {
 	@import "_992.scss";	
-}/*/mediaquery*/
+}
 
 @media only screen and (min-width: 1150px) {
 	@import "_1150.scss";	
-}/*/mediaquery*/
+}
