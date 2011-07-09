@@ -227,6 +227,27 @@ h1 a span {
     padding-right: 20px;
 }
 
+body.home .navigation nav .left li.nav_1 a,
+body.page-about .navigation nav .left li.nav_2 a,
+body.post-type-archive-work .navigation nav .left li.nav_3 a,
+body.single-work .navigation nav .left li.nav_3 a,
+body.post-type-archive-goods .navigation nav .right li.nav_4 a,
+body.single-goods .navigation nav .right li.nav_4 a,
+body.page-blog .navigation nav .right li.nav_5 a,
+body.single-post .navigation nav .right li.nav_5 a,
+body.page-contact .navigation nav .right li.nav_6 a {
+	background: #6caddf;
+	color: #fff;
+	height: 48px;
+    padding-top: 2px;
+
+	@include background(linear-gradient(rgba(134,198,247, .8), rgba(108,173,223, .8)));
+	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
+	
+	@include pie-element(relative);
+}
+
 //------------------------------------------------------------------
 //Hero Slider
 //------------------------------------------------------------------
@@ -238,20 +259,25 @@ h1 a span {
     visibility: hidden;
 }
 
+.hero_slider_wrap {
+    position: relative;
+}
+
 .hero_slider li {
     display: block;
 }
 
-.hero_slider li .slide_wrap {
+.hero_slider li .slide_wrap,
+.hero_slider li .slide_inner_wrap {
     height: 400px;
 }
 
-.hero_slider .first .slide_wrap {
-    background: aqua;
+.hero_slider li .slide_wrap {
+    border-bottom: 3px #fff solid;
 }
 
-.hero_slider .second .slide_wrap {
-    background: yellow;
+.hero_slider li .slide_inner_wrap {
+    border-bottom: 1px #ccc solid;      
 }
 
 .hero_slider {
@@ -259,12 +285,44 @@ h1 a span {
   position:relative !important;
   overflow:visible !important;
 }
-.hero_slider li{
+.hero_slider .pane {
   width:auto !important;
   position: relative !important;
   height: 0 !important;
 }
 
+.hero_slider .slide_wrap { background: image-url('bg_pattern_square.jpg') center; }
+
+.hero_slider .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(42, 83, 114, .3))); }
+
+.hero_slider .second .slide_wrap { background: image-url('bg_pattern_squiggle.jpg') center; }
+
+.hero_slider .second .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }
+
+.hero_slider .third .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }
+
+.hero_slider .third .slide_wrap { background: image-url('bg_noise_transparent.png') center; }
+
+.hero_slider_wrap .slides_nav {
+    bottom: 0;
+    left: 50%;
+    margin-left: -150px;
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    z-index: 100;
+}
+
+.hero_slider_wrap .slides_nav li {
+    background: aqua;
+    display: inline;
+    text-align: center;
+}
+
+.hero_slider_wrap .slides_nav li a {
+    text-align: center;
+    margin: 0 20px;
+}
 
 
 //------------------------------------------------------------------

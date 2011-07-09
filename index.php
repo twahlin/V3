@@ -8,20 +8,30 @@
 get_header(); ?>
 <div class="hero_slider_wrap">
 <ul class="hero_slider">
-    <li class="first">
+    <li class="first pane">
         <div class="slide_wrap">
-            <p>hi</p>
+            <div class="slide_inner_wrap">
+                <h2>Version 3 had launched</h2>
+            </div>
         </div>
     </li>
-    <li class="second">
+    <li class="second pane">
         <div class="slide_wrap">
-            <p>hi</p>
+            <div class="slide_inner_wrap">
+                <p>hi</p>
+            </div>
+        </div>
+    </li>
+    <li class="third pane">
+        <div class="slide_wrap">
+            <div class="slide_inner_wrap">
+                <p>hi</p>
+            </div>
         </div>
     </li>  
 </ul>
 <div class="dummy_slide"><!-- sets height for responsive slideshow --></div>
-<ul id="slides_nav">
-</ul>
+<ol id="slidesNav" class="slides_nav"></ol>
 </div>
 
 

@@ -24,6 +24,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 <script type="text/javascript" src="http://use.typekit.com/asn3yeo.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zflickrfeed.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zlastfm.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.ztwitterfeed.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.cycle.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/plugins.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/script.js"></script>

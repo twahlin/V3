@@ -152,19 +152,19 @@
 }
 
 body.home .navigation nav .left li.nav_1 a,
-body.about .navigation nav .left li.nav_2 a,
-body.category-work .navigation nav .left li.nav_3 a,
-body.goods .navigation nav .right li.nav_4 a,
-body.category-blog .navigation nav .right li.nav_5 a,
-body.contact .navigation nav .right li.nav_6 a {
-	background: #6caddf;
-	color: #fff;
+body.page-about .navigation nav .left li.nav_2 a,
+body.post-type-archive-work .navigation nav .left li.nav_3 a,
+body.single-work .navigation nav .left li.nav_3 a,
+body.post-type-archive-goods .navigation nav .right li.nav_4 a,
+body.single-goods .navigation nav .right li.nav_4 a,
+body.page-blog .navigation nav .right li.nav_5 a,
+body.single-post .navigation nav .right li.nav_5 a,
+body.page-contact .navigation nav .right li.nav_6 a {
+    display: inline;
+	height: auto;
+	padding: 7px 12px 4px 12px;
 
 	@include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
-	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
-	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
-	
-	@include pie-element(relative);
 }
 
 /*------------------------------------------------------------------

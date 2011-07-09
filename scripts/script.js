@@ -29,15 +29,43 @@ jQuery(document).ready(function($){
     $('.hero_slider').cycle({
 		fx: 'fade',
         timeout: 5000,
-        pager: '#slides_nav li'
+        pause: true,
+        pauseOnPagerHover: true,
+        pager: '#slidesNav',
+        pagerAnchorBuilder: pagerFactory
 	});
+	
+	function pagerFactory(idx, slide) {
+    var s = idx > 2 ? ' style="display:none"' : '';
+    return '<li'+s+'><a href="#">'+(idx+1)+'</a></li>';
+    };
     //end hero slider
 
-    // $(function(){
-    //     var doc_height = $(document).height();
-    //     $(".main_content").css("height", doc_height);
+    // Twitter, flickr, and last.fm feeds
+    $('p.js_off').hide();
+    $('.feed_twitter').twitterfeed('twahlin', {
+        limit: 5
+    });
+
+    //flickr feed
+    // $('.feed_flickr').flickrfeed('','', {
+    //     limit: 10,
+    //     imagesize: 'square'    
     // });
-    
+
+    //last.fm feed
+    $('.feed_lastfm').lastfm('twahlin','recenttracks','9b5045d6a52e5972cdf40e1193c1041f', {
+        limit: 10,        
+        noimage: 'public/images/noimage.gif',
+        imagesize: 'large'
+    });
+
+
+// $(function(){
+//     var doc_height = $(document).height();
+//     $(".main_content").css("height", doc_height);
+// });
+
     
 
 });
