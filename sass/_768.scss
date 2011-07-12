@@ -78,78 +78,92 @@
 	@include pie-element(relative);
 }
 
-.navigation nav .left,
-.navigation nav .right {
+.navigation nav ul.left,
+.navigation nav ul.right {
+    padding: 10px 0 0 0;
 	text-align: center;
 	width: 40%;    
 }
 
-.navigation nav .left { margin-left: -2px; }
+.navigation nav ul.left { float: left; margin-left: -2px; }
 
-.navigation nav .right { margin-right: -2px; }
+.navigation nav ul.right { float: right; margin-right: -3px; }
 
-.navigation nav .left li,
-.navigation nav .right li {
-	border: 0;
-	display: inline;        
+.navigation .max_width nav ul.left li.nav_1, 
+.navigation .max_width nav ul.left li.nav_2,
+.navigation .max_width nav ul.left li.nav_3, 
+.navigation .max_width nav ul.right li.nav_4,
+.navigation .max_width nav ul.right li.nav_5,
+.navigation .max_width nav ul.right li.nav_6 {
+    border: 0;
+    display: block;
+    float: left;
 }
 
-.navigation nav .left .nav_1,
-.navigation nav .right .nav_4 {
-	display: block;
-	float: left;
-	text-align: left;
+.navigation .max_width nav ul.left li.nav_1 { width: 33.33%; }
+.navigation .max_width nav ul.left li.nav_2 { width: 33.33%; }
+.navigation .max_width nav ul.left li.nav_3 { width: 33.33%; }
+.navigation .max_width nav ul.right li.nav_4 { width: 31%; }
+.navigation .max_width nav ul.right li.nav_5 { width: 33%; }
+.navigation .max_width nav ul.right li.nav_6 { width: 36%; }
+
+.navigation .max_width nav ul.left li.nav_1 a, 
+.navigation .max_width nav ul.left li.nav_2 a,
+.navigation .max_width nav ul.left li.nav_3 a, 
+.navigation .max_width nav ul.right li.nav_4 a,
+.navigation .max_width nav ul.right li.nav_5 a,
+.navigation .max_width nav ul.right li.nav_6 a {
+    background: #eee;
+    border: 1px solid #fff;    
+    display: block;
+    font-size: 14px;       
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 0;     
+    line-height: 33px;    
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    
+    @include background(linear-gradient(rgba(white, 1) 45%, rgba(240,240,240, 1) 65%));
+    @include border-radius(4px);
+    @include box-shadow(inset rgba(162, 162, 162, 1) 0 1px 3px, rgba(240, 240, 240, 1) 0 1px 0px);
+
+    @include pie-element(relative);
 }
 
-.navigation nav .left .nav_3,
-.navigation nav .right .nav_6 {
-	display: block;
-	float: right;
-	text-align: right;
+.navigation .max_width nav ul.left li.nav_1 a:hover, 
+.navigation .max_width nav ul.left li.nav_2 a:hover,
+.navigation .max_width nav ul.left li.nav_3 a:hover, 
+.navigation .max_width nav ul.right li.nav_4 a:hover,
+.navigation .max_width nav ul.right li.nav_5 a:hover,
+.navigation .max_width nav ul.right li.nav_6 a:hover {
+    background: #ccc;
+
+    @include background(linear-gradient(rgba(245,245,245, 1.0) 45%, rgba(230,230,230, 1.0) 65%));
+
+    @include pie-element(relative);
 }
 
-
-.navigation nav .left li a,
-.navigation nav .right li a,
-.navigation nav .left li a:visited,
-.navigation nav .right li a:visited,
-.navigation nav .left li a:active,
-.navigation nav .right li a:active {
-	background: #eee;
-	border: 1px solid #fff;
-	display: inline;
-	font-weight: 600;
-	font-size: 14px;
-	height: auto;
-	line-height: 53px;
-	letter-spacing: 0;
-	padding: 8px 12px 4px 12px;
-	position: relative;
-
-	@include background(linear-gradient(rgba(white, 1), rgba(240,240,240, 1)));
-	@include border-radius(4px);
-	@include box-shadow(inset rgba(162, 162, 162, 1) 0 1px 3px, rgba(240, 240, 240, 1) 0 1px 0px);
-
-	@include pie-element(relative);
+.navigation .max_width nav ul.left li.nav_1 a:active, 
+.navigation .max_width nav ul.left li.nav_2 a:active,
+.navigation .max_width nav ul.left li.nav_3 a:active, 
+.navigation .max_width nav ul.right li.nav_4 a:active,
+.navigation .max_width nav ul.right li.nav_5 a:active,
+.navigation .max_width nav ul.right li.nav_6 a:active {
+    background: #ddd;
+        
+    @include background(linear-gradient(rgba(235,235,235, 1.0) 45%, rgba(220,220,220, 1.0) 65%));
+    
+    @include pie-element(relative);
 }
 
-.navigation nav .left li a:hover,
-.navigation nav .right li a:hover,
-.navigation nav .left li a:focus,
-.navigation nav .right li a:focus,
-.navigation nav .left li a:active,
-.navigation nav .right li a:active {
-	background: #ccc;
-
-	@include background(linear-gradient(rgba(245,245,245, 1.0) 45%, rgba(230,230,230, 1.0) 65%));
-
-	@include pie-element(relative);
-}
-
-.navigation nav .left li a:active,
-.navigation nav .right li a:active {
-	@include background(linear-gradient(rgba(235,235,235, 1.0) 45%, rgba(220,220,220, 1.0) 65%));
-}
+.navigation .max_width nav ul.left li.nav_1 a { float:left; width: 65px; }
+.navigation .max_width nav ul.left li.nav_2 a { margin: 0 auto; width: 71px; }
+.navigation .max_width nav ul.left li.nav_3 a { float:right; width: 66px; }
+.navigation .max_width nav ul.right li.nav_4 a { float:left; width: 74px; }
+.navigation .max_width nav ul.right li.nav_5 a { margin: 0 auto; width: 61px; } 
+.navigation .max_width nav ul.right li.nav_6 a { float: right; width: 90px; }
 
 body.home .navigation nav .left li.nav_1 a,
 body.page-about .navigation nav .left li.nav_2 a,
@@ -159,12 +173,22 @@ body.post-type-archive-goods .navigation nav .right li.nav_4 a,
 body.single-goods .navigation nav .right li.nav_4 a,
 body.page-blog .navigation nav .right li.nav_5 a,
 body.single-post .navigation nav .right li.nav_5 a,
-body.page-contact .navigation nav .right li.nav_6 a {
-    display: inline;
-	height: auto;
-	padding: 7px 12px 4px 12px;
-
-	@include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
+body.page-contact .navigation nav .right li.nav_6 a,
+body.home .navigation nav .left li.nav_1 a:hover,
+body.page-about .navigation nav .left li.nav_2 a:hover,
+body.post-type-archive-work .navigation nav .left li.nav_3 a:hover,
+body.single-work .navigation nav .left li.nav_3 a:hover,
+body.post-type-archive-goods .navigation nav .right li.nav_4 a:hover,
+body.single-goods .navigation nav .right li.nav_4 a:hover,
+body.page-blog .navigation nav .right li.nav_5 a:hover,
+body.single-post .navigation nav .right li.nav_5 a:hover,
+body.page-contact .navigation nav .right li.nav_6 a:hover {
+    height: 30px;
+    padding: 0;
+    
+    @include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
+	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
 }
 
 /*------------------------------------------------------------------

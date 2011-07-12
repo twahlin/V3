@@ -30,6 +30,13 @@
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.cycle.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/plugins.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/script.js"></script>
+<script type="text/javascript">
+    $('.feed_lastfm').lastfm('twahlin','recenttracks','9b5045d6a52e5972cdf40e1193c1041f', {
+        limit: 8,        
+        noimage: '<?php bloginfo('template_directory'); ?>/images/no_album_art.png',
+        imagesize: 'large'
+    });
+</script>
 
 <!--[if (lt IE 9) & (!IEMobile)]>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/DOMAssistantCompressed-2.8.js"></script>

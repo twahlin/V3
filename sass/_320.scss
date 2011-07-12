@@ -235,14 +235,23 @@ body.post-type-archive-goods .navigation nav .right li.nav_4 a,
 body.single-goods .navigation nav .right li.nav_4 a,
 body.page-blog .navigation nav .right li.nav_5 a,
 body.single-post .navigation nav .right li.nav_5 a,
-body.page-contact .navigation nav .right li.nav_6 a {
+body.page-contact .navigation nav .right li.nav_6 a,
+body.home .navigation nav .left li.nav_1 a:hover,
+body.page-about .navigation nav .left li.nav_2 a:hover,
+body.post-type-archive-work .navigation nav .left li.nav_3 a:hover,
+body.single-work .navigation nav .left li.nav_3 a:hover,
+body.post-type-archive-goods .navigation nav .right li.nav_4 a:hover,
+body.single-goods .navigation nav .right li.nav_4 a:hover,
+body.page-blog .navigation nav .right li.nav_5 a:hover,
+body.single-post .navigation nav .right li.nav_5 a:hover,
+body.page-contact .navigation nav .right li.nav_6 a:hover {
 	background: #6caddf;
 	color: #fff;
 	height: 48px;
     padding-top: 2px;
 
-	@include background(linear-gradient(rgba(134,198,247, .8), rgba(108,173,223, .8)));
-	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+	@include background(linear-gradient(rgba(134,198,247, .7), rgba(108,173,223, .7)));
+	@include box-shadow(inset rgba(72, 110, 140, .8) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
 	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
 	
 	@include pie-element(relative);
@@ -452,6 +461,130 @@ footer .footer_nav li a:focus,
 footer .footer_nav li a:active {
     color: $blue;
     border-bottom: 1px dotted #6caddf;
+}
+
+//------------------------------------------------------------------
+//Last.fm Icons and functionality.
+//------------------------------------------------------------------
+
+.lastFMBody {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lastFMBody .itemRow {
+    float: left;
+    height: 132px;
+    margin: 0 6%;
+    position: relative;
+    width: 132px;
+}
+
+.lastFMBody ul li a {
+    background-size: 120px 120px;
+    background-position: 0px 0px;
+    border: 1px solid #fff;    
+    height: 120px;
+    left: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    width: 120px;
+    
+    @include border-radius(3px);
+    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+}
+
+.lastFMBody ul li a:before {
+    background: image-url('overlay_album_shine.png');
+    content: "";
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;    
+    width: 120px;    
+    z-index: 1;
+}
+
+.lastFMBody ul li:hover a {
+    border: 6px solid #4ab0ff;
+    left: 0;
+    top: 0;
+    
+    @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);        
+}
+
+
+.lastFMBody ul li a img {
+    height: 120px;
+    width: 120px;
+    
+    @include opacity(0);
+}
+
+.lastFMBody .itemName {
+    border: none;
+    font-size: 10px;
+    line-height: 12px;
+    height: 132px;   
+    position: absolute;
+    text-align: center;
+    width: 132px;
+    
+    @include background(radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7) 40px));
+    @include border-radius(6px);      
+}
+
+.lastFMBody .itemName a {
+    border-color: transparent;
+    color: #fff;  
+    height: 38px;
+    overflow: hidden;  
+    padding: 78px 15px 4px 15px;
+    width: 90px;    
+    z-index: 4;
+    
+	@include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+}
+
+.lastFMBody .itemName a em {
+    display: block;
+    font-style: normal;
+    height: 38px;
+    overflow: hidden;
+}
+
+.lastFMBody .itemName a:before {
+    background: none;
+}
+
+.itemArtist {
+    color: #fff;
+    font-size: 13px;
+    height: 34px;
+    left: 0; 
+    overflow: hidden;
+    padding: 20px 15px 0 15px;   
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 102px;
+    z-index: 3;
+    
+	@include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+}
+
+.lastFMBody .itemName,
+.lastFMBody .itemArtist {
+    @include opacity(0);
+}
+
+.lastFMBody .itemRow:hover .itemName,
+.lastFMBody .itemRow:hover .itemArtist {
+    @include opacity(1);
+    @include transition-property(opacity);
+  	@include transition-duration(0.5s);
 }
 
 //------------------------------------------------------------------

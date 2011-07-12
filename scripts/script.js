@@ -46,6 +46,7 @@ jQuery(document).ready(function($){
     $('.feed_twitter').twitterfeed('twahlin', {
         limit: 5
     });
+    
 
     //flickr feed
     // $('.feed_flickr').flickrfeed('','', {
@@ -54,11 +55,11 @@ jQuery(document).ready(function($){
     // });
 
     //last.fm feed
-    $('.feed_lastfm').lastfm('twahlin','recenttracks','9b5045d6a52e5972cdf40e1193c1041f', {
-        limit: 10,        
-        noimage: 'public/images/noimage.gif',
-        imagesize: 'large'
-    });
+    // $('.feed_lastfm').lastfm('twahlin','recenttracks','9b5045d6a52e5972cdf40e1193c1041f', {
+    //     limit: 8,        
+    //     noimage: 'images/no_album_art.png',
+    //     imagesize: 'large'
+    // });
 
 
 // $(function(){
