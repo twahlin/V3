@@ -44,6 +44,27 @@ function create_post_type() {
             'rewrite' => array('slug' => 'goods')
         )
     );
+    register_post_type( 'blog',
+        array(
+            'labels' => array(
+            'name' => __( 'Blog Posts' ),
+            'singular_name' => __( 'Blog' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array (
+            'title',
+            'editor',
+            'thumbnail',
+            'excerpt',
+            'custom-fields',
+            'categories'
+            ),
+            'has_archive' => 'blog',
+            'menu_position' => 6,
+            'rewrite' => array('slug' => 'blog')
+        )
+    );
 }
 // End Custom Post types
 

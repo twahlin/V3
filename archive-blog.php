@@ -9,7 +9,7 @@ get_header(); ?>
 
 
 
-<?php query_posts(); ?>
+<?php query_posts(array('post_type' => 'blog')); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <div class="post">
