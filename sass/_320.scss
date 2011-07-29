@@ -471,58 +471,50 @@ footer .footer_nav li a:active {
 //Last.fm Icons and functionality.
 //------------------------------------------------------------------
 
-.lastFMBody {
+/*.lastFMBody {
+    border-top: 1px solid #bbb; 
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
 }
 
 .lastFMBody .itemRow {
-    float: left;
-    height: 132px;
-    margin: 0 6%;
+    overflow: hidden;
+    height: 73px;
+}
+
+.lastFMBody .itemRowWrap {
+    border-bottom: 1px solid #bbb;
+    display: block;
+    padding: 5px;    
     position: relative;
-    width: 132px;
+    
+    @include background(linear-gradient(rgba(255,255,255, 1), rgba(238,238,238, 1)));     
+}
+
+.lastFMBody .artWrap {
+    display: block;
+    position: relative;
 }
 
 .lastFMBody ul li a {
-    background-size: 120px 120px;
+    background-size: 60px 60px;
     background-position: 0px 0px;
-    border: 1px solid #fff;    
-    height: 120px;
-    left: 5px;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;  
+    display: block;  
+    height: 60px;
     overflow: hidden;
-    position: absolute;
-    top: 5px;
-    width: 120px;
+    width: 60px;
     
     @include border-radius(3px);
     @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
 }
 
-.lastFMBody ul li a:before {
-    background: image-url('overlay_album_shine.png');
-    content: "";
-    height: 120px;
-    left: 0;
-    position: absolute;
-    top: 0;    
-    width: 120px;    
-    z-index: 1;
-}
-
-.lastFMBody ul li:hover a {
-    border: 6px solid #4ab0ff;
-    left: 0;
-    top: 0;
-    
-    @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);        
-}
-
 
 .lastFMBody ul li a img {
-    height: 120px;
-    width: 120px;
+    height: 60px;
+    width: 60px;
     
     @include opacity(0);
 }
@@ -530,65 +522,109 @@ footer .footer_nav li a:active {
 .lastFMBody .itemName {
     border: none;
     font-size: 10px;
-    line-height: 12px;
-    height: 132px;   
-    position: absolute;
-    text-align: center;
-    width: 132px;
-    
-    @include background(radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7) 40px));
-    @include border-radius(6px);      
+    line-height: 12px; 
+    text-align: left;   
 }
 
 .lastFMBody .itemName a {
-    border-color: transparent;
+    border: none;
     color: #fff;  
-    height: 38px;
-    overflow: hidden;  
-    padding: 78px 15px 4px 15px;
-    width: 90px;    
-    z-index: 4;
+    display: block;
+    height: 73px;   
+    position: absolute;
+    width: 100%; 
     
-	@include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+    @include box-shadow(rgba(0, 0, 0, 0) 0 0 0, inset rgba(0, 0, 0, 0) 0 0 0);
+    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
 }
 
 .lastFMBody .itemName a em {
-    display: block;
     font-style: normal;
-    height: 38px;
-    overflow: hidden;
 }
 
-.lastFMBody .itemName a:before {
-    background: none;
-}
-
-.itemArtist {
+.lastFMBody .itemArtist {
     color: #fff;
     font-size: 13px;
-    height: 34px;
-    left: 0; 
     overflow: hidden;
-    padding: 20px 15px 0 15px;   
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 102px;
-    z-index: 3;
+    text-align: left;
     
-	@include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+}*/
+
+/*.lastFMBody .itemArtist,
+.lastFMBody .itemName {
+    color: #666;
+    position: absolute;
+    left: 80px;
+    top: 0;
+}*/
+
+.lastFMBody ul {
+    border-top: 1px solid #ccc;
 }
 
-.lastFMBody .itemName,
-.lastFMBody .itemArtist {
+.lastFMBody ul .itemRow {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff; 
+    
+    @include background(linear-gradient(rgba(250,250,250, 1), rgba(230,230,230, 1)));        
+}
+
+.lastFMBody ul .itemRow a {
+    display: block;
+    height: 79px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lastFMBody ul .itemRow a .artWrap {
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 60px;
+    left: 10px;
+    position: absolute;
+    top: 9px;
+    width: 60px; 
+    
+    @include border-radius(3px);
+    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+}
+
+.lastFMBody ul .itemRow a .artWrap img {
+    display: block;
+    height: 60px;
+    width: 60px;
+    
     @include opacity(0);
 }
 
-.lastFMBody .itemRow:hover .itemName,
-.lastFMBody .itemRow:hover .itemArtist {
-    @include opacity(1);
-    @include transition-property(opacity);
-  	@include transition-duration(0.5s);
+.lastFMBody ul .itemRow a .track_info {
+    display: table;
+    height: 79px;  
+    width: 100%;
+}
+
+.lastFMBody ul .itemRow a .track_info p {
+    color: #444;
+    display: table-cell;
+    height: 79px;
+    font-size: 14px;
+    padding-left: 88px;
+    padding-right: 15%;
+    vertical-align: middle;    
+
+    @include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
+}
+
+.lastFMBody ul .itemRow a .track_info p .itemName,
+.lastFMBody ul .itemRow a .track_info p .itemArtist {
+    font-style: normal;       
+}
+
+.lastFMBody ul .itemRow a .track_info p .itemName {
+    font-weight: bold;
 }
 
 //------------------------------------------------------------------

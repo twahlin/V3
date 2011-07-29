@@ -711,33 +711,129 @@ footer .footer_nav li a:active {
   border-bottom: 1px dotted #6caddf;
 }
 
-/* line 474, ../sass/_320.scss */
-.lastFMBody {
-  margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
+/*.lastFMBody {
+    border-top: 1px solid #bbb; 
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
 }
 
-/* line 480, ../sass/_320.scss */
 .lastFMBody .itemRow {
-  float: left;
-  height: 132px;
-  margin: 0 6%;
-  position: relative;
-  width: 132px;
+    overflow: hidden;
+    height: 73px;
 }
 
-/* line 488, ../sass/_320.scss */
+.lastFMBody .itemRowWrap {
+    border-bottom: 1px solid #bbb;
+    display: block;
+    padding: 5px;    
+    position: relative;
+    
+    @include background(linear-gradient(rgba(255,255,255, 1), rgba(238,238,238, 1)));     
+}
+
+.lastFMBody .artWrap {
+    display: block;
+    position: relative;
+}
+
 .lastFMBody ul li a {
-  background-size: 120px 120px;
-  background-position: 0px 0px;
-  border: 1px solid #fff;
-  height: 120px;
-  left: 5px;
+    background-size: 60px 60px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;  
+    display: block;  
+    height: 60px;
+    overflow: hidden;
+    width: 60px;
+    
+    @include border-radius(3px);
+    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+}
+
+
+.lastFMBody ul li a img {
+    height: 60px;
+    width: 60px;
+    
+    @include opacity(0);
+}
+
+.lastFMBody .itemName {
+    border: none;
+    font-size: 10px;
+    line-height: 12px; 
+    text-align: left;   
+}
+
+.lastFMBody .itemName a {
+    border: none;
+    color: #fff;  
+    display: block;
+    height: 73px;   
+    position: absolute;
+    width: 100%; 
+    
+    @include box-shadow(rgba(0, 0, 0, 0) 0 0 0, inset rgba(0, 0, 0, 0) 0 0 0);
+    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+}
+
+.lastFMBody .itemName a em {
+    font-style: normal;
+}
+
+.lastFMBody .itemArtist {
+    color: #fff;
+    font-size: 13px;
+    overflow: hidden;
+    text-align: left;
+    
+    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+}*/
+/*.lastFMBody .itemArtist,
+.lastFMBody .itemName {
+    color: #666;
+    position: absolute;
+    left: 80px;
+    top: 0;
+}*/
+/* line 562, ../sass/_320.scss */
+.lastFMBody ul {
+  border-top: 1px solid #ccc;
+}
+
+/* line 566, ../sass/_320.scss */
+.lastFMBody ul .itemRow {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e6e6e6));
+  background: -webkit-linear-gradient(#fafafa, #e6e6e6);
+  background: -moz-linear-gradient(#fafafa, #e6e6e6);
+  background: -o-linear-gradient(#fafafa, #e6e6e6);
+  background: -ms-linear-gradient(#fafafa, #e6e6e6);
+  -pie-background: linear-gradient(#fafafa, #e6e6e6);
+  background: linear-gradient(#fafafa, #e6e6e6);
+}
+
+/* line 573, ../sass/_320.scss */
+.lastFMBody ul .itemRow a {
+  display: block;
+  height: 79px;
   overflow: hidden;
+  position: relative;
+}
+
+/* line 580, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .artWrap {
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  border: 1px solid #fff;
+  color: #fff;
+  height: 60px;
+  left: 10px;
   position: absolute;
-  top: 5px;
-  width: 120px;
+  top: 9px;
+  width: 60px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -750,128 +846,47 @@ footer .footer_nav li a:active {
   box-shadow: rgba(0, 0, 0, 0.2) 1px 0 5px, inset rgba(0, 0, 0, 0.5) 0 0 2px;
 }
 
-/* line 503, ../sass/_320.scss */
-.lastFMBody ul li a:before {
-  background: url('../images/overlay_album_shine.png?1311391074');
-  content: "";
-  height: 120px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 120px;
-  z-index: 1;
-}
-
-/* line 514, ../sass/_320.scss */
-.lastFMBody ul li:hover a {
-  border: 6px solid #4ab0ff;
-  left: 0;
-  top: 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
-}
-
-/* line 523, ../sass/_320.scss */
-.lastFMBody ul li a img {
-  height: 120px;
-  width: 120px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-
-/* line 530, ../sass/_320.scss */
-.lastFMBody .itemName {
-  border: none;
-  font-size: 10px;
-  line-height: 12px;
-  height: 132px;
-  position: absolute;
-  text-align: center;
-  width: 132px;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 40, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, rgba(0, 0, 0, 0.7)));
-  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 40px);
-  background: -moz-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 40px);
-  background: -o-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 40px);
-  background: -ms-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 40px);
-  -pie-background: -pie-radial-gradient(unsupported);
-  background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 40px);
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-}
-
-/* line 543, ../sass/_320.scss */
-.lastFMBody .itemName a {
-  border-color: transparent;
-  color: #fff;
-  height: 38px;
-  overflow: hidden;
-  padding: 78px 15px 4px 15px;
-  width: 90px;
-  z-index: 4;
-  text-shadow: black 0 1px 1px;
-}
-
-/* line 555, ../sass/_320.scss */
-.lastFMBody .itemName a em {
+/* line 595, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .artWrap img {
   display: block;
-  font-style: normal;
-  height: 38px;
-  overflow: hidden;
-}
-
-/* line 562, ../sass/_320.scss */
-.lastFMBody .itemName a:before {
-  background: none;
-}
-
-/* line 566, ../sass/_320.scss */
-.itemArtist {
-  color: #fff;
-  font-size: 13px;
-  height: 34px;
-  left: 0;
-  overflow: hidden;
-  padding: 20px 15px 0 15px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 102px;
-  z-index: 3;
-  text-shadow: black 0 1px 1px;
-}
-
-/* line 583, ../sass/_320.scss */
-.lastFMBody .itemName,
-.lastFMBody .itemArtist {
+  height: 60px;
+  width: 60px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
-/* line 588, ../sass/_320.scss */
-.lastFMBody .itemRow:hover .itemName,
-.lastFMBody .itemRow:hover .itemArtist {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+/* line 603, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .track_info {
+  display: table;
+  height: 79px;
+  width: 100%;
 }
 
-/* line 598, ../sass/_320.scss */
+/* line 609, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .track_info p {
+  color: #444;
+  display: table-cell;
+  height: 79px;
+  font-size: 14px;
+  padding-left: 88px;
+  padding-right: 15%;
+  vertical-align: middle;
+  text-shadow: white 0 1px 1px;
+}
+
+/* line 622, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .track_info p .itemName,
+.lastFMBody ul .itemRow a .track_info p .itemArtist {
+  font-style: normal;
+}
+
+/* line 626, ../sass/_320.scss */
+.lastFMBody ul .itemRow a .track_info p .itemName {
+  font-weight: bold;
+}
+
+/* line 634, ../sass/_320.scss */
 .FPO_individual_port aside h3 {
   color: #444;
   font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
@@ -883,7 +898,7 @@ footer .footer_nav li a:active {
   text-shadow: white 0 2px 2px;
 }
 
-/* line 610, ../sass/_320.scss */
+/* line 646, ../sass/_320.scss */
 .FPO_individual_port aside ul {
   border-top: 1px solid #bbb;
   font-size: 14px;
@@ -891,20 +906,20 @@ footer .footer_nav li a:active {
   text-shadow: white 0 1px 1px;
 }
 
-/* line 618, ../sass/_320.scss */
+/* line 654, ../sass/_320.scss */
 .FPO_individual_port aside ul li {
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #bbb;
 }
 
-/* line 623, ../sass/_320.scss */
+/* line 659, ../sass/_320.scss */
 .FPO_individual_port section ul {
   display: block;
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 629, ../sass/_320.scss */
+/* line 665, ../sass/_320.scss */
 .FPO_individual_port section ul li {
   background: rgba(255, 255, 255, 0.25);
   display: block;
@@ -918,7 +933,7 @@ footer .footer_nav li a:active {
   position: relative;
 }
 
-/* line 640, ../sass/_320.scss */
+/* line 676, ../sass/_320.scss */
 .FPO_individual_port section ul li img {
   display: block;
   margin: 0 auto;
@@ -1358,6 +1373,269 @@ footer .footer_nav li a:active {
   /* line 219, ../sass/_768.scss */
   .footer_wrap {
     padding: 0 3% 0 3%;
+  }
+
+  /*
+  .lastFMBody {
+      border: none;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 100%;
+  }
+  
+  .lastFMBody .itemRow {
+      background: none;
+      border: none;
+      float: left;
+      height: 132px;
+      margin: 0 6%;
+      position: relative;
+      width: 132px;
+  }
+  
+  .itemRowWrap {
+      border: none;
+      display: inline;
+  }
+  
+  .lastFMBody ul li a {
+      background-size: 120px 120px;
+      background-position: 0px 0px;
+      border: 1px solid #fff;    
+      height: 120px;
+      left: 5px;
+      overflow: hidden;
+      position: absolute;
+      top: 5px;
+      width: 120px;
+      
+      @include border-radius(3px);
+      @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+  }
+  
+  .lastFMBody ul li a:before {
+      background: image-url('overlay_album_shine.png');
+      content: "";
+      height: 120px;
+      left: 0;
+      position: absolute;
+      top: 0;    
+      width: 120px;    
+      z-index: 1;
+  }
+  
+  .lastFMBody ul li:hover a {
+      border: 6px solid #4ab0ff;
+      left: 0;
+      top: 0;
+      
+      @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);        
+  }
+  
+  
+  .lastFMBody ul li a img {
+      height: 120px;
+      width: 120px;
+      
+      @include opacity(0);
+  }
+  
+  .lastFMBody .itemName {
+      border: none;
+      font-size: 10px;
+      line-height: 12px;
+      height: 132px;   
+      position: absolute;
+      text-align: center;
+      width: 132px;
+      
+      @include background(radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7) 40px));
+      @include border-radius(6px);      
+  }
+  
+  .lastFMBody .itemName a {
+      border-color: transparent;
+      color: #fff;  
+      height: 38px;
+      overflow: hidden;  
+      padding: 78px 15px 4px 15px;
+      width: 90px;    
+      z-index: 4;
+      
+      @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+  }
+  
+  .lastFMBody .itemName a em {
+      display: block;
+      font-style: normal;
+      height: 38px;
+      overflow: hidden;
+  }
+  
+  .lastFMBody .itemName a:before {
+      background: none;
+  }
+  
+  .lastFMBody .itemArtist {
+      color: #fff;
+      font-size: 13px;
+      height: 34px;
+      left: 0; 
+      overflow: hidden;
+      padding: 20px 15px 0 15px;   
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 102px;
+      z-index: 3;
+      
+      @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
+  }
+  
+  .lastFMBody .itemName,
+  .lastFMBody .itemArtist {
+      @include opacity(0);
+  }
+  
+  .lastFMBody .itemRow:hover .itemName,
+  .lastFMBody .itemRow:hover .itemArtist {
+      @include opacity(1);
+      @include transition-property(opacity);
+      @include transition-duration(0.5s);
+  }*/
+  /* line 356, ../sass/_768.scss */
+  .lastFMBody ul {
+    border-top: none;
+  }
+
+  /* line 360, ../sass/_768.scss */
+  .lastFMBody ul .itemRow {
+    background: none;
+    border: none;
+    float: left;
+    height: 132px;
+    margin: 50px;
+    position: relative;
+    width: 132px;
+  }
+
+  /* line 370, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a {
+    display: block;
+    height: 122px;
+    left: 5px;
+    overflow: visible;
+    position: relative;
+    top: 5px;
+    width: 122px;
+  }
+
+  /* line 380, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .artWrap {
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 120px;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 120px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 0 5px, inset rgba(0, 0, 0, 0.5) 0 0 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 0 5px, inset rgba(0, 0, 0, 0.5) 0 0 2px;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 0 5px, inset rgba(0, 0, 0, 0.5) 0 0 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 0 5px, inset rgba(0, 0, 0, 0.5) 0 0 2px;
+  }
+
+  /* line 395, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .artWrap:before {
+    background: url('../images/overlay_album_shine.png?1311391074');
+    content: "";
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 120px;
+    z-index: 1;
+  }
+
+  /* line 406, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .artWrap img {
+    height: 120px;
+    width: 120px;
+  }
+
+  /* line 411, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .track_info {
+    background: rgba(0, 0, 0, 0.7);
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    height: 120px;
+    width: 120px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+
+  /* line 422, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .track_info p {
+    color: #fff;
+    height: 120px;
+    padding: 0;
+    text-align: center;
+    width: 120px;
+    text-shadow: black 0 1px 1px;
+  }
+
+  /* line 433, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .track_info p .itemName,
+  .lastFMBody ul .itemRow a .track_info p .itemArtist {
+    font-size: 11px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 0 12px;
+  }
+
+  /* line 440, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a .track_info p .itemName {
+    height: 50px;
+  }
+
+  /* line 445, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a:hover {
+    left: 0;
+    top: 0;
+  }
+
+  /* line 450, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a:hover .artWrap {
+    border: 6px solid #4ab0ff;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
+    -o-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
+  }
+
+  /* line 456, ../sass/_768.scss */
+  .lastFMBody ul .itemRow a:hover .track_info {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -moz-transition-property: opacity;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
   }
 }
 @media only screen and (min-width: 992px) {
