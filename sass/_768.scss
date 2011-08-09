@@ -412,6 +412,7 @@ Footer
 .lastFMBody ul .itemRow a .track_info {
     background: rgba(0, 0, 0, .7);
     left: 6px;
+	overflow: hidden;
     position: absolute;
     top: 6px;
     height: 120px;  
