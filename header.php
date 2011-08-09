@@ -1,3 +1,7 @@
+<?php
+    include_once(ABSPATH . WPINC . '/feed.php');
+    include_once(ABSPATH . WPINC . '/rss.php');
+?>
 <!DOCTYPE html>
 <!--[if IE 6]><meta HTTP-EQUIV="REFRESH" content="0; url=<?php bloginfo('template_directory'); ?>/ie6"><![endif]-->
 <!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
@@ -58,12 +62,12 @@
                     <div class="before_header_inner">
                         <p class="charter"><strong>Tom Wahlin</strong>&mdash;Designer and front-end developer</p>
                         <ul>
-                           <li class="dribbble"><a rel="external" title="Visit Tom Wahlin&rsquo;s Dribbble" href="http://dribbble.com/twahlin"></a></li>
-                           <li class="facebook"><a rel="external" title="Visit Tom Wahlin&rsquo;s Facebook" href="http://www.facebook.com/twahlin"></a></li>
-                           <li class="flickr"><a rel="external" title="Visit Tom Wahlin&rsquo;s Flickr" href="http://www.flickr.com/photos/twahlin"></a></li>
-                           <li class="linkedin"><a rel="external" title="Visit Tom Wahlin&rsquo;s Linkedin" href="http://www.linkedin.com/in/tomwahlin"></a></li>
-                           <li class="last_fm"><a rel="external" title="Visit Tom Wahlin&rsquo;s Last.fm" href="http://www.last.fm/user/twahlin"></a></li>
-                           <li class="twitter"><a rel="external" title="Visit Tom Wahlin&rsquo;s Twitter" href="http://twitter.com/twahlin"></a></li>
+                           <li class="dribbble"><a rel="external" title="Visit Tom Wahlin&rsquo;s Dribbble" href="http://dribbble.com/twahlin">Dribbble</a></li>
+                           <li class="facebook"><a rel="external" title="Visit Tom Wahlin&rsquo;s Facebook" href="http://www.facebook.com/twahlin">Facebook</a></li>
+                           <li class="flickr"><a rel="external" title="Visit Tom Wahlin&rsquo;s Flickr" href="http://www.flickr.com/photos/twahlin">Flickr</a></li>
+                           <li class="linkedin"><a rel="external" title="Visit Tom Wahlin&rsquo;s Linkedin" href="http://www.linkedin.com/in/tomwahlin">Linkedin</a></li>
+                           <li class="last_fm"><a rel="external" title="Visit Tom Wahlin&rsquo;s Last.fm" href="http://www.last.fm/user/twahlin">Last.fm</a></li>
+                           <li class="twitter"><a rel="external" title="Visit Tom Wahlin&rsquo;s Twitter" href="http://twitter.com/twahlin">Twitter</a></li>
                         </ul>
                     </div>    
                 </div> 

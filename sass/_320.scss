@@ -139,7 +139,6 @@ h1 a span {
 //------------------------------------------------------------------
 
 .navigation {
-
     border-top: 1px solid #6caddf;
     border-bottom: 1px solid #6caddf;
     font-family: $proxima_stack;
@@ -625,6 +624,42 @@ footer .footer_nav li a:active {
 
 .lastFMBody ul .itemRow a .track_info p .itemName {
     font-weight: bold;
+}
+
+//------------------------------------------------------------------
+//Skillset section and Functionality
+//------------------------------------------------------------------
+
+.progress_bar {
+    background: #f2f2f2 image-url('bg_noise_transparent.png') center;
+    border: 1px solid #fff;    
+    height: 24px;
+    position: relative;
+    
+    @include border-radius(12px);
+	@include box-shadow(rgba(0, 0, 0, .55) 0 0 5px, inset rgba(0, 0, 0, .55) 0 0 5px);
+}
+
+.progress_bar:after {
+    background: #68afe5;
+    content: "";   
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    
+	@include background(linear-gradient(rgba(134,198,247, 1), rgba(108,173,223, 1))); 
+    @include border-radius(10px);
+	@include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 1px);    
+}
+
+.progress_bar em {
+    font-size: 10px;
+    font-style: normal;
+    line-height: 24px;
+    margin-left: 10px;
 }
 
 //------------------------------------------------------------------

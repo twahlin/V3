@@ -39,7 +39,8 @@
 	background: url('../images/png_master_sprite.png');    
 	display: block;
 	height: 0;
-	height: 42px;
+	overflow: hidden;
+	padding-top: 42px;
 	position: relative;
 	width: 28px;
 	

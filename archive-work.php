@@ -19,6 +19,14 @@ get_header(); ?>
 
  <div class="entry">
      <?php the_content('View Project'); ?>
+     
+     <?php if ( get_post_meta($post->ID, 'my_meta_box_text', true) ) : ?>
+         <a href="<?php the_permalink() ?>" rel="bookmark">
+             <?php echo get_post_meta($post->ID, 'my_meta_box_text', true) ?>
+         </a>
+     <?php endif; ?>
+
+     
  </div>
 
 </div> <!-- closes the first div box -->
