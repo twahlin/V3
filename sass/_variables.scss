@@ -1,0 +1,39 @@
+//------------------------------------------------------------------
+//Typography
+//------------------------------------------------------------------
+
+$proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
+
+@mixin proxima_thin { font-family: $proxima_stack; font-weight: 100; font-style: normal; }
+@mixin proxima_thin_italic { font-family: $proxima_stack; font-weight: 100; font-style: italic; }
+@mixin proxima_light { font-family: $proxima_stack; font-weight: 300; font-style: normal; }
+@mixin proxima_light_italic { font-family: $proxima_stack; font-weight: 300; font-style: italic; }
+@mixin proxima_regular { font-family: $proxima_stack; font-weight: 400; font-style: normal; }
+@mixin proxima_regular_italic { font-family: $proxima_stack; font-weight: 400; font-style: italic; }
+@mixin proxima_semibold { font-family: $proxima_stack; font-weight: 600; font-style: normal; }
+@mixin proxima_semibold_italic { font-family: $proxima_stack; font-weight: 600; font-style: italic; }
+@mixin proxima_bold { font-family: $proxima_stack; font-weight: 700; font-style: normal; }
+@mixin proxima_bold_italic { font-family: $proxima_stack; font-weight: 700; font-style: italic; }
+@mixin proxima_extrabold { font-family: $proxima_stack; font-weight: 800; font-style: normal; }
+@mixin proxima_extrabold_italic { font-family: $proxima_stack; font-weight: 800; font-style: italic; }
+@mixin proxima_black { font-family: $proxima_stack; font-weight: 900; font-style: normal; }
+@mixin proxima_black_italic { font-family: $proxima_stack; font-weight: 900; font-style: italic; }
+
+
+@mixin white_text_shadow_bottom { @include text-shadow(#fff 0 1px 0); }
+@mixin white_text_shadow_top { @include text-shadow(#fff 0 -1px 0); }
+@mixin black_text_shadow_bottom { @include text-shadow(#000 0 1px 0); }
+@mixin black_text_shadow_top { @include text-shadow(#000 0 -1px 0); }
+
+//------------------------------------------------------------------
+//Colors
+//------------------------------------------------------------------
+
+$blue: #6caddf;
+$hover_blue: #8acbfc;
+
+//wcag compliant
+$link_blue: #00538e;
+
+@mixin gradient_solid_standard { @include background(linear-gradient(rgba(153,204,245, 1), rgba(129,181,220, 1))); }
+@mixin gradient_solid_hover { @include background(linear-gradient(rgba(163,214,255, 1), rgba(139,191,230, 1))); }

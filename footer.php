@@ -6,7 +6,6 @@
 <footer>
     <div class="footer_wrap">
         <div class="max_width">
-            <div class="resize_icon"><p title="Media queries make this site responisbly responsive. Resize your browser window to see for yourself">Resize &rarr;</p></div>
             <p class="copyright">&copy; <? echo date("Y");?> Tom Wahlin</p> 
             <ul class="footer_nav">
                <li><a href="<?php bloginfo('url'); ?>">Home</a></li>

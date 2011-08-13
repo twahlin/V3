@@ -36,7 +36,7 @@ get_header(); ?>
 
 <div class="feed_home">
     <section class="home_recent_post">
-        <h4>Recent Post</h4>
+        <h5>Recent Post</h5>
         <?php
         $args = array( 'numberposts' => 1, 'post_type' => 'blog' );
         $postslist = get_posts( $args );
@@ -50,7 +50,7 @@ get_header(); ?>
         <?php endforeach; ?>
     </section>
     <section class="home_dribbble_shots">
-        <h4>Dribbble Shots</h4>
+        <h5>Dribbble Shots</h5>
         <?php 
             if(function_exists('fetch_feed')):
                 $rss = fetch_feed("http://dribbble.com/twahlin/shots.rss");
@@ -88,11 +88,11 @@ get_header(); ?>
         ?>
     </section>
     <section class="home_tweets">
-        <h4>Tweets</h4>
+        <h5>Tweets</h5>
         <div class="feed_twitter"><p class="js_off">Oops! JavaScript needs to be enabled to view <a href="http://www.twitter.com/twahlin">twitter feed.</a></p></div>
     </section>
     <section class="home_connections">
-        <h4>Connections</h4>
+        <h5>Connections</h5>
     </section>    
 </div>
 

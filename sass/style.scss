@@ -10,11 +10,7 @@ $pie-behavior: url("/PIE.htc");
 //Variables
 //------------------------------------------------------------------
 
-//Typography
-$proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
-
-//Colors
-$blue: #6caddf;
+@import "_variables.scss";
 
 //------------------------------------------------------------------
 //Media Queries
@@ -37,3 +33,9 @@ $blue: #6caddf;
 @media only screen and (min-width: 1150px) {
 	@import "_1150.scss";	
 }
+
+//------------------------------------------------------------------
+//Temporary
+//------------------------------------------------------------------
+
+@import "_tmp_boilerplate.scss";

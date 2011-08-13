@@ -3,9 +3,12 @@
 //------------------------------------------------------------------
 
 html {
-    background: #eee image-url('bg_light_source.jpg') top no-repeat;    
+    background: #eee image-url('bg_light_source.jpg') top no-repeat;
+    color: #333;    
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-y : scroll;
+    
+    -webkit-font-smoothing: antialiased;    
 }
 
 //Opera Fix for sticky footer
@@ -20,6 +23,55 @@ body:before {
 a,
 a:visited {
     color: $blue;
+}
+
+h2, h3, h4, h5, h6 {
+    @include proxima_regular;
+    @include white_text_shadow_bottom;
+}
+
+h2 { 
+    color: #666;
+    font-size: 60px;
+    line-height: 72px;
+    padding: 40px 0 0 40px; 
+}
+
+h5 {
+    font-size: 30px;
+    line-height: 36px;
+    
+    @include proxima_light;
+}
+
+//------------------------------------------------------------------
+//Buttons
+//------------------------------------------------------------------
+
+.button,
+.button:visited {
+    border: 1px solid #6f9dc0;
+    background: $blue;
+    color: #fff;
+    font-size: 15px;
+    padding: 7px 12px 6px 12px;
+    line-height: 34px;
+    
+    @include border-radius (3px);
+    @include box-shadow(rgba(0, 0, 0, .2) 0 0 8px, inset rgba(207, 233, 254, 1) 0 1px 0);
+    @include gradient_solid_standard;
+    @include proxima_regular;
+    @include text-shadow(#4c88b6 0 -1px 1px);
+}
+
+.button:hover {
+    background: $hover_blue;
+    
+    @include box-shadow(rgba(0, 0, 0, .35) 0 0 8px, inset rgba(220, 243, 255, 1) 0 1px 0);
+    @include gradient_solid_hover;
+    @include transition-property(all);
+  	@include transition-duration(0.3s);
+  	@include transition-timing-function(ease-in);	    
 }
 
 //------------------------------------------------------------------
@@ -54,7 +106,7 @@ a:visited {
     z-index: 101;
 
     @include background(linear-gradient(rgba(112,112,112, 1), rgba(92,92,92, 1)));
- 	@include text-shadow(rgba(black, 1) 0 -1px 1px);
+ 	@include black_text_shadow_top;   
 }
 
 .before_header ul {
@@ -141,17 +193,16 @@ h1 a span {
 .navigation {
     border-top: 1px solid #6caddf;
     border-bottom: 1px solid #6caddf;
-    font-family: $proxima_stack;
     font-size: 16px;
-    font-weight: 600;
     letter-spacing: 2px;
     line-height: 50px;
     overflow: hidden;
     text-transform: uppercase;
     z-index: 100;
     
-	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);    
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
+	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
+	@include proxima_semibold;    
+	@include white_text_shadow_bottom;
 	
 	@include pie-element(relative);
 }
@@ -201,7 +252,7 @@ h1 a span {
     height: 50px;
 
 	@include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
+	@include white_text_shadow_bottom;
 }
 
 .navigation nav ul li a:hover, 
@@ -336,6 +387,22 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     margin: 0 20px;
 }
 
+//------------------------------------------------------------------
+//Feed Home
+//------------------------------------------------------------------
+
+.feed_home {
+    overflow: hidden;
+}
+
+.feed_home section {
+    background: aqua;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    overflow: hidden;
+    width: 22.5%;
+}
 
 //------------------------------------------------------------------
 //post_sep
@@ -401,12 +468,12 @@ footer {
     clear: both;
     font-size: 16px;
     height: 70px;
-    margin-top: -71px;
+    margin-top: -50px;
     overflow: hidden;
     position: relative;
     
 	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);    
+	@include white_text_shadow_bottom;    
     
 	@include pie-element(absolute);   
 }
@@ -419,15 +486,13 @@ footer {
 	@include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
 }
 
-.resize_icon { display: none; }
-
 footer .copyright {
     clear: both;
     color: #666;
     font-size: 12px;
     padding-top: 18px;       
 
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);    
+	@include white_text_shadow_bottom;    
 }
 
 footer .footer_nav {
@@ -469,94 +534,6 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 //Last.fm Icons and functionality.
 //------------------------------------------------------------------
-
-/*.lastFMBody {
-    border-top: 1px solid #bbb; 
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-}
-
-.lastFMBody .itemRow {
-    overflow: hidden;
-    height: 73px;
-}
-
-.lastFMBody .itemRowWrap {
-    border-bottom: 1px solid #bbb;
-    display: block;
-    padding: 5px;    
-    position: relative;
-    
-    @include background(linear-gradient(rgba(255,255,255, 1), rgba(238,238,238, 1)));     
-}
-
-.lastFMBody .artWrap {
-    display: block;
-    position: relative;
-}
-
-.lastFMBody ul li a {
-    background-size: 60px 60px;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    border: 1px solid #fff;  
-    display: block;  
-    height: 60px;
-    overflow: hidden;
-    width: 60px;
-    
-    @include border-radius(3px);
-    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
-}
-
-
-.lastFMBody ul li a img {
-    height: 60px;
-    width: 60px;
-    
-    @include opacity(0);
-}
-
-.lastFMBody .itemName {
-    border: none;
-    font-size: 10px;
-    line-height: 12px; 
-    text-align: left;   
-}
-
-.lastFMBody .itemName a {
-    border: none;
-    color: #fff;  
-    display: block;
-    height: 73px;   
-    position: absolute;
-    width: 100%; 
-    
-    @include box-shadow(rgba(0, 0, 0, 0) 0 0 0, inset rgba(0, 0, 0, 0) 0 0 0);
-    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
-}
-
-.lastFMBody .itemName a em {
-    font-style: normal;
-}
-
-.lastFMBody .itemArtist {
-    color: #fff;
-    font-size: 13px;
-    overflow: hidden;
-    text-align: left;
-    
-    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
-}*/
-
-/*.lastFMBody .itemArtist,
-.lastFMBody .itemName {
-    color: #666;
-    position: absolute;
-    left: 80px;
-    top: 0;
-}*/
 
 .lastFMBody ul {
     border-top: 1px solid #ccc;
@@ -614,7 +591,7 @@ footer .footer_nav li a:active {
     padding-right: 15%;
     vertical-align: middle;    
 
-    @include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
+    @include white_text_shadow_bottom;
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName,
@@ -650,7 +627,7 @@ footer .footer_nav li a:active {
     left: 2px;
     width: 50%;
     
-	@include background(linear-gradient(rgba(134,198,247, 1), rgba(108,173,223, 1))); 
+	@include gradient_solid_standard; 
     @include border-radius(10px);
 	@include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 1px);    
 }
@@ -660,56 +637,4 @@ footer .footer_nav li a:active {
     font-style: normal;
     line-height: 24px;
     margin-left: 10px;
-}
-
-//------------------------------------------------------------------
-//Individual work
-//------------------------------------------------------------------
-
-.FPO_individual_port aside h3 {
-    color: #444;
-    font-family: $proxima_stack;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 60px;
-    padding-left: 20px;
-    text-align: left;
-
-	@include text-shadow(rgba(255, 255, 255, 1) 0 2px 2px);       
-}
-
-.FPO_individual_port aside ul {
-    border-top: 1px solid #bbb;
-    font-size: 14px; 
-    margin: 0 20px;
-
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
-}
-
-.FPO_individual_port aside ul li {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #bbb;
-}
-
-.FPO_individual_port section ul {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.FPO_individual_port section ul li {
-    background: rgba(255, 255, 255, .25);
-    display: block;
-    margin: 20px;
-    padding: 1%;
-    
-	@include box-shadow(rgba(0, 0, 0, .25) 0 0 10px);
-	
-	@include pie-element(relative);   
-}
-
-.FPO_individual_port section ul li img {
-    display: block;
-    margin: 0 auto; 
-    width: 100%;
 }

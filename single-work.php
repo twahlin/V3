@@ -14,10 +14,6 @@ get_header(); ?>
 
 Single WOOOOOOORK
 
-<?php
-
-
-?>
 
 
 </div>

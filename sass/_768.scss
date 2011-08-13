@@ -15,7 +15,7 @@
 	text-align: left;
 	text-transform: uppercase;
 	
-	@include text-shadow(rgba(255, 255, 255, 1) 0 1px 1px);
+	@include white_text_shadow_bottom;
 }
 
 .before_header .charter {
@@ -118,7 +118,6 @@
     border: 1px solid #fff;    
     display: block;
     font-size: 14px;       
-    font-weight: 600;
     height: 30px;
     letter-spacing: 0;     
     line-height: 33px;    
@@ -217,6 +216,7 @@ Main Content
 /*------------------------------------------------------------------
 Footer
 ------------------------------------------------------------------*/
+
 .footer_wrap {
 	padding: 0 3% 0 3%;
 }
@@ -224,138 +224,9 @@ Footer
 //------------------------------------------------------------------
 //Last.fm Icons and functionality.
 //------------------------------------------------------------------
-/*
-.lastFMBody {
-    border: none;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-}
-
-.lastFMBody .itemRow {
-    background: none;
-    border: none;
-    float: left;
-    height: 132px;
-    margin: 0 6%;
-    position: relative;
-    width: 132px;
-}
-
-.itemRowWrap {
-    border: none;
-    display: inline;
-}
-
-.lastFMBody ul li a {
-    background-size: 120px 120px;
-    background-position: 0px 0px;
-    border: 1px solid #fff;    
-    height: 120px;
-    left: 5px;
-    overflow: hidden;
-    position: absolute;
-    top: 5px;
-    width: 120px;
-    
-    @include border-radius(3px);
-    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
-}
-
-.lastFMBody ul li a:before {
-    background: image-url('overlay_album_shine.png');
-    content: "";
-    height: 120px;
-    left: 0;
-    position: absolute;
-    top: 0;    
-    width: 120px;    
-    z-index: 1;
-}
-
-.lastFMBody ul li:hover a {
-    border: 6px solid #4ab0ff;
-    left: 0;
-    top: 0;
-    
-    @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);        
-}
-
-
-.lastFMBody ul li a img {
-    height: 120px;
-    width: 120px;
-    
-    @include opacity(0);
-}
-
-.lastFMBody .itemName {
-    border: none;
-    font-size: 10px;
-    line-height: 12px;
-    height: 132px;   
-    position: absolute;
-    text-align: center;
-    width: 132px;
-    
-    @include background(radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7) 40px));
-    @include border-radius(6px);      
-}
-
-.lastFMBody .itemName a {
-    border-color: transparent;
-    color: #fff;  
-    height: 38px;
-    overflow: hidden;  
-    padding: 78px 15px 4px 15px;
-    width: 90px;    
-    z-index: 4;
-    
-    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
-}
-
-.lastFMBody .itemName a em {
-    display: block;
-    font-style: normal;
-    height: 38px;
-    overflow: hidden;
-}
-
-.lastFMBody .itemName a:before {
-    background: none;
-}
-
-.lastFMBody .itemArtist {
-    color: #fff;
-    font-size: 13px;
-    height: 34px;
-    left: 0; 
-    overflow: hidden;
-    padding: 20px 15px 0 15px;   
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 102px;
-    z-index: 3;
-    
-    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);        
-}
-
-.lastFMBody .itemName,
-.lastFMBody .itemArtist {
-    @include opacity(0);
-}
-
-.lastFMBody .itemRow:hover .itemName,
-.lastFMBody .itemRow:hover .itemArtist {
-    @include opacity(1);
-    @include transition-property(opacity);
-    @include transition-duration(0.5s);
-}*/
-
 
 .lastFMBody ul {
-    border-top: none;
+    border-top: none; 
 }
 
 .lastFMBody ul .itemRow {
@@ -427,16 +298,18 @@ Footer
     padding: 0;
     text-align: center;
     width: 120px;
-
-    @include text-shadow(rgba(0, 0, 0, 1) 0 1px 1px);
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName,
 .lastFMBody ul .itemRow a .track_info p .itemArtist {
+    display: block;
     font-size: 11px;
     font-weight: normal;
     overflow: hidden;
-    padding: 0 12px;       
+    padding: 0 12px;
+    text-align: center;   
+    
+	@include black_text_shadow_bottom;         
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName {
@@ -460,14 +333,5 @@ Footer
     @include transition-property(opacity);
     @include transition-duration(0.5s);
 }
-
-
-
-
-
-
-
-
-
 
 
