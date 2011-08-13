@@ -60,36 +60,31 @@ get_header(); ?>
             endif;
             endif;
             if (!empty($items)): ?>
-            <ol class="dribbbles">
-            <?php
-                foreach ( $items as $item ):
-                    $title = $item->get_title();
-                    $link = $item->get_permalink();
-                    $date = $item->get_date('F d, Y');
-                    $description = $item->get_description();
-                    preg_match("/src=\"(http.*(jpg|jpeg|gif|png))/", $description, $image_url);
-                    $image = $image_url[1];
-            ?>
-            <li class="group">
-                <div class="dribbble">
-                    <div class="dribbble-shot">
-                        <div class="dribbble-img">
-                            <a href="<?php echo $link; ?>" class="dribbble-link"><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></a>
-                            <a href="<?php echo $link; ?>" class="dribbble-over"><strong><?php echo $title; ?></strong>
-                            <em><?php echo $date; ?></em>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <ol>
+                <?php
+                    foreach ( $items as $item ):
+                        $title = $item->get_title();
+                        $link = $item->get_permalink();
+                        $date = $item->get_date('F d, Y');
+                        $description = $item->get_description();
+                        preg_match("/src=\"(http.*(jpg|jpeg|gif|png))/", $description, $image_url);
+                        $image = $image_url[1];
+                ?>
+                <li>
+                    <a href="<?php echo $link; ?>" rel="external">
+                        <div class="dribbble_img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><span><em><?php echo $title; ?></em></span><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div>
+                    </a>
+                </li>    
             <?php endforeach;?>
         </ol>
+        <a class="button" href="http://dribbble.com/twahlin/" rel="external">Visit Dribbble</a>
         <?php endif;
         ?>
     </section>
     <section class="home_tweets">
         <h5>Tweets</h5>
         <div class="feed_twitter"><p class="js_off">Oops! JavaScript needs to be enabled to view <a href="http://www.twitter.com/twahlin">twitter feed.</a></p></div>
+        <a class="button" href="http://www.twitter.com/twahlin" rel="external">Visit Twitter</a>
     </section>
     <section class="home_connections">
         <h5>Connections</h5>

@@ -24,6 +24,7 @@ $proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans
 @mixin white_text_shadow_top { @include text-shadow(#fff 0 -1px 0); }
 @mixin black_text_shadow_bottom { @include text-shadow(#000 0 1px 0); }
 @mixin black_text_shadow_top { @include text-shadow(#000 0 -1px 0); }
+@mixin blue_text_shadow_top { @include text-shadow(#4c88b6 0 -1px 1px); }
 
 //------------------------------------------------------------------
 //Colors
@@ -37,3 +38,8 @@ $link_blue: #00538e;
 
 @mixin gradient_solid_standard { @include background(linear-gradient(rgba(153,204,245, 1), rgba(129,181,220, 1))); }
 @mixin gradient_solid_hover { @include background(linear-gradient(rgba(163,214,255, 1), rgba(139,191,230, 1))); }
+
+
+
+
+@mixin transition_default { @include transition-property(all); @include transition-duration(0.3s); @include transition-timing-function(ease-in); }

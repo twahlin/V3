@@ -46,15 +46,14 @@
 	width: 28px;
 	
 	@include opacity(0.4);
+	@include transition-property(margin);
+	@include transition-duration(0.1s);
+	@include transition-timing-function(ease-in);	
 }
 
 .before_header ul li a:hover {
 	margin-top: 3px;
 	opacity: 1;
-
-	@include transition-property(margin);
-	@include transition-duration(0.1s);
-	@include transition-timing-function(ease-in); 
 }
 
 .before_header ul li.linkedin a { background-position: -85px 0px; }

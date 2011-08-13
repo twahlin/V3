@@ -63,7 +63,7 @@ p {
     border: 1px solid #6f9dc0;
     background: $blue;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     padding: 7px 12px 6px 12px;
     line-height: 34px;
     
@@ -71,17 +71,15 @@ p {
     @include box-shadow(rgba(0, 0, 0, .2) 0 0 8px, inset rgba(207, 233, 254, 1) 0 1px 0);
     @include gradient_solid_standard;
     @include proxima_regular;
-    @include text-shadow(#4c88b6 0 -1px 1px);
+    @include blue_text_shadow_top;
+    @include transition_default;     
 }
 
 .button:hover {
     background: $hover_blue;
     
     @include box-shadow(rgba(0, 0, 0, .35) 0 0 8px, inset rgba(220, 243, 255, 1) 0 1px 0);
-    @include gradient_solid_hover;
-    @include transition-property(all);
-  	@include transition-duration(0.3s);
-  	@include transition-timing-function(ease-in);	    
+    @include gradient_solid_hover;	    
 }
 
 //------------------------------------------------------------------
@@ -161,6 +159,9 @@ h1 a {
 	@include background(linear-gradient(rgba(white, 1), rgba(221,221,221, 1)));
 	@include border-radius(80px);
 	@include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px);
+	@include transition-property(box-shadow);
+  	@include transition-duration(0.3s);
+  	@include transition-timing-function(ease-in);
 	
 	@include pie-element(relative);
 }
@@ -171,9 +172,7 @@ h1 a:focus {
 
 	@include background(linear-gradient(rgba(255, 255, 255, 1), rgba(200, 200, 200, 1)));
 	@include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px, rgba(108, 173, 223, .5) 2px 4px 20px, rgba(108, 173, 223, .25) -9px -4px 20px);    
-	@include transition-property(box-shadow);
-  	@include transition-duration(0.3s);
-  	@include transition-timing-function(ease-in);
+
 
 	@include pie-element(relative);
 }
@@ -413,14 +412,70 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .feed_home section {
     float: left;
-    margin: 2% 0 2% 2%;
-    overflow: hidden;
-    width: 22.5%;
+    margin: 2.4% 0 2.4% 2.4%;
+    width: 22%;
 }
 
 .feed_home section img {
    display: block;
    width: 100%;
+}
+
+.home_dribbble_shots ol li {    
+    display: block;
+    margin-bottom: 18px;
+}
+
+.home_dribbble_shots ol li a {
+    background: #fff;
+    display: block;   
+    padding: 3%; 
+    width: 94%;    
+    
+    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+    @include transition_default;           
+}
+
+.home_dribbble_shots ol li a:hover { 
+    @include box-shadow(rgba(0, 0, 0, .6) 0 0 8px);          
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap {
+    position: relative;
+    @include box-shadow(inset rgba(0, 0, 0, .3) 0 0 6px);                 
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap span {
+    bottom: 0;
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    left: 0;     
+    position: absolute;
+    width: 100%;
+    
+    @include blue_text_shadow_top;    
+    @include gradient_solid_standard;
+    @include transition_default;
+    @include opacity(0);    
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap span em {
+    display: block;
+    font-style: normal;    
+    padding: 5px;
+}
+
+.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
+    @include opacity(100);
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap img {
+    @include opacity(0);
+}
+
+.home_tweets ul {
+    margin-bottom: 18px;
 }
 
 //------------------------------------------------------------------
