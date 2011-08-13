@@ -8,7 +8,6 @@
 	display: block;
 	height: 34px;
 	color: #777;
-	font-size: 10px;
 	font-weight: normal;
 	padding-left: 3%;
 	position: relative;
@@ -19,7 +18,9 @@
 }
 
 .before_header .charter {
-	padding-bottom: 18px;
+    font-size: 10px;
+	padding-bottom: 18px;    
+    margin: 0;	
 }
 
 .before_header ul {

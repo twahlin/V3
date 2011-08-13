@@ -38,10 +38,20 @@ h2 {
 }
 
 h5 {
+    border-bottom: 1px solid #bbb;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 11px;
+    padding-bottom: 5px;
     
+    @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0);    
     @include proxima_light;
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 9px;
 }
 
 //------------------------------------------------------------------
@@ -107,6 +117,12 @@ h5 {
 
     @include background(linear-gradient(rgba(112,112,112, 1), rgba(92,92,92, 1)));
  	@include black_text_shadow_top;   
+}
+
+.before_header .charter {
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;    
 }
 
 .before_header ul {
@@ -396,12 +412,15 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 .feed_home section {
-    background: aqua;
     float: left;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin: 2% 0 2% 2%;
     overflow: hidden;
     width: 22.5%;
+}
+
+.feed_home section img {
+   display: block;
+   width: 100%;
 }
 
 //------------------------------------------------------------------
@@ -638,3 +657,9 @@ footer .footer_nav li a:active {
     line-height: 24px;
     margin-left: 10px;
 }
+
+//------------------------------------------------------------------
+//Overrides
+//------------------------------------------------------------------
+
+.twitterHeader { display: none; }
