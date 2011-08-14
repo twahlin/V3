@@ -446,6 +446,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 .home_dribbble_shots ol li a .dribbble_img_wrap span {
+    border-top: 1px solid #6f9dc0;    
     bottom: 0;
     color: #fff;
     display: block;
@@ -454,7 +455,8 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     position: absolute;
     width: 100%;
     
-    @include blue_text_shadow_top;    
+    @include blue_text_shadow_top;
+    @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
     @include gradient_solid_standard;
     @include transition_default;
     @include opacity(0);    
@@ -463,7 +465,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .home_dribbble_shots ol li a .dribbble_img_wrap span em {
     display: block;
     font-style: normal;    
-    padding: 5px;
+    padding: 6px;
 }
 
 .home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
