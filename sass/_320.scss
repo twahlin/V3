@@ -48,6 +48,13 @@ h5 {
     @include proxima_light;
 }
 
+h6 {
+    font-family: "Helvetica Neue", Arial, sans-serif;	
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 9px;
+}
+
 p {
     font-size: 13px;
     line-height: 18px;
@@ -425,6 +432,10 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .feed_home section img {
    display: block;
    width: 100%;
+}
+
+.home_recent_post .home_excerpt {
+	margin-bottom: 18px;
 }
 
 .home_dribbble_shots ol li {    

@@ -4,7 +4,7 @@
 // Home Page Feeds
 ?>
 
-<ul>
+<ul class="links_social">
    <li class="dribbble"><a rel="external" title="Visit Tom Wahlin&rsquo;s Dribbble" href="http://dribbble.com/twahlin"><em>Dribbble </em><span>View Shots on Dribbble</span></a></li>
    <li class="facebook"><a rel="external" title="Visit Tom Wahlin&rsquo;s Facebook" href="http://www.facebook.com/twahlin"><em>Facebook </em><span>Friend on Facebook</span></a></li>
    <li class="flickr"><a rel="external" title="Visit Tom Wahlin&rsquo;s Flickr" href="http://www.flickr.com/photos/twahlin"><em>Flickr </em><span>View Photos on Flickr</span></a></li>
