@@ -61,14 +61,7 @@
                 <div class="before_header">
                     <div class="before_header_inner">
                         <p class="charter"><strong>Tom Wahlin</strong>&mdash;Designer and front-end developer</p>
-                        <ul>
-                           <li class="dribbble"><a rel="external" title="Visit Tom Wahlin&rsquo;s Dribbble" href="http://dribbble.com/twahlin">Dribbble</a></li>
-                           <li class="facebook"><a rel="external" title="Visit Tom Wahlin&rsquo;s Facebook" href="http://www.facebook.com/twahlin">Facebook</a></li>
-                           <li class="flickr"><a rel="external" title="Visit Tom Wahlin&rsquo;s Flickr" href="http://www.flickr.com/photos/twahlin">Flickr</a></li>
-                           <li class="linkedin"><a rel="external" title="Visit Tom Wahlin&rsquo;s Linkedin" href="http://www.linkedin.com/in/tomwahlin">Linkedin</a></li>
-                           <li class="last_fm"><a rel="external" title="Visit Tom Wahlin&rsquo;s Last.fm" href="http://www.last.fm/user/twahlin">Last.fm</a></li>
-                           <li class="twitter"><a rel="external" title="Visit Tom Wahlin&rsquo;s Twitter" href="http://twitter.com/twahlin">Twitter</a></li>
-                        </ul>
+                        <?php include "includes/snippets/links-social.php" ?>
                     </div>    
                 </div> 
                 <header>

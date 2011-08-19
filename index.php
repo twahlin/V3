@@ -88,6 +88,7 @@ get_header(); ?>
     </section>
     <section class="home_connections">
         <h5>Connections</h5>
+        <?php include "includes/snippets/links-social.php" ?> 
     </section>    
 </div>
 
