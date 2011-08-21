@@ -51,6 +51,11 @@
 	@include transition-timing-function(ease-in);	
 }
 
+.before_header ul li a em {
+	display: none;
+}
+
+
 .before_header ul li a:hover {
 	margin-top: 3px;
 	opacity: 1;

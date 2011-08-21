@@ -497,8 +497,43 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     margin-bottom: 18px;
 }
 
+.home_connections .links_social li {
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 0 0 0 46px;
+    position: relative;
+}
+
+.home_connections .links_social li a {
+    display: table;
+    height: 34px;
+}
+
+.home_connections .links_social li a .button {
+    display: block;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 34px 0 0 0;
+    position: absolute;
+    top: 0;
+    width: 34px;
+}
+
+.home_connections .links_social li a span {
+    color: #666;
+    display: table-cell;    
+    font-size: 16px;
+    height: 36px;
+    vertical-align: middle;
+    
+    @include proxima_regular;
+    @include white_text_shadow_bottom    
+}
+
+
 //------------------------------------------------------------------
-//post_sep
+//post_sep OLD
 //------------------------------------------------------------------
 
 .post_sep {
