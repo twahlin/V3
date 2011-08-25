@@ -7,3 +7,119 @@
 }
 
 .before_header ul { margin-right: 5%; }
+
+//------------------------------------------------------------------
+//Feed Home
+//------------------------------------------------------------------
+
+.feed_home {
+    overflow: hidden;
+}
+
+.feed_home section {
+    float: left;
+    margin: 2.4% 0 2.4% 2.4%;
+    width: 22%;
+}
+
+.feed_home section img {
+   display: block;
+   width: 100%;
+}
+
+.home_recent_post .home_excerpt {
+	margin-bottom: 18px;
+}
+
+.home_dribbble_shots ol li {    
+    display: block;
+    margin-bottom: 18px;
+}
+
+.home_dribbble_shots ol li a {
+    background: #fff;
+    display: block;   
+    padding: 3%; 
+    width: 94%;    
+    
+    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+    @include transition_default;           
+}
+
+.home_dribbble_shots ol li a:hover { 
+    @include box-shadow(rgba(0, 0, 0, .6) 0 0 8px);          
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap {
+    position: relative;
+    @include box-shadow(inset rgba(0, 0, 0, .3) 0 0 6px);                 
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap span {
+    border-top: 1px solid #6f9dc0;    
+    bottom: 0;
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    left: 0;     
+    position: absolute;
+    width: 100%;
+    
+    @include blue_text_shadow_top;
+    @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
+    @include gradient_solid_standard;
+    @include transition_default;
+    @include opacity(0);    
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap span em {
+    display: block;
+    font-style: normal;    
+    padding: 6px;
+}
+
+.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
+    @include opacity(100);
+}
+
+.home_dribbble_shots ol li a .dribbble_img_wrap img {
+    @include opacity(0);
+}
+
+.home_tweets ul {
+    margin-bottom: 18px;
+}
+
+.home_connections .links_social li {
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 0 0 0 46px;
+    position: relative;
+}
+
+.home_connections .links_social li a {
+    display: table;
+    height: 34px;
+}
+
+.home_connections .links_social li a .button {
+    display: block;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 34px 0 0 0;
+    position: absolute;
+    top: 0;
+    width: 34px;
+}
+
+.home_connections .links_social li a span {
+    color: #666;
+    display: table-cell;    
+    font-size: 16px;
+    height: 36px;
+    vertical-align: middle;
+    
+    @include proxima_regular;
+    @include white_text_shadow_bottom    
+}
