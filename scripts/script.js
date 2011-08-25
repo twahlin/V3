@@ -46,6 +46,16 @@ jQuery(document).ready(function($){
     $('.feed_twitter').twitterfeed('twahlin', {
         limit: 5
     });
+
+		//twitter google-tweet.js
+			getTwitters('tweet', { 
+				id: 'twahlin', 
+				count: 4, 
+				enableLinks: true, 
+				ignoreReplies: true, 
+				clearContents: true,
+				template: '<p>%text%</p>'
+			});
     
 
     //flickr feed

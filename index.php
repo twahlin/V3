@@ -82,7 +82,10 @@ get_header(); ?>
     </section>
     <section class="home_tweets">
         <h5>Tweets</h5>
-        <div class="feed_twitter"><p class="js_off">Oops! JavaScript needs to be enabled to view <a href="http://www.twitter.com/twahlin">twitter feed.</a></p></div>
+        <!-- twitter google-tweet.js -->
+    			<div id="tweet">
+    			 <p>Please wait while my tweets load</p>
+    			</div>
         <a class="button" href="http://www.twitter.com/twahlin" rel="external">Visit Twitter</a>
     </section>
     <section class="home_connections">
