@@ -21,20 +21,6 @@ get_header(); ?>
         <li><p>XHTML &amp; CSS:</p><div class="progress_bar"><em>Skill score: 89 out of 100</em></div></li>  
         <li><p>XHTML &amp; CSS:</p><div class="progress_bar"><em>Skill score: 89 out of 100</em></div></li>      
     </ul>
-    <?php
-    $completeurl =
-    "http://ws.audioscrobbler.com/2.0/?method=&user=xgayax" .
-    "&api_key=b25b959554ed76058ac220b7b2e0a026";
-    $xml = simplexml_load_file($completeurl);
-    
-    
-
-
-
-    
-    
-    
-    ?>
     
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
