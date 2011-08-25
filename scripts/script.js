@@ -41,11 +41,8 @@ jQuery(document).ready(function($){
     };
     //end hero slider
 
-    // Twitter, flickr, and last.fm feeds
+    // hide js off paragraph
     $('p.js_off').hide();
-    $('.feed_twitter').twitterfeed('twahlin', {
-        limit: 5
-    });
 
 		//twitter google-tweet.js
 			getTwitters('tweet', { 
