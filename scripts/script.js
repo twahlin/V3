@@ -9,6 +9,14 @@ if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) 
     }
 }
 
+//Hide iphone bar
+window.addEventListener("load",function() {
+  setTimeout(function(){
+    window.scrollTo(0, 1);
+  }, 0);
+});
+//End Hide iphone bar
+
 jQuery(document).ready(function($){
     
     //external links
