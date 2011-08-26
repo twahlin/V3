@@ -444,7 +444,9 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .home_dribbble_shots ol li a {
     background: #fff;
-    display: block;   
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;       
     padding: 3%; 
     width: 94%;    
     
@@ -458,6 +460,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .home_dribbble_shots ol li a .dribbble_img_wrap {
     position: relative;
+    
     @include box-shadow(inset rgba(0, 0, 0, .3) 0 0 6px);                 
 }
 
@@ -475,7 +478,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
     @include gradient_solid_standard;
     @include transition_default;
-    @include opacity(0);    
+/*    @include opacity(0); */   
 }
 
 .home_dribbble_shots ol li a .dribbble_img_wrap span em {
@@ -484,9 +487,9 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     padding: 6px;
 }
 
-.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
+/*.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
     @include opacity(100);
-}
+}*/
 
 .home_dribbble_shots ol li a .dribbble_img_wrap img {
     @include opacity(0);
@@ -498,36 +501,26 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .home_connections .links_social li {
     height: 34px;
-    margin-bottom: 15px;
-    padding: 0 0 0 46px;
-    position: relative;
+    float: left;
+    margin-bottom: 2%;
+    margin-right: 4%;
+    width: 48%;
 }
 
 .home_connections .links_social li a {
-    display: table;
-    height: 34px;
+    display: block;
+    margin-bottom: 15px;    
+    overflow: visible;
+    width: 100%;    
 }
 
 .home_connections .links_social li a .button {
     display: block;
-    height: 0;
-    left: 0;
-    overflow: hidden;
-    padding: 34px 0 0 0;
-    position: absolute;
-    top: 0;
-    width: 34px;
+    padding: 0;
 }
 
 .home_connections .links_social li a span {
-    color: #666;
-    display: table-cell;    
-    font-size: 16px;
-    height: 36px;
-    vertical-align: middle;
-    
-    @include proxima_regular;
-    @include white_text_shadow_bottom    
+    display: none;
 }
 
 
