@@ -500,28 +500,42 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 .home_connections .links_social li {
-    height: 34px;
-    float: left;
-    margin-bottom: 2%;
-    margin-right: 4%;
-    width: 48%;
+	display: block;
+    margin-bottom: 15px; 
+	width: 100%;
 }
 
 .home_connections .links_social li a {
-    display: block;
-    margin-bottom: 15px;    
+    display: block;   
     overflow: visible;
+	position: relative;
     width: 100%;    
 }
 
-.home_connections .links_social li a .button {
+.home_connections .links_social li a .button { 
     display: block;
-    padding: 0;
+	line-height: 0;
+    padding: 19px 0 18px 42px;
 }
 
 .home_connections .links_social li a span {
-    display: none;
+    background-image: image-url('png_master_sprite.png');
+	display: block;
+    height: 0;
+	left: 11px;
+	overflow: hidden;
+	padding: 22px 0 0 0;	
+	position: absolute;
+	top: 8px;
+	width: 22px;
 }
+
+.home_connections .links_social .dribbble span { background-position: 0px -95px; }
+.home_connections .links_social .facebook span { background-position: -1px -142px; }
+.home_connections .links_social .flickr span { background-position: 0px -190px; }
+.home_connections .links_social .linkedin span { background-position: -1px -239px; }
+.home_connections .links_social .last_fm span { background-position: -1px -285px; }
+.home_connections .links_social .twitter span { background-position: 0px -333px; }
 
 
 //------------------------------------------------------------------
@@ -578,9 +592,9 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 	@include pie-element(absolute);
 }
 
-/*------------------------------------------------------------------
-Footer
-------------------------------------------------------------------*/
+//------------------------------------------------------------------
+//Footer
+//------------------------------------------------------------------
 
 footer {
     background: #fff image-url('bg_diagonal_lines.png') center;

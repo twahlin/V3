@@ -1,3 +1,28 @@
+//------------------------------------------------------------------
+//Feed Home
+//------------------------------------------------------------------
+
+.home_connections .links_social li {
+	margin-bottom: 4%;
+	width: 48%;
+}
+
+.home_connections .links_social .dribbble,
+.home_connections .links_social .flickr,
+.home_connections .links_social .last_fm {
+	float: left;
+}
+
+.home_connections .links_social .facebook,
+.home_connections .links_social .linkedin,
+.home_connections .links_social .twitter {
+	float: right;
+}
+
+//------------------------------------------------------------------
+//Footer
+//------------------------------------------------------------------
+
 footer .footer_nav {
     display: block;
     float: right;
