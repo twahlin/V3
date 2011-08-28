@@ -43,3 +43,29 @@ $link_blue: #00538e;
 
 
 @mixin transition_default { @include transition-property(all); @include transition-duration(0.3s); @include transition-timing-function(ease-in); }
+
+//------------------------------------------------------------------
+//Buttons
+//------------------------------------------------------------------
+
+@mixin button_hover { 
+    background: $hover_blue;
+    @include box-shadow(rgba(0, 0, 0, .35) 0 0 8px, inset rgba(220, 243, 255, 1) 0 1px 0);
+    @include gradient_solid_hover;
+}
+
+@mixin button {
+    border: 1px solid #6f9dc0;
+    background: $blue;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 12px 6px 12px;
+    line-height: 34px;
+    
+    @include border-radius (3px);
+    @include box-shadow(rgba(0, 0, 0, .2) 0 0 8px, inset rgba(207, 233, 254, 1) 0 1px 0);
+    @include gradient_solid_standard;
+    @include proxima_regular;
+    @include blue_text_shadow_top;
+    @include transition_default;
+}

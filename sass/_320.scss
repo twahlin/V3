@@ -67,33 +67,21 @@ p {
 	font-variant: small-caps;
 }
 
+.hr {
+    background: aqua;
+    display: block;
+    clear: both;
+    height: 20px;
+}
+
 //------------------------------------------------------------------
 //Buttons
 //------------------------------------------------------------------
 
 .button,
-.button:visited {
-    border: 1px solid #6f9dc0;
-    background: $blue;
-    color: #fff;
-    font-size: 14px;
-    padding: 7px 12px 6px 12px;
-    line-height: 34px;
-    
-    @include border-radius (3px);
-    @include box-shadow(rgba(0, 0, 0, .2) 0 0 8px, inset rgba(207, 233, 254, 1) 0 1px 0);
-    @include gradient_solid_standard;
-    @include proxima_regular;
-    @include blue_text_shadow_top;
-    @include transition_default;     
-}
+.button:visited { @include button }
 
-.button:hover {
-    background: $hover_blue;
-    
-    @include box-shadow(rgba(0, 0, 0, .35) 0 0 8px, inset rgba(220, 243, 255, 1) 0 1px 0);
-    @include gradient_solid_hover;	    
-}
+.button:hover { @include button_hover }
 
 //------------------------------------------------------------------
 //Sticky Footer
@@ -423,6 +411,10 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     overflow: hidden;
 }
 
+.feed_home .hr {
+    display: none;
+}
+
 .feed_home section {
     margin: 3%;
     width: 94%;
@@ -478,7 +470,6 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
     @include gradient_solid_standard;
     @include transition_default;
-/*    @include opacity(0); */   
 }
 
 .home_dribbble_shots ol li a .dribbble_img_wrap span em {
@@ -486,10 +477,6 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     font-style: normal;    
     padding: 6px;
 }
-
-/*.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
-    @include opacity(100);
-}*/
 
 .home_dribbble_shots ol li a .dribbble_img_wrap img {
     @include opacity(0);
@@ -503,6 +490,8 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 	display: block;
     margin-bottom: 15px; 
 	width: 100%;
+	
+	@include proxima_regular;
 }
 
 .home_connections .links_social li a {
@@ -514,8 +503,12 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .home_connections .links_social li a .button { 
     display: block;
-	line-height: 0;
-    padding: 19px 0 18px 42px;
+    font-size: 16px;
+    height: 36px;
+    line-height: 38px;
+    padding: 0 0 0 42px;
+    
+    @include proxima_regular;
 }
 
 .home_connections .links_social li a span {
@@ -528,6 +521,13 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 	position: absolute;
 	top: 8px;
 	width: 22px;
+	
+	@include opacity(0.85);
+    @include transition_default;
+}
+
+.home_connections .links_social li a:hover span {
+	@include opacity(1);
 }
 
 .home_connections .links_social .dribbble span { background-position: 0px -95px; }

@@ -13,7 +13,7 @@ get_header(); ?>
         <li class="first pane">
             <div class="slide_wrap">
                 <div class="slide_inner_wrap">
-                    <h2>Version 3 had launched</h2>
+                    <h2>Version 3 has launched</h2>
                 </div>
             </div>
         </li>
@@ -45,6 +45,7 @@ get_header(); ?>
         <h5>Dribbble Shots</h5>
         <?php include "includes/snippets/dribbble-shots-two.php" ?>
     </section>
+    <div class="hr">sadf</div>
     <section class="home_tweets">
         <h5>Tweets</h5>
         <div id="tweet">

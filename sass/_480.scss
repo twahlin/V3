@@ -2,21 +2,24 @@
 //Feed Home
 //------------------------------------------------------------------
 
-.home_connections .links_social li {
-	margin-bottom: 4%;
-	width: 48%;
+.feed_home section {
+    width: 44%;
 }
 
-.home_connections .links_social .dribbble,
-.home_connections .links_social .flickr,
-.home_connections .links_social .last_fm {
-	float: left;
+.feed_home .hr {
+    display: block;
 }
 
-.home_connections .links_social .facebook,
-.home_connections .links_social .linkedin,
-.home_connections .links_social .twitter {
-	float: right;
+.feed_home .home_recent_post,
+.feed_home .home_tweets {
+    float: left;
+    margin: 3% 0 3% 3%;
+}
+
+.feed_home .home_dribbble_shots,
+.feed_home .home_connections {
+    float: right;
+    margin: 3% 3% 3% 0;    
 }
 
 //------------------------------------------------------------------
