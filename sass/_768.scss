@@ -257,8 +257,20 @@ Footer
 }
 
 //------------------------------------------------------------------
+//About Feed
+//------------------------------------------------------------------
+
+.col_left {
+	max-width: 700px;
+}
+
+//------------------------------------------------------------------
 //Last.fm Icons and functionality.
 //------------------------------------------------------------------
+
+.feed_lastfm {
+	overflow: hidden;
+}
 
 .lastFMBody ul {
     border-top: none; 
@@ -269,7 +281,7 @@ Footer
     border: none;
     float: left;
     height: 132px;
-    margin: 50px;
+    margin: 10px;
     position: relative;
     width: 132px;
 }
