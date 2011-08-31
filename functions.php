@@ -34,10 +34,12 @@ function hide_menus() {
 Includes
 -----------------------------------------------------------------------------------*/
 
+//Add custom post types
+include("includes/admin/custom_post_types.php");
+
 //Add custom meta boxes
 include("includes/admin/custom_meta_boxes.php");
 
-//Add custom post types
-include("includes/admin/custom_post_types.php");
+
 
 ?>

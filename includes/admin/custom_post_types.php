@@ -12,11 +12,11 @@ function create_post_type() {
             'public' => true,
             'has_archive' => true,
             'supports' => array (
-            'title',
-            'editor',
-            'thumbnail',
-            'excerpt',
-            'categories'
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+                'categories'
             ),
             'has_archive' => 'work',
             'menu_position' => 5,
@@ -32,11 +32,11 @@ function create_post_type() {
             'public' => true,
             'has_archive' => true,
             'supports' => array (
-            'title',
-            'editor',
-            'thumbnail',
-            'excerpt',
-            'categories'
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+                'categories'
             ),
             'has_archive' => 'goods',
             'menu_position' => 6,
@@ -52,11 +52,11 @@ function create_post_type() {
             'public' => true,
             'has_archive' => true,
             'supports' => array (
-            'title',
-            'editor',
-            'thumbnail',
-            'excerpt',
-            'categories'
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+                'categories'
             ),
             'has_archive' => 'blog',
             'menu_position' => 6,
