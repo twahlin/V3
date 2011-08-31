@@ -9,34 +9,37 @@ get_header(); ?>
 
 
 
-<?php query_posts(array('post_type' => 'blog')); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+	<?php
+    
+        // The following determines what the post format is and shows the correct file accordingly
+        $format = get_post_format();
+        get_template_part( 'includes/post_formats/'.$format );
+        
+        if($format == '')
+        get_template_part( 'includes/post_formats/standard' );
+        
+    ?>
 
-<div class="post">
+	<?php comments_template('', true); ?>
 
-<!-- Display the Title as a link to the Post's permalink. -->
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	<?php endwhile; else: ?>
 
- <div class="entry">
-     <?php the_content('View Project'); ?>
- </div>
+	<!--BEGIN #post-0-->
+	<div id="post-0" <?php post_class() ?>>
+	
+		<h1 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h1>
+	
+		<!--BEGIN .entry-content-->
+		<div class="entry-content">
+			<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+		<!--END .entry-content-->
+		</div>
+	
+	<!--END #post-0-->
+	</div>
 
-</div> <!-- closes the first div box -->
-
-<?php 
-if ( has_post_format( 'quote' )) {
-  echo 'this is the quote format';
-}
-if ( has_post_format( 'image' )) {
-  echo 'this is the image format';
-}
-
-  echo 'this is the standard format';
-
-?>
-
-<?php endwhile; else: ?>
-<p>Sorry, no posts matched your criteria.</p>
 <?php endif; ?>
 
 <?php get_sidebar(); ?>
