@@ -4,9 +4,13 @@
 Functions
 -----------------------------------------------------------------------------------*/
 
+//Adding post formats for global use if needed
 add_theme_support( 'post-formats', array( 'gallery', 'link', 'image', 'quote', 'status', 'video' ) );
+//End Adding post formats for global use if needed
 
+//post type to custom format blog
 add_post_type_support( 'blog', 'post-formats' );
+//end post type to custom format blog
 
 // adds body classes to respective pages
 function add_body_class( $classes ) {

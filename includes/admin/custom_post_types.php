@@ -60,6 +60,7 @@ function create_post_type() {
             ),
             'has_archive' => 'blog',
             'menu_position' => 6,
+            'taxonomies' => array('category'),
             'rewrite' => array('slug' => 'blog')
         )
     );
