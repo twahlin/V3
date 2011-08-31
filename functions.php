@@ -4,6 +4,10 @@
 Functions
 -----------------------------------------------------------------------------------*/
 
+add_theme_support( 'post-formats', array( 'gallery', 'link', 'image', 'quote', 'status', 'video' ) );
+
+add_post_type_support( 'blog', 'post-formats' );
+
 // adds body classes to respective pages
 function add_body_class( $classes ) {
     global $post;

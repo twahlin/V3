@@ -23,6 +23,18 @@ get_header(); ?>
 
 </div> <!-- closes the first div box -->
 
+<?php 
+if ( has_post_format( 'quote' )) {
+  echo 'this is the quote format';
+}
+if ( has_post_format( 'image' )) {
+  echo 'this is the image format';
+}
+
+  echo 'this is the standard format';
+
+?>
+
 <?php endwhile; else: ?>
 <p>Sorry, no posts matched your criteria.</p>
 <?php endif; ?>
