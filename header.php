@@ -89,4 +89,4 @@
                 </header>
                 <div class="main_content_outer max_width">
                     <div class="main_content">
-                        <div class="main_content_inner">
+                        <div class="main_content_inner" id="main_content_inner">

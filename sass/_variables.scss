@@ -25,6 +25,7 @@ $proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans
 @mixin black_text_shadow_bottom { @include text-shadow(#000 0 1px 0); }
 @mixin black_text_shadow_top { @include text-shadow(#000 0 -1px 0); }
 @mixin blue_text_shadow_top { @include text-shadow(#4c88b6 0 -1px 1px); }
+@mixin blue_text_shadow_bottom { @include text-shadow(#4c88b6 0 1px 1px); }
 
 //------------------------------------------------------------------
 //Colors

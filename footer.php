@@ -25,7 +25,6 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zflickrfeed.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zlastfm.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.ztwitterfeed.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.cycle.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/google-tweet.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/plugins.js"></script>

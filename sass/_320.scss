@@ -94,7 +94,7 @@ p {
 
 #page_content {
     overflow: auto;
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 }
 
 //------------------------------------------------------------------
@@ -537,6 +537,47 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .home_connections .links_social .last_fm span { background-position: -1px -285px; }
 .home_connections .links_social .twitter span { background-position: 0px -333px; }
 
+//------------------------------------------------------------------
+//Blog Styles
+//------------------------------------------------------------------
+
+.blog_cal {
+    background: image-url('png_master_sprite.png') -65px -100px;    
+    height: 49px;
+    overflow: hidden;
+    width: 44px;
+}
+
+.blog_cal strong,
+.blog_cal em {
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blog_cal strong {
+    color: #fff;
+    font-size: 14px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    
+    @include blue_text_shadow_bottom;
+    @include proxima_semibold;
+}
+
+.blog_cal em {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 7px;
+    
+    @include white_text_shadow_bottom;        
+}
+
+.blog_cal p {
+      padding-top: 20px;
+}
 
 //------------------------------------------------------------------
 //post_sep OLD
@@ -602,7 +643,7 @@ footer {
     clear: both;
     font-size: 16px;
     height: 70px;
-    margin-top: -50px;
+    margin-top: -71px;
     overflow: hidden;
     position: relative;
     

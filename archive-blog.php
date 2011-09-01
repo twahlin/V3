@@ -10,6 +10,12 @@ get_header(); ?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    
+    <div class="blog_cal">
+	    <strong><?php the_time('M') ?></strong>
+	    <em><?php the_time('j') ?></em>
+	    <p><?php the_time('Y') ?></p>
+	</div>
 	
 	<?php
     
@@ -22,23 +28,9 @@ get_header(); ?>
         
     ?>
 
-	<?php comments_template('', true); ?>
-
 	<?php endwhile; else: ?>
 
-	<!--BEGIN #post-0-->
-	<div id="post-0" <?php post_class() ?>>
-	
-		<h1 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h1>
-	
-		<!--BEGIN .entry-content-->
-		<div class="entry-content">
-			<p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
-		<!--END .entry-content-->
-		</div>
-	
-	<!--END #post-0-->
-	</div>
+        No post here, 404 page
 
 <?php endif; ?>
 
