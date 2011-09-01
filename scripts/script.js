@@ -65,12 +65,16 @@ jQuery(document).ready(function($){
 
 $(window).load(function () {
 
+    //functionlist for window.load
+    autoWindowHeight();
+    //end functionlist for window.load
+
     //begin setting the height for main content div        
     function autoWindowHeight() {
         var windowHeight = $(window).height();
         var mainContentHeight = $("#main_content_inner").height();
         var footerHeight = $("footer").height();
-        var headerHeight = $("header").height() + $(".before_header").height() + 18;
+        var headerHeight = $("header").height() + $(".before_header").height() + 22;
         var mainContentBottomPadding = windowHeight - headerHeight - footerHeight - mainContentHeight;
         $("#main_content_inner").css("padding-bottom", mainContentBottomPadding);
     }
@@ -82,8 +86,6 @@ $(window).load(function () {
     });
     //end window resize function 
 
-    //functionlist for window.load
-    autoWindowHeight();
-    //end functionlist for window.load
+
 
 });
