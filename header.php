@@ -56,6 +56,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div id="top"></div>
     <div id="page_wrap">
             <div id="page_content">
                 <div class="before_header">

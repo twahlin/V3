@@ -85,7 +85,5 @@ $(window).load(function () {
         autoWindowHeight();
     });
     //end window resize function 
-
-
-
+    
 });

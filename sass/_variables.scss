@@ -40,8 +40,15 @@ $link_blue: #00538e;
 @mixin gradient_solid_standard { @include background(linear-gradient(rgba(153,204,245, 1), rgba(129,181,220, 1))); }
 @mixin gradient_solid_hover { @include background(linear-gradient(rgba(163,214,255, 1), rgba(139,191,230, 1))); }
 
+//------------------------------------------------------------------
+//Shadows
+//------------------------------------------------------------------
 
+@mixin white_box_shadow_bottom { @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0); }
 
+//------------------------------------------------------------------
+//Transition
+//------------------------------------------------------------------
 
 @mixin transition_default { @include transition-property(all); @include transition-duration(0.3s); @include transition-timing-function(ease-in); }
 

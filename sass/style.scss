@@ -34,6 +34,10 @@ $pie-behavior: url("/PIE.htc");
 	@import "_1150.scss";	
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    @import "_2x.scss";
+}
+
 //------------------------------------------------------------------
 //Temporary
 //------------------------------------------------------------------

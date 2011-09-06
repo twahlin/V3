@@ -43,9 +43,9 @@ h5 {
     line-height: 36px;
     margin-bottom: 11px;
     padding-bottom: 5px;
-    
-    @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0);    
+      
     @include proxima_light;
+    @include white_box_shadow_bottom;      
 }
 
 h6 {
@@ -65,13 +65,6 @@ p {
 	font-style: normal;
 	font-weight: normal;
 	font-variant: small-caps;
-}
-
-.hr {
-    background: aqua;
-    display: block;
-    clear: both;
-    height: 20px;
 }
 
 .main_content_inner {
@@ -337,7 +330,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 /* this changes the height of the master slideshow.*/
 .dummy_slide {
-    height: 400px;
+    height: 241px;
     width: 100%;
     visibility: hidden;
 }
@@ -352,7 +345,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .hero_slider li .slide_wrap,
 .hero_slider li .slide_inner_wrap {
-    height: 400px;
+    height: 241px;
 }
 
 .hero_slider li .slide_wrap {
@@ -584,57 +577,41 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
-//post_sep OLD
+//Post separator
 //------------------------------------------------------------------
 
-.post_sep {
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
-    height: 17px;
-    position: relative;
-}
-
-.post_sep:after {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    content: "";
+.hr {
+    background: #bbb;
     display: block;
-    height: 17px;
+    clear: both;
+    height: 1px;    
+    position: relative;
+    
+    @include white_box_shadow_bottom;      
 }
 
-.post_sep a,
-.post_sep a:visited {
-    background: #c8c7c7;
-    position: absolute;
+.hr a {
+    background: #c8c8c8 image-url('png_master_sprite.png') 0 -386px;
+    display: block;
     height: 0;
-    margin-left: -15px;
-    overflow: hidden;
-    padding-top: 30px;
     left: 50%;
-    top: -8px;
-    width: 30px;
-
-	@include border-radius(100px);
-	@include box-shadow(inset rgba(68, 68, 68, .75) 0 1px 1px, rgba(238, 238, 238, 1) 0 1px 1px);    
-	
-	@include pie-element(absolute);
+    margin: -11px 0 0 -11px;
+    overflow: hidden;
+    padding-top: 22px;    
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    
+    @include border-radius(20px);
+    @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, inset rgba(0, 0, 0, .3) 0 1px 1px);
+    @include transition_default;    
 }
 
-.post_sep a:hover,
-.post_sep a:focus {
-    background: #ccc;
-
-	@include box-shadow(inset rgba(68, 68, 68, .85) 0 1px 1px, rgba(238, 238, 238, 1) 0 1px 1px);    
+.hr a:hover,
+.hr a:active {
+    background-color: #bbb;
     
-	@include pie-element(absolute);
-}
-
-.post_sep_inner a:active {
-    margin-top: 1px;
-    
-	@include box-shadow(inset rgba(68, 68, 68, .85) 0 2px 1px, rgba(238, 238, 238, 1) 0 1px 1px);    
-    
-	@include pie-element(absolute);
+    @include box-shadow(rgba(255, 255, 255, 1) 0 2px 1px, inset rgba(0, 0, 0, .5) 0 1px 1px);   
 }
 
 //------------------------------------------------------------------
