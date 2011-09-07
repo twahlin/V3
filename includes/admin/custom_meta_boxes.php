@@ -4,6 +4,7 @@ add_action( 'add_meta_boxes', 'cd_meta_box_add' );
 function cd_meta_box_add()
 {
     add_meta_box( 'my-meta-box-id', 'My First Meta Box', 'cd_meta_box_cb', 'work', 'normal', 'high' );
+    add_meta_box( 'format_quote', 'Quote', 'format_quote', 'blog', 'normal', 'high' );    
 }
 function cd_meta_box_cb( $post )
 {
@@ -66,4 +67,51 @@ function cd_meta_box_save( $post_id )
         update_post_meta( $post_id, 'my_meta_box_check', $chk );
     }
     // End Custom Meta Boxes
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //Toggle meta boxes per post format in "custom meta box type: blog"
+    function toggle_meta_box_per_post_format()
+    {
+        wp_enqueue_script( 'jquery' );
+
+        $script = '
+        <script type="text/javascript">
+            jQuery( document ).ready( function($)
+                {
+                    $( "#post_format_box" ).addClass( "hidden" );
+
+                    $( "input#post-format-0" ).change( function() {
+                        $( "#postdivrich" ).removeClass( "hidden" );
+                        $( "#post_format_box" ).addClass( "hidden" );
+                    } );
+
+                    $( "input:not(#post-format-0)" ).change( function() {
+                        $( "#postdivrich" ).addClass( "hidden" );
+                        $( "#post_format_box" ).removeClass( "hidden" );
+                    } );
+
+                    $( "input[name=\"post_format\"]" ).click( function() {
+                        var mydiv = $(this).attr( "id" ).replace( "post-format-", "" );
+                        $( "#post_format_box div.inside div" ).addClass("hidden");
+                        $( "#post_format_box div.inside div#"+mydiv).removeClass( "hidden" );
+                    } );
+                }
+            );
+        </script>
+        ';
+
+        return print $script;
+    }
+    add_action( 'admin_footer', 'toggle_meta_box_per_post_format' );
+    //End Toggle meta boxes per post format in "custom meta box type: blog"
+    
     ?>
