@@ -5,7 +5,7 @@ Functions
 -----------------------------------------------------------------------------------*/
 
 //Adding post formats for global use if needed
-add_theme_support( 'post-formats', array( 'gallery', 'link', 'image', 'quote', 'status', 'video' ) );
+add_theme_support( 'post-formats', array( 'gallery', 'link', 'image', 'quote', 'video' ) );
 //End Adding post formats for global use if needed
 
 //post type to custom format blog
@@ -43,7 +43,5 @@ include("includes/admin/custom_post_types.php");
 
 //Add custom meta boxes
 include("includes/admin/custom_meta_boxes.php");
-
-
 
 ?>
