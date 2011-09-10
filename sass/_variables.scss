@@ -45,6 +45,7 @@ $link_blue: #00538e;
 //------------------------------------------------------------------
 
 @mixin white_box_shadow_bottom { @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0); }
+@mixin white_box_shadow_top_inset { @include box-shadow(inset rgba(255, 255, 255, 1) 0 1px 0); }
 
 //------------------------------------------------------------------
 //Transition

@@ -8,14 +8,9 @@
 get_header(); ?>
 
 
-
+<div class="col_left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    
-    <div class="blog_cal">
-	    <strong><?php the_time('M') ?></strong>
-	    <em><?php the_time('j') ?></em>
-	    <p><?php the_time('Y') ?></p>
-	</div>
+
 	
 	<?php
     
@@ -33,6 +28,8 @@ get_header(); ?>
         No post here, 404 page
 
 <?php endif; ?>
+
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

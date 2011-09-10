@@ -61,14 +61,14 @@
             <div id="page_content">
                 <div class="before_header">
                     <div class="before_header_inner">
-                        <p class="charter"><strong>Tom Wahlin</strong>&mdash;Designer and front-end developer</p>
+                        <p class="charter"><strong>Tom Wahlin</strong>&mdash;Creative Thinker &amp; Problem Solver</p>
                         <?php include "includes/snippets/links-social.php" ?>
                     </div>    
                 </div> 
                 <header>
                     <div class="logo_wrap">
                         <div class="logo_inner_wrap">
-                            <h1><a href="<?php bloginfo('url'); ?>"><span>Designer and front-end developer Tom Wahlin</span></a></h1>
+                            <h1><a href="<?php bloginfo('url'); ?>"><span>Creative Thinker &amp; Problem Solver&mdash;Tom Wahlin</span></a></h1>
                         </div>
                     </div>    
                     <div class="navigation">

@@ -1,10 +1,47 @@
-<!--BEGIN .hentry -->
-<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">				
-    <h3>FPO: Standard Post Format Get this into the main loop and not repeat in other templates</h3>
-    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<div <?php post_class(post_wrap); ?> id="post-<?php the_ID(); ?>">
+    
+    <div class="blog_cal">
+        <strong><?php the_time('M') ?></strong>
+        <em><?php the_time('j') ?></em>
+        <p><?php the_time('Y') ?></p>
+    </div>
+    
+    <h3><em><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></em></a></h3>
+        <div class="img_border">
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+            <?php img_first(); ?>
+            <?php ribbon_new() ?>
+            </a>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <?php
+        $content = $post->post_content;
+        $searchimages = '~<img [^>]* />~';
 
-     <div class="entry">
-         <?php the_content('View Project'); ?>
-     </div>
-<!--END .hentry-->  
+        /*Run preg_match_all to grab all the images and save the results in $images*/
+
+        preg_match_all( $searchimages, $content, $images );
+
+        // Check to see if we have at least 1 image
+        $iNumberOfImages = count($images[0]);
+
+        if ( $iNumberOfImages > 0 ) {
+            echo "There is an image here";
+        // Your post have one or more images.
+        }
+
+        ?>
+        
+        
+        
+        <?php the_excerpt(); ?>
+        
 </div>

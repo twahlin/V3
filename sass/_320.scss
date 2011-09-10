@@ -325,6 +325,79 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
+//Post Format Icons
+//------------------------------------------------------------------
+
+.icon_post_format {
+    padding: 2px;
+    height: 40px;
+    width: 40px;
+}
+
+.format-standard .img_border:before {
+    background: #fff image-url('png_master_sprite.png') -163px -91px;
+    content:"";
+    display: block;
+    height: 50px;
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    width: 50px;
+    z-index: 100;
+}
+
+//------------------------------------------------------------------
+//Ribbon New
+//------------------------------------------------------------------
+
+.ribbon_new {
+    background: image-url('png_master_sprite.png') -118px -100px;
+    display: block;
+    height: 44px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 44px;
+}
+
+.ribbon_new span {
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include rotate(45deg); 
+    @include blue_text_shadow_bottom;   
+}
+
+//------------------------------------------------------------------
+//Image Border
+//------------------------------------------------------------------
+
+.img_border {
+    background: #fff;
+    //a lot depends on this border
+    border: 9px solid #fff;    
+    display: block; 
+    position: relative;        
+    
+    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+    @include transition_default;
+}
+
+.img_border a {
+    display: block;
+}
+
+.img_border img {
+    display: block;
+    width: 100%;
+}
+
+//------------------------------------------------------------------
 //Hero Slider
 //------------------------------------------------------------------
 
@@ -535,7 +608,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .home_connections .links_social .twitter span { background-position: 0px -333px; }
 
 //------------------------------------------------------------------
-//Blog Styles
+//Blog Cal
 //------------------------------------------------------------------
 
 .blog_cal {
@@ -574,6 +647,50 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .blog_cal p {
       padding-top: 20px;
+}
+
+//------------------------------------------------------------------
+//Blog Style
+//------------------------------------------------------------------
+
+.post_wrap {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.post_wrap .blog_cal {
+    position: absolute;
+    top: 10px;
+}
+
+.post_wrap h3 {
+    border-top: 1px solid #bbb; 
+    font-size: 25px;
+    line-height: 25px;    
+    padding: 10px 0 9px 55px;
+    
+    @include proxima_light;
+    @include white_box_shadow_top_inset;      
+    @include white_text_shadow_bottom;
+}
+
+.post_wrap h3 em {
+    display: table;
+    font-style: normal;
+    height: 50px;
+    width: 75%;              
+}
+
+.post_wrap h3 em a {  
+    color: #333; 
+    display: table-cell;
+    vertical-align: middle;
+    
+    @include transition_default;    
+}
+
+.post_wrap h3 em a:hover {
+     color: $blue;   
 }
 
 //------------------------------------------------------------------
