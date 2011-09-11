@@ -1041,7 +1041,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 /* line 652, ../sass/_320.scss */
 .post_wrap {
   position: relative;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
 }
 
 /* line 657, ../sass/_320.scss */

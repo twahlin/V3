@@ -4,7 +4,7 @@
 add_action( 'add_meta_boxes', 'metabox_quote_add' );  
 function metabox_quote_add()  
 {  
-    add_meta_box( 'blog_quote', 'Quote', 'metabox_quote', 'blog', 'normal', 'high' );  
+    add_meta_box( 'format_blog_quote', 'Quote', 'metabox_quote', 'blog', 'normal', 'high' );  
 }
 
 function metabox_quote( $post )  

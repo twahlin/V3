@@ -20,17 +20,25 @@ jQuery( document ).ready( function($) {
 // $( "#post_format_box div.inside div#"+mydiv).removeClass( "hidden" );
 // } );
 
-    $('#blog_quote, #postdivrich, #postexcerpt').addClass('hidden');
+    // $('#blog_quote, #postdivrich, #postexcerpt').addClass('hidden');
     
-    $('#formatdiv input#post-format-0').change( function() {
-        $('#blog_quote').hide();
-        $('#postdivrich, #postexcerpt').show();
+    // $('#formatdiv input#post-format-0').change( function() {
+    //     $('#blog_quote').hide();
+    //     $('#postdivrich, #postexcerpt').show();
+    // });
+    // 
+    // $('#formatdiv input#post-format-quote').change( function() {
+    //     $('#postdivrich, #postexcerpt').hide();
+    //     $('#blog_quote').show();
+    // });
+    
+    console.log("format_blog_" + $("#formatdiv input:checked").val() + " is checked!");
+    
+    $("#formatdiv input").click(function() {
+      console.log("format_blog_" + $("#formatdiv input:checked").val() + " is checked!");
+      // console.log($("format_blog_").val());
     });
     
-    $('#formatdiv input#post-format-quote').change( function() {
-        $('#postdivrich, #postexcerpt').hide();
-        $('#blog_quote').show();
-    });
 
 });
 
