@@ -325,28 +325,6 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
-//Post Format Icons
-//------------------------------------------------------------------
-
-.icon_post_format {
-    padding: 2px;
-    height: 40px;
-    width: 40px;
-}
-
-.format-standard .img_border:before {
-    background: #fff image-url('png_master_sprite.png') -163px -91px;
-    content:"";
-    display: block;
-    height: 50px;
-    position: absolute;
-    left: -9px;
-    top: -9px;
-    width: 50px;
-    z-index: 100;
-}
-
-//------------------------------------------------------------------
 //Ribbon New
 //------------------------------------------------------------------
 
@@ -653,21 +631,39 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //Blog Style
 //------------------------------------------------------------------
 
+.icon_post_format {
+    padding: 2px;
+    height: 40px;
+    width: 40px;
+}
+
+.format-standard .img_border:before {
+    background: #fff image-url('png_master_sprite.png') -163px -91px;
+    content:"";
+    display: block;
+    height: 50px;
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    width: 50px;
+    z-index: 100;
+}
+
 .post_wrap {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 .post_wrap .blog_cal {
     position: absolute;
-    top: 10px;
+    top: 14px;
 }
 
 .post_wrap h3 {
     border-top: 1px solid #bbb; 
     font-size: 25px;
     line-height: 25px;    
-    padding: 10px 0 9px 55px;
+    padding: 14px 0 13px 55px;
     
     @include proxima_light;
     @include white_box_shadow_top_inset;      
@@ -691,6 +687,58 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .post_wrap h3 em a:hover {
      color: $blue;   
+}
+
+.format-quote {
+    background: #fff image-url('bg_diagonal_lines_5_percent.png');
+    overflow: visible;
+    
+    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+}
+
+.format-quote aside {
+    background: #fff;
+    border-right: 1px solid #afadad;
+    bottom: 0;    
+    float: left;
+    position: absolute;
+    top: 0;    
+    height: 100%;
+    width: 50px;
+    
+	@include background(linear-gradient(rgba(255, 255, 255, 1), rgba(250, 250, 250, 1)));
+    @include box-shadow(rgba(0, 0, 0, .1) 0 0 8px);	    
+}
+
+.format-quote aside em {
+    background: image-url('png_master_sprite.png') -356px -96px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    margin: 5px 0 5px 5px;
+    padding-top: 40px;
+    width: 40px;    
+}
+
+.quote_content {
+    border-left: 1px solid #fff;
+    overflow: visible;
+    margin-left: 53px;
+    padding: 22px 30px 26px 30px;
+}
+
+.quote_content p {
+    color: #666;
+    font-size: 28px;
+    line-height: 36px;
+    
+    @include proxima_light;
+    @include white_text_shadow_bottom;
+}
+
+.quote_content .ribbon_new {
+    right: -1px;
+    top: -1px;
 }
 
 //------------------------------------------------------------------

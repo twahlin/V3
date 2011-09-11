@@ -59,46 +59,21 @@ function metabox_quote_save( $id )
     
     
     
+
     
     
     
+
     
-    // //Toggle meta boxes per post format in "custom meta box type: blog"
-    // function toggle_meta_box_per_post_format()
-    // {
-    // wp_enqueue_script( 'jquery' );
-    // 
-    // $script = '
-    // <script type="text/javascript">
-    // jQuery( document ).ready( function($)
-    // {
-    // $( "#post_format_box" ).addClass( "hidden" );
-    // 
-    // $( "input#post-format-0" ).change( function() {
-    // $( "#postdivrich" ).removeClass( "hidden" );
-    // $( "#post_format_box" ).addClass( "hidden" );
-    // } );
-    // 
-    // $( "input:not(#post-format-0)" ).change( function() {
-    // $( "#postdivrich" ).addClass( "hidden" );
-    // $( "#post_format_box" ).removeClass( "hidden" );
-    // } );
-    // 
-    // $( "input[name=\"post_format\"]" ).click( function() {
-    // var mydiv = $(this).attr( "id" ).replace( "post-format-", "" );
-    // $( "#post_format_box div.inside div" ).addClass("hidden");
-    // $( "#post_format_box div.inside div#"+mydiv).removeClass( "hidden" );
-    // } );
-    // }
-    // );
-    // </script>
-    // ';
-    // 
-    // return print $script;
-    // }
-    // add_action( 'admin_footer', 'toggle_meta_box_per_post_format' );
-    // //End Toggle meta boxes per post format in "custom meta box type: blog"
-    // 
+    
+    function toggle_meta_box_per_post_format() {
+       wp_register_script('toggle_meta_box_per_post_format', get_template_directory_uri() . '/scripts/admin/toggle_meta_box_per_post_format.js');
+       wp_enqueue_script('toggle_meta_box_per_post_format');
+    }
+    add_action('admin_enqueue_scripts', 'toggle_meta_box_per_post_format');
+    
+    
+    
     
     
     
