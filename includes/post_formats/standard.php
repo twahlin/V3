@@ -17,8 +17,17 @@
         
         
         
+        <?php the_excerpt(); ?>
         
         
+        
+        
+
+
+        
+        
+        
+
         
         
         
@@ -42,6 +51,9 @@
         
         
         
-        <?php the_excerpt(); ?>
+        
+        
+        
+        
         
 </div>

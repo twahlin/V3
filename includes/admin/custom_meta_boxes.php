@@ -1,73 +1,57 @@
 <?php
-// Start Custom Meta Boxes
-add_action( 'add_meta_boxes', 'cd_meta_box_add' );
-function cd_meta_box_add()
-{
-    add_meta_box( 'my-meta-box-id', 'My First Meta Box', 'cd_meta_box_cb', 'work', 'normal', 'high' );
-    add_meta_box( 'format_quote', 'Quote', 'format_quote', 'blog', 'advanced', 'high' );
-	add_meta_box( 'quote-meta', 'Inpirational Quote', 'cd_quote_meta_cb', 'blog', 'normal', 'high' );        
-}
-function cd_meta_box_cb( $post )
-{
-    // $post is already set, and contains an object: the WordPress post
-    global $post;
-    $values = get_post_custom( $post->ID );
-    $text = isset( $values['my_meta_box_text'] ) ? esc_attr( $values['my_meta_box_text'][0] ) : '';
-    $selected = isset( $values['my_meta_box_select'] ) ? esc_attr( $values['my_meta_box_select'][0] ) : '';
-    $check = isset( $values['my_meta_box_check'] ) ? esc_attr( $values['my_meta_box_check'][0] ) : '';
 
-    // We'll use this nonce field later on when saving.
-    wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
-    ?>
-    <p>
-        <label for="my_meta_box_text">Text Label</label>
-        <input type="text" name="my_meta_box_text" id="my_meta_box_text" value="<?php echo $text; ?>" />
-    </p>
-    <p>
-        <label for="my_meta_box_select">Color</label>
-        <select name="my_meta_box_select" id="my_meta_box_select">
-            <option value="red" <?php selected( $selected, 'red' ); ?>>Red</option>
-            <option value="blue" <?php selected( $selected, 'blue' ); ?>>Blue</option>
-        </select>
-    </p>
-    <p>
-        <input type="checkbox" id="my_meta_box_check" name="my_meta_box_check" <?php checked( $check, 'on' ); ?> />
-        <label for="my_meta_box_check">Do not check this</label>
-    </p>
-    <?php
+//begin custom meta box for quote in blog post type
+add_action( 'add_meta_boxes', 'metabox_quote_add' );  
+function metabox_quote_add()  
+{  
+    add_meta_box( 'blog_quote', 'Quote', 'metabox_quote', 'blog', 'normal', 'high' );  
 }
 
-add_action( 'save_post', 'cd_meta_box_save' );
-function cd_meta_box_save( $post_id )
-{
-    // Bail if we're doing an auto save
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+function metabox_quote( $post )  
+{  
+    $quote_content = get_post_meta( $post->ID, 'quote_content', true );  
+    $quote_author = get_post_meta( $post->ID, 'quote_author', true );  
+    $quote_url = get_post_meta( $post->ID, 'quote_url', true );  
+    wp_nonce_field( 'save_quote_meta', 'quote_nonce' );  
+    ?>  
+        <p>
+            <label for="quote_content">Quote</label>  
+            <textarea class="widefat" id="quote_content" name="quote_content"><?php echo $quote_content; ?></textarea>  
+        </p>
+        <p>
+            <label for="quote_author">Author</label>  
+            <input type="text" class="widefat" id="quote_author" name="quote_author" value="<?php echo $quote_author; ?>" />   
+        </p>
+        <p>
+            <label for="quote_url">Author URL (if any)</label>  
+            <input type="text" class="widefat" id="quote_url" name="quote_url" value="<?php echo $quote_url; ?>" />
+        <em>Please use http://</em>
+        </p>   
+    <?php  
+  
+}
 
-    // if our nonce isn't there, or we can't verify it, bail
-    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
-
-    // if our current user can't edit this post, bail
-    if( !current_user_can( 'edit_post' ) ) return;
-
-    // now we can actually save the data
-    $allowed = array(
-    'a' => array( // on allow a tags
-        'href' => array() // and those anchors can only have href attribute
-        )
-            );
-
-        // Make sure your data is set before trying to save it
-        if( isset( $_POST['my_meta_box_text'] ) )
-            update_post_meta( $post_id, 'my_meta_box_text', wp_kses( $_POST['my_meta_box_text'], $allowed ) );
-
-        if( isset( $_POST['my_meta_box_select'] ) )
-            update_post_meta( $post_id, 'my_meta_box_select', esc_attr( $_POST['my_meta_box_select'] ) );
-
-        // This is purely my personal preference for saving check-boxes
-        $chk = ( isset( $_POST['my_meta_box_check'] ) && $_POST['my_meta_box_check'] ) ? 'on' : 'off';
-        update_post_meta( $post_id, 'my_meta_box_check', $chk );
-    }
-    // End Custom Meta Boxes
+add_action( 'save_post', 'metabox_quote_save' );  
+function metabox_quote_save( $id )  
+{  
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;  
+  
+    if( !isset( $_POST['quote_nonce'] ) || !wp_verify_nonce( $_POST['quote_nonce'], 'save_quote_meta' ) ) return;  
+  
+    if( !current_user_can( 'edit_post' ) ) return;  
+  
+    if( isset( $_POST['quote_content'] ) )  
+        update_post_meta( $id, 'quote_content', esc_attr( strip_tags( $_POST['quote_content'] )) );  
+  
+    if( isset( $_POST['quote_author'] ) )  
+        update_post_meta( $id, 'quote_author', esc_attr( strip_tags( $_POST['quote_author'] ) ) );  
+  
+    if( isset( $_POST['quote_url'] ) )  
+        update_post_meta( $id, 'quote_url', esc_attr( strip_tags( $_POST['quote_url'] ) ) );  
+  
+}
+//end custom meta box for quote in blog post type
+    
     
     
     
@@ -82,37 +66,41 @@ function cd_meta_box_save( $post_id )
     // //Toggle meta boxes per post format in "custom meta box type: blog"
     // function toggle_meta_box_per_post_format()
     // {
-    //     wp_enqueue_script( 'jquery' );
+    // wp_enqueue_script( 'jquery' );
     // 
-    //     $script = '
-    //     <script type="text/javascript">
-    //         jQuery( document ).ready( function($)
-    //             {
-    //                 $( "#post_format_box" ).addClass( "hidden" );
+    // $script = '
+    // <script type="text/javascript">
+    // jQuery( document ).ready( function($)
+    // {
+    // $( "#post_format_box" ).addClass( "hidden" );
     // 
-    //                 $( "input#post-format-0" ).change( function() {
-    //                     $( "#postdivrich" ).removeClass( "hidden" );
-    //                     $( "#post_format_box" ).addClass( "hidden" );
-    //                 } );
+    // $( "input#post-format-0" ).change( function() {
+    // $( "#postdivrich" ).removeClass( "hidden" );
+    // $( "#post_format_box" ).addClass( "hidden" );
+    // } );
     // 
-    //                 $( "input:not(#post-format-0)" ).change( function() {
-    //                     $( "#postdivrich" ).addClass( "hidden" );
-    //                     $( "#post_format_box" ).removeClass( "hidden" );
-    //                 } );
+    // $( "input:not(#post-format-0)" ).change( function() {
+    // $( "#postdivrich" ).addClass( "hidden" );
+    // $( "#post_format_box" ).removeClass( "hidden" );
+    // } );
     // 
-    //                 $( "input[name=\"post_format\"]" ).click( function() {
-    //                     var mydiv = $(this).attr( "id" ).replace( "post-format-", "" );
-    //                     $( "#post_format_box div.inside div" ).addClass("hidden");
-    //                     $( "#post_format_box div.inside div#"+mydiv).removeClass( "hidden" );
-    //                 } );
-    //             }
-    //         );
-    //     </script>
-    //     ';
+    // $( "input[name=\"post_format\"]" ).click( function() {
+    // var mydiv = $(this).attr( "id" ).replace( "post-format-", "" );
+    // $( "#post_format_box div.inside div" ).addClass("hidden");
+    // $( "#post_format_box div.inside div#"+mydiv).removeClass( "hidden" );
+    // } );
+    // }
+    // );
+    // </script>
+    // ';
     // 
-    //     return print $script;
+    // return print $script;
     // }
     // add_action( 'admin_footer', 'toggle_meta_box_per_post_format' );
     // //End Toggle meta boxes per post format in "custom meta box type: blog"
+    // 
     
-    ?>
+    
+    
+
+?>

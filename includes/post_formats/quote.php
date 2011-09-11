@@ -1,10 +1,31 @@
-<!--BEGIN .hentry -->
-<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">				
-    <h3>FPO: Quote Post Format</h3>
-    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<div <?php post_class(post_wrap); ?> id="post-<?php the_ID(); ?>">
+    
 
-     <div class="entry">
-         <?php the_content('View Project'); ?>
-     </div>
-<!--END .hentry-->  
+        
+        
+        
+        
+    <?php
+
+
+    	$quote = get_post_meta( $post->ID, 'quote_content', true );
+    	$author = get_post_meta( $post->ID, 'quote_author', true ); 
+        $url = get_post_meta( $post->ID, 'quote_url', true );
+
+        
+        echo $quote;
+        echo $author;
+        echo $url;
+
+
+    ?>
+
+
+        
+        
+        
+        
+        
+        
+        
 </div>
