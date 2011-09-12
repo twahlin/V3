@@ -35,10 +35,11 @@ jQuery( document ).ready( function($) {
     console.log("format_blog_" + $("#formatdiv input:checked").val() + " is checked!");
     
     $("#formatdiv input").click(function() {
-      console.log("format_blog_" + $("#formatdiv input:checked").val() + " is checked!");
+      console.log("#format_blog_" + $("#formatdiv input:checked").val());
       // console.log($("format_blog_").val());
+			// $("#format_blog_").val().hide();
+			// $("#format_blog_" + $("#formatdiv input:checked").val()).hide();
     });
-    
 
 });
 
