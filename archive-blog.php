@@ -16,10 +16,10 @@ get_header(); ?>
     
         // The following determines what the post format is and shows the correct file accordingly
         $format = get_post_format();
-        get_template_part( 'includes/post_formats/'.$format );
+        get_template_part( 'includes/admin/post_formats/'.$format );
         
         if($format == '')
-        get_template_part( 'includes/post_formats/standard' );
+        get_template_part( 'includes/admin/post_formats/standard' );
         
     ?>
 

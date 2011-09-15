@@ -51,6 +51,49 @@ function metabox_quote_save( $id )
   
 }
 //end custom meta box for quote in blog post type
+
+//begin custom meta box for link in blog post type
+add_action( 'add_meta_boxes', 'metabox_link_add' );  
+function metabox_link_add()  
+{  
+    add_meta_box( 'format_blog_link', 'Link', 'metabox_link', 'blog', 'normal', 'high' );  
+}
+
+function metabox_link( $post )  
+{  
+    $link_url = get_post_meta( $post->ID, 'link_url', true ); 
+    $link_content = get_post_meta( $post->ID, 'link_content', true );   
+    wp_nonce_field( 'save_link_meta', 'link_nonce' );  
+    ?>  
+        <p>
+            <label for="link_url">Link URL</label>  
+            <input type="text" class="widefat" id="link_url" name="link_url" value="<?php echo $link_url; ?>" />
+        <em>Please use http:// (this will go directly to the href)</em>
+        </p>    
+        <p>
+            <label for="link_content">Link Information</label>  
+            <textarea class="widefat" id="link_content" name="link_content"><?php echo $link_content; ?></textarea>  
+        </p>
+    <?php  
+  
+}
+
+add_action( 'save_post', 'metabox_link_save' );  
+function metabox_link_save( $id )  
+{  
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;  
+  
+    if( !isset( $_POST['link_nonce'] ) || !wp_verify_nonce( $_POST['link_nonce'], 'save_link_meta' ) ) return;  
+  
+    if( !current_user_can( 'edit_post' ) ) return;  
+    
+    if( isset( $_POST['link_url'] ) )  
+        update_post_meta( $id, 'link_url', esc_attr( strip_tags( $_POST['link_url'] ) ) );
+  
+    if( isset( $_POST['link_content'] ) )  
+        update_post_meta( $id, 'link_content', esc_attr( strip_tags( $_POST['link_content'] )) );  
+}
+//end custom meta box for link in blog post type
     
     
     
@@ -65,12 +108,13 @@ function metabox_quote_save( $id )
     
 
     
-    
+//start JS for toggling meta boxes    
     function toggle_meta_box_per_post_format() {
        wp_register_script('toggle_meta_box_per_post_format', get_template_directory_uri() . '/scripts/admin/toggle_meta_box_per_post_format.js');
        wp_enqueue_script('toggle_meta_box_per_post_format');
     }
     add_action('admin_enqueue_scripts', 'toggle_meta_box_per_post_format');
+//end JS for toggling meta boxes
     
     
     

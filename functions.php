@@ -23,13 +23,14 @@ function add_body_class( $classes ) {
 add_filter( 'body_class', 'add_body_class' );
 //end adds body classes to respective pages
 
-// Hides posts in admin menu
-add_action('admin_head', 'hide_menus');
+// Hides posts in admin menu and ovverides other styles
+add_action('admin_head', 'override_styles');
 
-function hide_menus() {
+function override_styles() {
     echo
     '<style>
         #menu-posts{ display:none; }
+        textarea.widefat{ background-color: #fff; }
     </style>';
 }
 // End hides posts in admin menu
