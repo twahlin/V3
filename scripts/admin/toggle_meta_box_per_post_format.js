@@ -5,7 +5,7 @@ jQuery( document ).ready( function($) {
 		var all_format_divs = "#format_blog_0, #format_blog_gallery, #format_blog_link, #format_blog_image, #format_blog_quote, #format_blog_video"
 		var currently_selected = $("#formatdiv input:checked").val();
 
-		$("#postdivrich").addClass("hidden");
+		$("#postdivrich, #postexcerpt").addClass("hidden");
 		$(all_format_divs).addClass("hidden");
 
 		$("#format_blog_" + currently_selected).removeClass("hidden");
