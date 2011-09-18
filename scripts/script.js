@@ -61,6 +61,9 @@ jQuery(document).ready(function($){
         clearContents: true,
         template: '<p>%text%</p>'
     });
+    
+    //fitvid - responsive video
+    $("#page_wrap").fitVids();
 });
 
 $(window).load(function () {

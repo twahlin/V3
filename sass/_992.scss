@@ -22,6 +22,10 @@
     width: 22%;
 }
 
+.feed_home .home_dribbble_shots li {
+    display: block;
+}
+
 .home_dribbble_shots ol li a .dribbble_img_wrap span {
     @include opacity(0);    
 }

@@ -9,14 +9,7 @@ get_header(); ?>
 
 
 
-<div class="content clearfix">
-
-
-Single WOOOOOOORK
-
-
-
-</div>
+<h2>Client goes here</h2>
 
 
 <?php get_sidebar(); ?>

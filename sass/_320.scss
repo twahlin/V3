@@ -34,7 +34,7 @@ h2 {
     color: #666;
     font-size: 60px;
     line-height: 72px;
-    padding: 40px 0 0 40px; 
+    padding: 2.4% 0 0 2.4%; 
 }
 
 h5 {
@@ -929,7 +929,7 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .progress_bar {
-    background: #f2f2f2 image-url('bg_noise_transparent.png') center;
+    background: rgba(0, 0, 0, .05) image-url('bg_diagonal_lines_5_percent.png') center;
     border: 1px solid #fff;    
     height: 24px;
     position: relative;

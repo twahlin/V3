@@ -11,8 +11,11 @@
 get_header(); ?>
 
 <div class="col_left">
+    
+
+    
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        <h3 class="entry-title"><?php the_title(); ?></h3>
+        <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
     <?php endwhile; // end of the loop. ?>
 

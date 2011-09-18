@@ -22,6 +22,14 @@
     margin: 3% 3% 3% 0;    
 }
 
+.feed_home .home_dribbble_shots li {
+    display: none;
+}
+
+.feed_home .home_dribbble_shots li:first-child {
+   display: block;
+}
+
 //------------------------------------------------------------------
 //Footer
 //------------------------------------------------------------------

@@ -63,8 +63,11 @@ function ribbon_new() {
 }
 //end new ribbon for blog posts -- goes over image
 
-function icon_post_format(){
-    
+//de-bloat and remove wordpress clutter
+add_action( 'add_meta_boxes', 'my_remove_post_meta_boxes' );
+
+function my_remove_post_meta_boxes() {
+    remove_meta_box( 'commentsdiv', 'post', 'normal' );
 }
 
 /*-----------------------------------------------------------------------------------

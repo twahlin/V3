@@ -8,7 +8,6 @@
 get_header(); ?>
 
 
-
 <?php query_posts(array('post_type' => 'work')); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -27,6 +26,7 @@ get_header(); ?>
      <?php endif; ?>
 
      
+          
  </div>
 
 </div> <!-- closes the first div box -->
