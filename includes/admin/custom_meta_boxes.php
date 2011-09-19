@@ -94,8 +94,61 @@ function metabox_link_save( $id )
         update_post_meta( $id, 'link_content', esc_attr( strip_tags( $_POST['link_content'] )) );  
 }
 //end custom meta box for link in blog post type
+   
     
+// NOT COMPLETE!!!!    
     
+//begin custom meta box work posts
+add_action( 'add_meta_boxes', 'metabox_work_add' );  
+function metabox_work_add()  
+{  
+    add_meta_box( 'work_type', 'Work Information', 'metabox_work', 'work', 'normal', 'high' );  
+}
+
+function metabox_work( $post )  
+{  
+    $quote_content = get_post_meta( $post->ID, 'quote_content', true );  
+    $quote_author = get_post_meta( $post->ID, 'quote_author', true );  
+    $quote_url = get_post_meta( $post->ID, 'quote_url', true );  
+    wp_nonce_field( 'save_work_meta', 'work_nonce' );  
+    ?>  
+        <p>
+            <label for="quote_content">Quote</label>  
+            <textarea class="widefat" id="quote_content" name="quote_content"><?php echo $quote_content; ?></textarea>  
+        </p>
+        <p>
+            <label for="quote_author">Author</label>  
+            <input type="text" class="widefat" id="quote_author" name="quote_author" value="<?php echo $quote_author; ?>" />   
+        </p>
+        <p>
+            <label for="quote_url">Author URL (if any)</label>  
+            <input type="text" class="widefat" id="quote_url" name="quote_url" value="<?php echo $quote_url; ?>" />
+        <em>Please use http://</em>
+        </p>   
+    <?php  
+  
+}
+
+add_action( 'save_post', 'metabox_work_save' );  
+function metabox_work_save( $id )  
+{  
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;  
+  
+    if( !isset( $_POST['work_nonce'] ) || !wp_verify_nonce( $_POST['work_nonce'], 'save_work_meta' ) ) return;  
+  
+    if( !current_user_can( 'edit_post' ) ) return;  
+  
+    if( isset( $_POST['quote_content'] ) )  
+        update_post_meta( $id, 'quote_content', esc_attr( strip_tags( $_POST['quote_content'] )) );  
+  
+    if( isset( $_POST['quote_author'] ) )  
+        update_post_meta( $id, 'quote_author', esc_attr( strip_tags( $_POST['quote_author'] ) ) );  
+  
+    if( isset( $_POST['quote_url'] ) )  
+        update_post_meta( $id, 'quote_url', esc_attr( strip_tags( $_POST['quote_url'] ) ) );  
+  
+}
+//end custom meta box for work posts   
     
     
     

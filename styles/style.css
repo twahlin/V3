@@ -1453,7 +1453,44 @@ footer .footer_nav li a:active {
   margin-left: 10px;
 }
 
-/* line 967, ../sass/_320.scss */
+/* line 971, ../sass/_320.scss */
+.work_post aside {
+  float: left;
+  width: 30%;
+  margin: 0 2.4%;
+}
+
+/* line 978, ../sass/_320.scss */
+.work_post aside h4 {
+  font-size: 13px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+/* line 984, ../sass/_320.scss */
+.work_post aside ul li ol li {
+  margin-bottom: 3px;
+}
+
+/* line 988, ../sass/_320.scss */
+.work_post aside ul li ol li a {
+  font-size: 12px;
+  line-height: 13px;
+}
+
+/* line 993, ../sass/_320.scss */
+.work_post section {
+  float: left;
+  max-width: 800px;
+  width: 62.8%;
+}
+
+/* line 999, ../sass/_320.scss */
+.work_post section ul li img {
+  width: 100%;
+}
+
+/* line 1008, ../sass/_320.scss */
 .twitterHeader {
   display: none;
 }

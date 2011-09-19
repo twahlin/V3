@@ -78,3 +78,14 @@ $link_blue: #00538e;
     @include blue_text_shadow_top;
     @include transition_default;
 }
+
+//------------------------------------------------------------------
+//Box Model
+//------------------------------------------------------------------
+
+@mixin global_wrap_margin { margin: 2.4%; }
+
+@mixin global_wrap_margin_left_right { margin: 0 2.4%; }
+
+
+

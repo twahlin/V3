@@ -961,6 +961,47 @@ footer .footer_nav li a:active {
 }
 
 //------------------------------------------------------------------
+//Work Single
+//------------------------------------------------------------------
+
+.single_work_header {
+    
+}
+
+.work_post aside {
+    float: left;
+    width: 30%;
+    
+    @include global_wrap_margin_left_right;
+}
+
+.work_post aside h4 {
+    font-size: 13px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+.work_post aside ul li ol li {
+    margin-bottom: 3px;
+}
+
+.work_post aside ul li ol li a {
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.work_post section {
+    float: left;
+    max-width: 800px;
+    width: 62.8%;
+}
+
+.work_post section ul li img {
+    width: 100%;
+    
+}
+
+//------------------------------------------------------------------
 //Overrides
 //------------------------------------------------------------------
 
