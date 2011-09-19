@@ -107,24 +107,40 @@ function metabox_work_add()
 
 function metabox_work( $post )  
 {  
-    $quote_content = get_post_meta( $post->ID, 'quote_content', true );  
-    $quote_author = get_post_meta( $post->ID, 'quote_author', true );  
-    $quote_url = get_post_meta( $post->ID, 'quote_url', true );  
+    $work_project = get_post_meta( $post->ID, 'work_project', true );  
+    $work_role = get_post_meta( $post->ID, 'work_role', true );  
+    $work_technology_used = get_post_meta( $post->ID, 'work_technology_used', true ); 
+    $work_company = get_post_meta( $post->ID, 'work_company', true );  
+    $work_description = get_post_meta( $post->ID, 'work_description', true );   
     wp_nonce_field( 'save_work_meta', 'work_nonce' );  
     ?>  
-        <p>
-            <label for="quote_content">Quote</label>  
-            <textarea class="widefat" id="quote_content" name="quote_content"><?php echo $quote_content; ?></textarea>  
-        </p>
-        <p>
-            <label for="quote_author">Author</label>  
-            <input type="text" class="widefat" id="quote_author" name="quote_author" value="<?php echo $quote_author; ?>" />   
-        </p>
-        <p>
-            <label for="quote_url">Author URL (if any)</label>  
-            <input type="text" class="widefat" id="quote_url" name="quote_url" value="<?php echo $quote_url; ?>" />
-        <em>Please use http://</em>
-        </p>   
+    <p>
+        <label for="work_project">Project</label>  
+        <input type="text" class="widefat" id="work_project" name="work_project" value="<?php echo $work_project; ?>" />
+    </p>
+    <p>
+        <label for="work_role">Role</label>  
+        <input type="text" class="widefat" id="work_role" name="work_role" value="<?php echo $work_role; ?>" />
+    </p>
+    <p>
+        <label for="work_technology_used">Technology Used</label>  
+        <input type="text" class="widefat" id="work_technology_used" name="work_technology_used" value="<?php echo $work_technology_used; ?>" />
+    </p>
+    <p>
+        <label for="work_company">Company</label>  
+        <input type="text" class="widefat" id="work_company" name="work_company" value="<?php echo $work_company; ?>" />
+    </p>
+    <!-- <p>
+        <label for="work_company">Color</label> 
+        <select name="work_company" id="work_company"> 
+            <option value="red" <?php //selected( $selected, 'red' ); ?>>Red</option> 
+            <option value="blue" <?php// selected( $selected, 'blue' ); ?>>Blue</option> 
+        </select>
+    </p>   -->
+    <p>
+        <label for="work_description">Description</label>  
+        <textarea class="widefat" id="work_description" name="work_description"><?php echo $work_description; ?></textarea>  
+    </p>  
     <?php  
   
 }
@@ -138,14 +154,20 @@ function metabox_work_save( $id )
   
     if( !current_user_can( 'edit_post' ) ) return;  
   
-    if( isset( $_POST['quote_content'] ) )  
-        update_post_meta( $id, 'quote_content', esc_attr( strip_tags( $_POST['quote_content'] )) );  
+    if( isset( $_POST['work_project'] ) )  
+        update_post_meta( $id, 'work_project', esc_attr( strip_tags( $_POST['work_project'] )) );  
   
-    if( isset( $_POST['quote_author'] ) )  
-        update_post_meta( $id, 'quote_author', esc_attr( strip_tags( $_POST['quote_author'] ) ) );  
+    if( isset( $_POST['work_role'] ) )  
+        update_post_meta( $id, 'work_role', esc_attr( strip_tags( $_POST['work_role'] ) ) );  
   
-    if( isset( $_POST['quote_url'] ) )  
-        update_post_meta( $id, 'quote_url', esc_attr( strip_tags( $_POST['quote_url'] ) ) );  
+    if( isset( $_POST['work_technology_used'] ) )  
+        update_post_meta( $id, 'work_technology_used', esc_attr( strip_tags( $_POST['work_technology_used'] ) ) );  
+        
+    if( isset( $_POST['work_company'] ) )  
+        update_post_meta( $id, 'work_company', esc_attr( strip_tags( $_POST['work_company'] ) ) );
+        
+    if( isset( $_POST['work_description'] ) )  
+        update_post_meta( $id, 'work_description', esc_attr( strip_tags( $_POST['work_description'] ) ) );                
   
 }
 //end custom meta box for work posts   
