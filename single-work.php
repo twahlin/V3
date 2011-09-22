@@ -15,33 +15,40 @@ get_header(); ?>
 </div>
 
 <div class="work_post">
+    <?php
+        $project = get_post_meta( $post->ID, 'work_project', true );
+        $role = get_post_meta( $post->ID, 'work_role', true );
+        $technology_used = get_post_meta( $post->ID, 'work_technology_used', true );
+        $company = get_post_meta( $post->ID, 'work_company', true );
+        $description = get_post_meta( $post->ID, 'work_description', true );
+    ?>
     <aside>
         <ul>
             <li>
                 <h4>Project:</h4>
-                <p>Various</p>
+                <p><?php echo "$project" ?></p>
             </li>
             <li>
                 <h4>Role:</h4>
-                <p>Design &amp; front-end development</p>
+                <p><?php echo "$role" ?></p>
             </li>
             <li>
                 <h4>Technology Used:</h4>
-                <p>xhtml, css, scss, Visual Design, jQuery.</p>
+                <p><?php echo "$technology_used" ?></p>
             </li>
             <li>
                 <h4>Description:</h4>
-                <p>Many projects have been completed with American Express during my time at space150. American Express prefers that I do not show this work in a public setting. Get in touch if you would like to view the projects.</p>
+                <p><?php echo "$company" ?></p>
             </li>
             <li>
-                <h4>Agency:</h4>
-                <p>space150</p>
+                <h4>Company:</h4>
+                <p><?php echo "$description" ?></p>
             </li>
             <li>
-                <h4>Related Posts:</h4>
+                <h4>Related Blog Posts:</h4>
                 <ol>
-                    <li><a href="#">American Express Process</a></li>
-                    <li><a href="#">Getting jQuery cycle plugin without multiple instances </a></li>    
+                    <li><a href="#">FPO American Express Process</a></li>
+                    <li><a href="#">FPO Getting jQuery cycle plugin without multiple instances </a></li>    
                 </ol>    
             </li>
         </ul>    
