@@ -11,7 +11,7 @@
     	$author = get_post_meta( $post->ID, 'quote_author', true ); 
         $url = get_post_meta( $post->ID, 'quote_url', true );
         
-        echo "<p>$quote</p><a href='$url' title='Quote author link'>&mdash;$author</a>"
+        echo "<p>$quote</p><a href='$url' rel='external' title='Quote author link'>&mdash;$author</a>"
 
 
     ?>

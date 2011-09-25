@@ -516,12 +516,12 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     padding: 3%; 
     width: 94%;    
     
-    @include default_box_shadow;
+    @include default_container_shadow;
     @include transition_default;           
 }
 
 .home_dribbble_shots ol li a:hover { 
-    @include box-shadow(rgba(0, 0, 0, .6) 0 0 8px);          
+    @include default_container_shadow_hover        
 }
 
 .home_dribbble_shots ol li a .dribbble_img_wrap {
@@ -701,7 +701,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     background: #fff image-url('bg_diagonal_lines_5_percent.png');
     overflow: visible;
     
-    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+    @include default_container_shadow;
 }
 
 .format-quote aside {
@@ -1033,7 +1033,7 @@ footer .footer_nav li a:active {
     position: relative;      
     width: 94%;
     
-    @include default_box_shadow;     
+    @include default_container_shadow;     
 }
 
 .masonry_inner a .masonry_img_wrap {
