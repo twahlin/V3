@@ -6,7 +6,13 @@
         <p><?php the_time('Y') ?></p>
     </div>
     
-    <h3><em><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></em></a></h3>
+    <h3>
+        <em>
+            <span>
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            <span>
+        </em>
+    </h3>
         <div class="img_border">
             <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
             <?php img_first(); ?>

@@ -73,7 +73,7 @@ var $container = $('#masonry_responsive_grid');
 
 $(window).resize(function(){
   $container.masonry({
-      itemSelector: '.item',
+      itemSelector: '.masonry_item',
       isResizable: true,
       // set columnWidth a fraction of the container width
       // columnWidth: $container.width() / 4
