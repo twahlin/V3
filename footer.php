@@ -28,7 +28,11 @@
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.cycle.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/google-tweet.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.fitvids.js"></script>
+<<<<<<< HEAD
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.masonry.min.js"></script>
+=======
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.isotope.min.js"></script>
+>>>>>>> Experimenting with isotope
 <script src="<?php bloginfo('template_directory'); ?>/scripts/plugins.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/script.js"></script>
 <script type="text/javascript">

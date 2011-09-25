@@ -64,6 +64,18 @@ jQuery(document).ready(function($){
     
     //fitvid - responsive video
     $("#page_wrap").fitVids();
+    //end fitvid - responsive video   
+    
+    // Begin Isotope
+    $('#responsive_grid').isotope({
+      // options
+      itemSelector : '.item',
+      layoutMode : 'masonry'
+    });
+    // End Isotope
+
+    
+    
 });
 
 $(window).load(function () {
