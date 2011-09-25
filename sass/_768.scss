@@ -382,4 +382,16 @@ Footer
     @include transition-duration(0.5s);
 }
 
+//------------------------------------------------------------------
+//Masonry responsive grid
+//------------------------------------------------------------------
+
+.masonry_responsive_grid {
+    margin: 0 10px 0 11px; 
+}
+
+.masonry_item {
+    width: 33.33%;
+}
+
 

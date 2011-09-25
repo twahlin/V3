@@ -65,18 +65,24 @@ jQuery(document).ready(function($){
     //fitvid - responsive video
     $("#page_wrap").fitVids();
     //end fitvid - responsive video   
-    
-    // Begin Isotope
-    $('#responsive_grid').isotope({
-      // options
-      itemSelector : '.item',
-      layoutMode : 'masonry'
-    });
-    // End Isotope
-
-    
-    
+      
 });
+
+
+var $container = $('#masonry_responsive_grid');
+
+$(window).resize(function(){
+  $container.masonry({
+      itemSelector: '.item',
+      isResizable: true,
+      // set columnWidth a fraction of the container width
+      // columnWidth: $container.width() / 4
+  });
+// trigger resize to set up masonry on start-up
+}).resize();
+
+
+
 
 $(window).load(function () {
 

@@ -46,3 +46,21 @@ footer .copyright {
     float: left;
     padding-top: 28px;
 }
+
+//------------------------------------------------------------------
+//Masonry responsive grid
+//------------------------------------------------------------------
+
+.masonry_responsive_grid {
+    margin: 0 10px;
+}
+
+.masonry_item {
+    float: left;
+    width: 50%;
+}
+
+.masonry_inner {
+    background: #fff;
+    margin: 10px;
+}

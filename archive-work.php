@@ -8,19 +8,26 @@
 get_header(); ?>
 
 
-<div id="responsive_grid">
-    <div class="item" style="width: 23%; height: 320px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 320px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 320px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 320px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 260px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 48%; height: 600px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 380px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 260px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 380px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 260px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 380px; background: #ccc; margin: 1%"></div>
-    <div class="item" style="width: 23%; height: 260px; background: #ccc; margin: 1%"></div>        
+<div id="masonry_responsive_grid" class="masonry_responsive_grid">
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>                              
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>  
+    <div class="masonry_item" ><div class="masonry_inner">Hi, I'm a masonry item</div></div>    
+    
+    <!-- <div class="masonry_item">
+        <div class="masonry_inner">
+        </div>    
+    </div>   -->                         
+         
 </div>
 
 
