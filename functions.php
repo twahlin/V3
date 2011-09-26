@@ -46,7 +46,7 @@ $files = get_children('post_parent='.get_the_ID().'&post_type=attachment&post_mi
     $imagepieces = explode('"', $image);
     $imagepath = $imagepieces[1];
     $thumb=wp_get_attachment_url($num);
-    echo "<img src='$thumb' alt='Post Preview Image' />";
+    echo "$thumb";
   endif;
 }
 //end post first single image

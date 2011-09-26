@@ -352,42 +352,52 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
-//Image Border !! May want to globalize this with masonry items, percentage based
+//Global image borders and hover functionality
 //------------------------------------------------------------------
 
 .img_border {
     background: #fff;
     //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
-    border: 9px solid #fff;    
+    border: 9px solid #fff;  
     display: block; 
     position: relative;        
     
-    @include box-shadow(rgba(0, 0, 0, .4) 0 0 8px);
+    @include default_container_shadow;
     @include transition_default;
 }
 
-.img_border a {
-    display: block;
+.img_border .ribbon_new {
+    right: -10px;
+    top: -10px;	
 }
 
-.img_border img {
+.img_border .img_wrap {
+	overflow: hidden;	
+	position: relative;
+	
+    @include default_container_inner_shadow; 
+    @include transition_default; 	
+}
+
+
+.img_border .img_wrap img {
     display: block;
     width: 100%;
+
+    @include opacity(0);
 }
 
-//------------------------------------------------------------------
-//Image title bar overlay
-//------------------------------------------------------------------
-
-.img_titlebar_overlay {
+.img_border .img_wrap em {
     border-top: 1px solid #6f9dc0;    
     bottom: 0;
     color: #fff;
-    display: block;
+    display: inline-block;
+    font-style: normal;    
     font-size: 11px;
-    left: 0;     
+    left: 0;   
+    padding: 6px;
     position: absolute;
-    width: 100%;
+	width: 100%;
     
     @include blue_text_shadow_top;
     @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
@@ -395,11 +405,9 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     @include transition_default;    
 }
 
-.img_titlebar_overlay em {
-    display: block;
-    font-style: normal;    
-    padding: 6px;   
-}
+//Hover States, need this because a.img_border may not always be an a tag
+a.img_border:hover { @include default_container_shadow_hover; }
+a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 //------------------------------------------------------------------
 //Hero Slider
@@ -506,32 +514,6 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .home_dribbble_shots ol li {    
     display: block;
     margin-bottom: 18px;
-}
-
-.home_dribbble_shots ol li a {
-    background: #fff;
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;       
-    padding: 3%; 
-    width: 94%;    
-    
-    @include default_container_shadow;
-    @include transition_default;           
-}
-
-.home_dribbble_shots ol li a:hover { 
-    @include default_container_shadow_hover        
-}
-
-.home_dribbble_shots ol li a .dribbble_img_wrap {
-    position: relative;
-    
-    @include box-shadow(inset rgba(0, 0, 0, .3) 0 0 6px);                 
-}
-
-.home_dribbble_shots ol li a .dribbble_img_wrap img {
-    @include opacity(0);
 }
 
 .home_tweets ul {
@@ -1022,27 +1004,8 @@ footer .footer_nav li a:active {
     width: 100%;
 }
 
-.masonry_inner {
-    margin: 10px 20px;       
-}
-
-.masonry_inner a {
-    background: #fff;    
-    display: block;
-    padding: 3%;
-    position: relative;      
-    width: 94%;
-    
-    @include default_container_shadow;     
-}
-
-.masonry_inner a .masonry_img_wrap {
-    position: relative;
-}
-
-.masonry_inner a img {
-    display: block;
-    width: 100%;
+.masonry_item .img_border {
+    margin: 10px 20px;  	
 }
 
 //------------------------------------------------------------------

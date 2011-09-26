@@ -18,9 +18,18 @@
                 $image = $image_url[1];
         ?>
         <li>
-            <a href="<?php echo $link; ?>" rel="external">
-                <div class="dribbble_img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><span class="img_titlebar_overlay"><em><?php echo $title; ?></em></span><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div>
-            </a>
+
+                <!-- <div class="dribbble_img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><span class="img_titlebar_overlay"><em><?php echo $title; ?></em></span><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div> -->
+
+            
+                <a class="img_border" href="<?php echo $link; ?>" rel="external"><div class="img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><em><?php echo $title; ?></em><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div></a> 
+            
+            
+            
+            
+            
+            
+            
         </li>    
     <?php endforeach;?>
 </ol>

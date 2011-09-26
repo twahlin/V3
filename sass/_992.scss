@@ -9,6 +9,14 @@
 .before_header ul { margin-right: 5%; }
 
 //------------------------------------------------------------------
+//Global image borders and hover functionality
+//------------------------------------------------------------------
+
+a.img_border .img_wrap em  { @include opacity(0); }
+
+a.img_border:hover .img_wrap em { @include opacity(100); }
+
+//------------------------------------------------------------------
 //Feed Home
 //------------------------------------------------------------------
 
@@ -24,14 +32,6 @@
 
 .feed_home .home_dribbble_shots li {
     display: block;
-}
-
-.home_dribbble_shots ol li a .dribbble_img_wrap span {
-    @include opacity(0);    
-}
-
-.home_dribbble_shots ol li a:hover .dribbble_img_wrap span {
-    @include opacity(100);
 }
 
 .feed_home .hr {
