@@ -23,18 +23,6 @@ function add_body_class( $classes ) {
 add_filter( 'body_class', 'add_body_class' );
 //end adds body classes to respective pages
 
-// Hides posts in admin menu and ovverides other styles
-add_action('admin_head', 'override_styles');
-
-function override_styles() {
-    echo
-    '<style>
-        #menu-posts{ display:none; }
-        textarea.widefat{ background-color: #fff; }
-    </style>';
-}
-// End hides posts in admin menu
-
 //post first single image
 function img_first() {
 $files = get_children('post_parent='.get_the_ID().'&post_type=attachment&post_mime_type=image');
@@ -64,11 +52,43 @@ function ribbon_new() {
 //end new ribbon for blog posts -- goes over image
 
 //de-bloat and remove wordpress clutter
-add_action( 'add_meta_boxes', 'my_remove_post_meta_boxes' );
+function disable_default_dashboard_widgets() {  
+    // remove_meta_box('dashboard_right_now', 'dashboard', 'core');  
+    // remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');  
+    remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  
+    remove_meta_box('dashboard_plugins', 'dashboard', 'core');  
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  
+    // remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');  
+    remove_meta_box('dashboard_primary', 'dashboard', 'core');  
+    remove_meta_box('dashboard_secondary', 'dashboard', 'core');  
+}  
+add_action('admin_menu', 'disable_default_dashboard_widgets');
+//end de-bloat and remove wordpress clutter
 
-function my_remove_post_meta_boxes() {
-    remove_meta_box( 'commentsdiv', 'post', 'normal' );
-}
+// remove default wordpress menu items
+function remove_menus () {  
+global $menu;  
+        $restricted = array(__('Links'), __('Media'), __('Posts'));  
+        end ($menu);  
+        while (prev($menu)){  
+            $value = explode(' ',$menu[key($menu)][0]);  
+            if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}  
+        }  
+}  
+add_action('admin_menu', 'remove_menus');
+// end remove default wordpress menu items
+
+// Customize footer text
+function modify_footer_admin () {  
+  echo 'Created by <a href="http://www.tomwahlin.com/">Tom Wahlin</a>. Powered by <a href="http://www.wordpress.org">WordPress</a>.  •
+    <a href="http://codex.wordpress.org/">Documentation</a> •
+    <a href="http://twimac.local:8888/V3/wp-admin/freedoms.php">Freedoms</a> •
+    <a href="http://wordpress.org/support/forum/4">Feedback</a> •
+    <a href="http://twimac.local:8888/V3/wp-admin/credits.php">Credits</a>';  
+}  
+  
+add_filter('admin_footer_text', 'modify_footer_admin');
+// End Customize footer text
 
 /*-----------------------------------------------------------------------------------
 Includes
