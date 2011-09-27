@@ -355,16 +355,42 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //Global image borders and hover functionality
 //------------------------------------------------------------------
 
+//image needs a wrap with a z index. Maybe the shadow can be put on the img_wrap?
+
 .img_border {
     background: #fff;
     //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
     border: 9px solid #fff;  
     display: block; 
-    position: relative;        
+    position: relative;  
     
     @include default_container_shadow;
     @include transition_default;
 }
+
+.img_border:before,
+.img_border:after {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	left: 1px;
+	bottom: 5px;
+	width: 70%;
+	max-width: 300px;
+	height: 70%;
+	
+	@include transform(skew(-20deg) rotate(-16deg));
+	@include box-shadow(rgba(0, 0, 0, 1) 0 10px 18px);    
+}
+
+.img_border:after {
+	left: auto;
+	right: 10px;
+
+	@include transform(skew(20deg) rotate(16deg));
+}
+
+
 
 .img_border .ribbon_new {
     right: -10px;
