@@ -370,14 +370,15 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .img_border:before,
 .img_border:after {
+	background: rgba(0, 0, 0, .5);
 	content: '';
 	z-index: -1;
 	position: absolute;
 	left: 1px;
 	bottom: 5px;
-	width: 70%;
+	width: 20%;
 	max-width: 300px;
-	height: 70%;
+	height: 40%;
 	
 	@include transform(skew(-20deg) rotate(-16deg));
 	@include box-shadow(rgba(0, 0, 0, 1) 0 10px 18px);    
