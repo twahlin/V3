@@ -359,6 +359,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .img_border {
     background: #fff;
+background-size: 100% 100%;
     //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
     border: 9px solid #fff;  
     display: block; 
@@ -370,7 +371,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .img_border:before,
 .img_border:after {
-	background: rgba(0, 0, 0, .5);
+	background: rgba(0, 0, 0, .4);
 	content: '';
 	z-index: -1;
 	position: absolute;
@@ -378,20 +379,21 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 	bottom: 5px;
 	width: 20%;
 	max-width: 300px;
-	height: 40%;
+	height: 60%;
 	
-	@include transform(skew(-20deg) rotate(-16deg));
-	@include box-shadow(rgba(0, 0, 0, 1) 0 10px 18px);    
+	@include transform(skew(-18deg) rotate(-16deg));
+	@include box-shadow(rgba(0, 0, 0, 0.8) 0 15px 25px);   
 }
 
 .img_border:after {
 	left: auto;
-	right: 10px;
+	right: 1px;
 
-	@include transform(skew(20deg) rotate(16deg));
+	@include transform(skew(18deg) rotate(16deg));
 }
 
-
+.img_border:hover:before,
+.img_border:hover:after { @include box-shadow(rgba(0, 0, 0, 1) 0 17px 27px); }
 
 .img_border .ribbon_new {
     right: -10px;
@@ -405,7 +407,6 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     @include default_container_inner_shadow; 
     @include transition_default; 	
 }
-
 
 .img_border .img_wrap img {
     display: block;
@@ -650,15 +651,17 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
     width: 40px;
 }
 
-.format-standard .img_border:before {
+.format-standard .icon_post_format {
     background: #fff image-url('png_master_sprite.png') -163px -91px;
     content:"";
     display: block;
-    height: 50px;
+    height: 0;
+	overflow: hidden;
+	padding-top: 48px;
     position: absolute;
     left: -9px;
     top: -9px;
-    width: 50px;
+    width: 46px;
     z-index: 100;
 }
 

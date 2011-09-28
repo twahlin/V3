@@ -22,7 +22,7 @@
                 <!-- <div class="dribbble_img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><span class="img_titlebar_overlay"><em><?php echo $title; ?></em></span><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div> -->
 
             
-                <a class="img_border" href="<?php echo $link; ?>" rel="external"><div class="img_wrap" style="background-size: 100%; background-image: url(<?php echo $image; ?>)"><em><?php echo $title; ?></em><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div></a> 
+                <a class="img_border" href="<?php echo $link; ?>" rel="external" style="background-image: url(<?php echo $image; ?>)"><div class="img_wrap"><em><?php echo $title; ?></em><img src="<?php echo $image; ?>" alt="<?php echo $title;?>"/></div></a> 
             
             
             
