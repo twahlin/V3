@@ -12,9 +12,9 @@
 //Global image borders and hover functionality
 //------------------------------------------------------------------
 
-a.img_border .img_wrap em  { @include opacity(0); }
+a.img_border .img_wrap em  { @include opacity(0); bottom: -30px; }
 
-a.img_border:hover .img_wrap em { @include opacity(100); }
+a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
 
 //------------------------------------------------------------------
 //Feed Home
