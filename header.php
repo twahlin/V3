@@ -56,6 +56,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <noscript>
+    <div class="top_alert">
+        Your browser does not support JavaScript!
+    </div>  
+    </noscript>  
     <div id="top"></div>
     <div id="page_wrap">
             <div id="page_content">

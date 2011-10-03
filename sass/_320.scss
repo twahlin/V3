@@ -325,6 +325,23 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
+//Top Alert
+//------------------------------------------------------------------
+
+.top_alert {
+    background: rgba(170, 0, 0, 1) image-url('bg_diagonal_lines_5_percent.png');
+    border: 1px solid #ff0000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    
+    @include box-shadow(inset rgba(0, 0, 0, 0.2)0 0 12px);
+	@include text-shadow(rgba(0, 0, 0, 0.8)0 1px 1px);    
+}
+
+//------------------------------------------------------------------
 //Ribbon New
 //------------------------------------------------------------------
 
@@ -359,7 +376,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .img_border {
     background: #fff;
-background-size: 100% 100%;
+    background-size: 100% 100%;
     //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
     border: 9px solid #fff;  
     display: block; 

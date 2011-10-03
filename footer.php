@@ -20,7 +20,7 @@
 </footer> 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="http://use.typekit.com/zbv5ytb.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zflickrfeed.min.js"></script>
