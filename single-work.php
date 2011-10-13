@@ -37,11 +37,11 @@ get_header(); ?>
                 <p><?php echo "$technology_used" ?></p>
             </li>
             <li>
-                <h4>Description:</h4>
+                <h4>Company:</h4>
                 <p><?php echo "$company" ?></p>
             </li>
             <li>
-                <h4>Company:</h4>
+                <h4>Description:</h4>
                 <p><?php echo "$description" ?></p>
             </li>
             <li>
