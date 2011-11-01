@@ -14,6 +14,9 @@ get_header(); ?>
             <div class="slide_wrap">
                 <div class="slide_inner_wrap">
                     <h2>Version 3 has launched</h2>
+                    <div class="slide_ribbon">
+                        <a href="#">Hi there, here is the ribbon link</a>
+                    </div>    
                 </div>
             </div>
         </li>
@@ -21,6 +24,9 @@ get_header(); ?>
             <div class="slide_wrap">
                 <div class="slide_inner_wrap">
                     <p>hi</p>
+                    <div class="slide_ribbon">
+                        <a href="#">Hi there, here is the ribbon link</a>
+                    </di>
                 </div>
             </div>
         </li>
@@ -28,6 +34,9 @@ get_header(); ?>
             <div class="slide_wrap">
                 <div class="slide_inner_wrap">
                     <p>hi</p>
+                    <div class="slide_ribbon">
+                        <a href="#">Hi there, here is the ribbon link</a>
+                    </di>
                 </div>
             </div>
         </li>  
