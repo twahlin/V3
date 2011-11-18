@@ -478,6 +478,10 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
     height: 241px;
 }
 
+.hero_slider li .slide_inner_wrap {
+  overflow: hidden;
+}
+
 .hero_slider li .slide_wrap {
     border-bottom: 3px #fff solid;
 }

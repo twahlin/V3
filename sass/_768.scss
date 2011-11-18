@@ -1,4 +1,4 @@
-#page_content {
+    #page_content {
 	padding-top: 18px;
 }
 
@@ -226,6 +226,10 @@ Main Content
 .hero_slider li .slide_wrap,
 .hero_slider li .slide_inner_wrap {
     height: 400px;
+}
+
+.hero_slider li .slide_inner_wrap {
+  overflow: visible;
 }
 
 //------------------------------------------------------------------
