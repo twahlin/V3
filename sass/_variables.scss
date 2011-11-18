@@ -40,6 +40,8 @@ $link_blue: #00538e;
 @mixin gradient_solid_standard { @include background(linear-gradient(rgba(153,204,245, 1), rgba(129,181,220, 1))); }
 @mixin gradient_solid_hover { @include background(linear-gradient(rgba(163,214,255, 1), rgba(139,191,230, 1))); }
 
+@mixin gradient_solid_666_555 { @include background(linear-gradient(rgba(102,102,102, 1), rgba(85,85,85, 1))); }
+
 //------------------------------------------------------------------
 //Shadows
 //------------------------------------------------------------------

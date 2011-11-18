@@ -450,6 +450,22 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
     @include transition_default;    
 }
 
+/*border-top: 1px solid #000;    
+bottom: 0;
+color: #fff;
+display: inline-block;
+font-style: normal;    
+font-size: 11px;
+left: 0; 
+right: 0;
+padding: 6px;
+position: absolute;
+
+@include text-shadow(#333 0 1px 0);
+@include box-shadow(inset rgba(255, 255, 255, .15) 0 1px 0);            
+@include gradient_solid_666_555;
+@include transition_default;*/
+
 //Hover States, need this because a.img_border may not always be an a tag
 a.img_border:hover { @include default_container_shadow_hover; }
 a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
@@ -628,6 +644,7 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 .feed_home section {
     margin: 3%;
+    padding: 0 0 20px 0;
     width: 94%;
 }
 
@@ -1128,6 +1145,8 @@ footer .footer_nav li a:active {
 .masonry_item {
     float: left;  
     width: 100%;
+    
+    @include transition_default;
 }
 
 .masonry_item .img_border {
