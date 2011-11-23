@@ -68,22 +68,6 @@ jQuery(document).ready(function($){
       
 });
 
-
-var $container = $('#masonry_responsive_grid');
-
-$(window).resize(function(){
-  $container.masonry({
-      itemSelector: '.masonry_item',
-      isResizable: true,
-      // set columnWidth a fraction of the container width
-      // columnWidth: $container.width() / 4
-  });
-// trigger resize to set up masonry on start-up
-}).resize();
-
-
-
-
 $(window).load(function () {
 
     //functionlist for window.load
@@ -106,5 +90,19 @@ $(window).load(function () {
         autoWindowHeight();
     });
     //end window resize function 
+    
+    //Masonry Functionality
+    var $container = $('#masonry_responsive_grid');
+
+    $(window).resize(function(){
+      $container.masonry({
+          itemSelector: '.masonry_item',
+          isResizable: true,
+          // set columnWidth a fraction of the container width
+          // columnWidth: $container.width() / 4
+      });
+    // trigger resize to set up masonry on start-up
+    }).resize();
+    //End Masonry Functionality    
     
 });

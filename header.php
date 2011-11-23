@@ -42,15 +42,6 @@
 <!-- For everything else -->
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
 
-<!--iOS. Delete if not required -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_directory'); ?>/images/splash.png">
-
-<!--Microsoft. Delete if not required -->
-<meta http-equiv="cleartype" content="on">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 <!-- http://t.co/y1jPVnT -->
 <link rel="canonical" href="/">
 </head>
