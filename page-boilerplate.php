@@ -1,12 +1,12 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Tom Wahlin V3
- * @since Tom Wahlin 2009
- */
- /*
- Template Name: Boilerplate
- */
+  * @package WordPress
+  * @subpackage Tom Wahlin V3
+  * @since Tom Wahlin 2009
+  */
+/*
+  Template Name: Boilerplate
+  */
 
 get_header(); ?>
 

@@ -128,6 +128,7 @@ p {
 header {
   background: #fff image-url('global/bg_diagonal_lines.png') center;
   position: relative;
+  z-index: 1000;
 }
 
 h1 {
@@ -200,7 +201,7 @@ h1 a span {
   line-height: 50px;
   overflow: hidden;
   text-transform: uppercase;
-  z-index: 100;
+  z-index: 1000;
 
   @include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
   @include proxima_semibold;    
@@ -480,11 +481,13 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   height: 0 !important;
 }
 
-.hero_slider .slide_wrap { background: image-url('slider-hero/bg_pattern_square.jpg') center; }
+.hero_slider .slide_wrap { background: image-url('global/bg_noise_transparent.png') center; }
 
-.hero_slider .second .slide_wrap { background: image-url('slider-hero/bg_pattern_squiggle.jpg') center; }
+.hero_slider .hero_first .slide_wrap { background: image-url('slider-hero/bg_pattern_square.jpg') center; }
 
-.hero_slider .third .slide_wrap { background: image-url('global/bg_noise_transparent.png') center; }
+.hero_slider .hero_second .slide_wrap { background: image-url('slider-hero/bg_pattern_squiggle.jpg') center; }
+
+.hero_slider .hero_third .slide_wrap { background: image-url('global/bg_noise_transparent.png') center; }
 
 .hero_slider_wrap .slides_nav {
   bottom: 10px;
