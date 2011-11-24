@@ -37,10 +37,8 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/m/apple-touch-icon.png">
 <!-- For iPhone 3G, iPod Touch and Android -->
 <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/l/apple-touch-icon-precomposed.png">
-<!-- For Nokia -->
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/l/apple-touch-icon.png">
 <!-- For everything else -->
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
 
 <!-- http://t.co/y1jPVnT -->
 <link rel="canonical" href="/">

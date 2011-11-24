@@ -88,7 +88,7 @@ abbr[title] {
 
 /* line 5, ../sass/_320.scss */
 html {
-  background: #eeeeee url('../images/bg_light_source.jpg?1314796059') top no-repeat;
+  background: #eeeeee url('../images/bg_light_source.jpg?1322149756') top no-repeat;
   color: #333;
   font-family: "Helvetica Neue", Arial, sans-serif;
   overflow-y: scroll;
@@ -231,7 +231,7 @@ p {
 
 /* line 87, ../sass/_320.scss */
 #page_wrap {
-  background: url('../images/bg_noise_transparent.png?1314796059') center;
+  background: url('../images/bg_noise_transparent.png?1322149756') center;
   min-height: 100%;
 }
 
@@ -279,7 +279,7 @@ p {
 
 /* line 128, ../sass/_320.scss */
 header {
-  background: white url('../images/bg_diagonal_lines.png?1314796059') center;
+  background: white url('../images/bg_diagonal_lines.png?1322149756') center;
   position: relative;
 }
 
@@ -388,7 +388,7 @@ h1 a:active {
 
 /* line 189, ../sass/_320.scss */
 h1 a span {
-  background: url('../images/png_master_sprite.png?1320349727') 18px 31px;
+  background: url('../images/png_master_sprite.png?1322149756') 18px 31px;
   display: block;
   position: relative;
   height: 100px;
@@ -568,7 +568,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 /* line 331, ../sass/_320.scss */
 .top_alert {
-  background: #aa0000 url('../images/bg_diagonal_lines_5_percent.png?1315831635');
+  background: #aa0000 url('../images/bg_diagonal_lines_5_percent.png?1322149756');
   border: 1px solid #ff0000;
   color: #fff;
   font-size: 14px;
@@ -584,7 +584,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 /* line 348, ../sass/_320.scss */
 .ribbon_new {
-  background: url('../images/png_master_sprite.png?1320349727') -118px -100px;
+  background: url('../images/png_master_sprite.png?1322149756') -118px -100px;
   display: block;
   height: 44px;
   position: absolute;
@@ -688,10 +688,10 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .img_border .img_wrap {
   overflow: hidden;
   position: relative;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 0 6px;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 0 6px;
-  -o-box-shadow: inset rgba(0, 0, 0, 0.25) 0 0 6px;
-  box-shadow: inset rgba(0, 0, 0, 0.25) 0 0 6px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 6px;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 6px;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 6px;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 6px;
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -710,6 +710,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 .img_border .img_wrap img {
   display: block;
   width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
@@ -777,10 +778,10 @@ a.img_border:hover {
 
 /* line 471, ../sass/_320.scss */
 a.img_border:hover .img_wrap {
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 6px;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 6px;
-  -o-box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 6px;
-  box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 6px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.4) 0 1px 6px;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.4) 0 1px 6px;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.4) 0 1px 6px;
+  box-shadow: inset rgba(0, 0, 0, 0.4) 0 1px 6px;
 }
 
 /* this changes the height of the master slideshow.*/
@@ -833,20 +834,20 @@ a.img_border:hover .img_wrap {
 
 /* line 516, ../sass/_320.scss */
 .hero_slider .slide_wrap {
-  background: url('../images/bg_pattern_square.jpg?1314796059') center;
+  background: url('../images/bg_pattern_square.jpg?1322149756') center;
 }
 
 /*.hero_slider .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(42, 83, 114, .3))); }*/
 /* line 520, ../sass/_320.scss */
 .hero_slider .second .slide_wrap {
-  background: url('../images/bg_pattern_squiggle.jpg?1314796059') center;
+  background: url('../images/bg_pattern_squiggle.jpg?1322149756') center;
 }
 
 /*.hero_slider .second .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }*/
 /*.hero_slider .third .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }*/
 /* line 526, ../sass/_320.scss */
 .hero_slider .third .slide_wrap {
-  background: url('../images/bg_noise_transparent.png?1314796059') center;
+  background: url('../images/bg_noise_transparent.png?1322149756') center;
 }
 
 /* line 528, ../sass/_320.scss */
@@ -886,6 +887,7 @@ a.img_border:hover .img_wrap {
   -webkit-box-shadow: white 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 1px 1px;
   -o-box-shadow: white 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 1px 1px;
   box-shadow: white 0 1px 0, inset rgba(0, 0, 0, 0.3) 0 1px 1px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   -moz-transition-property: all;
@@ -905,6 +907,7 @@ a.img_border:hover .img_wrap {
 /* line 560, ../sass/_320.scss */
 .hero_slider_wrap .slides_nav li a:hover,
 .hero_slider_wrap .slides_nav li a:active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
 }
@@ -929,7 +932,7 @@ a.img_border:hover .img_wrap {
 
 /* line 579, ../sass/_320.scss */
 .slide_inner_wrap .slide_ribbon a {
-  background: url('../images/png_master_sprite.png?1320349727') -56px -160px no-repeat;
+  background: url('../images/png_master_sprite.png?1322149756') -56px -160px no-repeat;
   color: #fff;
   display: block;
   font-size: 18px;
@@ -954,7 +957,7 @@ a.img_border:hover .img_wrap {
 
 /* line 601, ../sass/_320.scss */
 .slide_inner_wrap .slide_ribbon a:after {
-  background: url('../images/png_master_sprite.png?1320349727') -950px -160px no-repeat;
+  background: url('../images/png_master_sprite.png?1322149756') -950px -160px no-repeat;
   height: 64px;
   right: -10px;
   width: 18px;
@@ -962,7 +965,7 @@ a.img_border:hover .img_wrap {
 
 /* line 608, ../sass/_320.scss */
 .slide_inner_wrap .slide_ribbon a:before {
-  background: url('../images/png_master_sprite.png?1320349727') -496px -122px no-repeat;
+  background: url('../images/png_master_sprite.png?1322149756') -496px -122px no-repeat;
   bottom: -4px;
   position: absolute;
   right: -2px;
@@ -1061,7 +1064,7 @@ a.img_border:hover .img_wrap {
 
 /* line 694, ../sass/_320.scss */
 .home_connections .links_social li a span {
-  background-image: url('../images/png_master_sprite.png?1320349727');
+  background-image: url('../images/png_master_sprite.png?1322149756');
   display: block;
   height: 0;
   left: 11px;
@@ -1070,6 +1073,7 @@ a.img_border:hover .img_wrap {
   position: absolute;
   top: 8px;
   width: 22px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
   -moz-transition-property: all;
@@ -1088,6 +1092,7 @@ a.img_border:hover .img_wrap {
 
 /* line 709, ../sass/_320.scss */
 .home_connections .links_social li a:hover span {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
@@ -1124,7 +1129,7 @@ a.img_border:hover .img_wrap {
 
 /* line 724, ../sass/_320.scss */
 .blog_cal {
-  background: url('../images/png_master_sprite.png?1320349727') -65px -100px;
+  background: url('../images/png_master_sprite.png?1322149756') -65px -100px;
   height: 49px;
   overflow: hidden;
   width: 44px;
@@ -1174,7 +1179,7 @@ a.img_border:hover .img_wrap {
 
 /* line 772, ../sass/_320.scss */
 .format-standard .icon_post_format {
-  background: white url('../images/png_master_sprite.png?1320349727') -163px -91px;
+  background: white url('../images/png_master_sprite.png?1322149756') -163px -91px;
   content: "";
   display: block;
   height: 0;
@@ -1254,7 +1259,7 @@ a.img_border:hover .img_wrap {
 
 /* line 830, ../sass/_320.scss */
 .format-quote {
-  background: white url('../images/bg_diagonal_lines_5_percent.png?1315831635');
+  background: white url('../images/bg_diagonal_lines_5_percent.png?1322149756');
   overflow: visible;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 5px;
@@ -1287,7 +1292,7 @@ a.img_border:hover .img_wrap {
 
 /* line 851, ../sass/_320.scss */
 .format-quote aside em {
-  background: url('../images/png_master_sprite.png?1320349727') -356px -96px;
+  background: url('../images/png_master_sprite.png?1322149756') -356px -96px;
   display: block;
   height: 0;
   overflow: hidden;
@@ -1336,7 +1341,7 @@ a.img_border:hover .img_wrap {
 
 /* line 896, ../sass/_320.scss */
 .hr a {
-  background: #c8c8c8 url('../images/png_master_sprite.png?1320349727') 0 -386px;
+  background: #c8c8c8 url('../images/png_master_sprite.png?1322149756') 0 -386px;
   display: block;
   height: 0;
   left: 50%;
@@ -1382,7 +1387,7 @@ a.img_border:hover .img_wrap {
 
 /* line 924, ../sass/_320.scss */
 footer {
-  background: white url('../images/bg_diagonal_lines.png?1314796059') center;
+  background: white url('../images/bg_diagonal_lines.png?1322149756') center;
   border-top: 1px solid #6caddf;
   clear: both;
   font-size: 16px;
@@ -1510,6 +1515,7 @@ footer .footer_nav li a:active {
   display: block;
   height: 60px;
   width: 60px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
@@ -1546,7 +1552,7 @@ footer .footer_nav li a:active {
 
 /* line 1064, ../sass/_320.scss */
 .progress_bar {
-  background: rgba(0, 0, 0, 0.05) url('../images/bg_diagonal_lines_5_percent.png?1315831635') center;
+  background: rgba(0, 0, 0, 0.05) url('../images/bg_diagonal_lines_5_percent.png?1322149756') center;
   border: 1px solid #fff;
   height: 24px;
   position: relative;
@@ -1794,6 +1800,7 @@ footer .footer_nav li a:active {
     padding-top: 42px;
     position: relative;
     width: 28px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
     opacity: 0.4;
     -moz-transition-property: margin;
@@ -2233,7 +2240,7 @@ footer .footer_nav li a:active {
 
   /* line 319, ../sass/_768.scss */
   .lastFMBody ul .itemRow a .artWrap:before {
-    background: url('../images/overlay_album_shine.png?1314796059');
+    background: url('../images/overlay_album_shine.png?1322149756');
     content: "";
     height: 120px;
     left: 0;
@@ -2258,6 +2265,7 @@ footer .footer_nav li a:active {
     top: 6px;
     height: 120px;
     width: 120px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
@@ -2305,6 +2313,7 @@ footer .footer_nav li a:active {
 
   /* line 383, ../sass/_768.scss */
   .lastFMBody ul .itemRow a:hover .track_info {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     -moz-transition-property: opacity;
@@ -2344,6 +2353,7 @@ footer .footer_nav li a:active {
 
   /* line 15, ../sass/_992.scss */
   a.img_border .img_wrap em {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     bottom: -30px;
@@ -2351,6 +2361,7 @@ footer .footer_nav li a:active {
 
   /* line 17, ../sass/_992.scss */
   a.img_border:hover .img_wrap em {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10000)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
     opacity: 100;
     bottom: 0;
@@ -2432,7 +2443,7 @@ footer .footer_nav li a:active {
 
   /* line 78, ../sass/_992.scss */
   .home_connections .links_social li a .button:after {
-    background-image: url('../images/png_master_sprite.png?1320349727');
+    background-image: url('../images/png_master_sprite.png?1322149756');
     content: "";
     height: 34px;
     left: 0;
@@ -2440,6 +2451,7 @@ footer .footer_nav li a:active {
     top: 0;
     width: 34px;
     z-index: 2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
     opacity: 0.85;
     -moz-transition-property: all;
@@ -2458,6 +2470,7 @@ footer .footer_nav li a:active {
 
   /* line 92, ../sass/_992.scss */
   .home_connections .links_social li a:hover .button:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
@@ -2654,7 +2667,7 @@ footer .footer_nav li a:active {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   /* line 1, ../sass/_2x.scss */
   h1 a span {
-    background-image: url('../images/2x/logo_tw.png?1315317333');
+    background-image: url('../images/2x/logo_tw.png?1322149756');
     background-repeat: no-repeat;
     background-size: 64px auto;
     background-position: center 32px;

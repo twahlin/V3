@@ -50,8 +50,9 @@ $link_blue: #00538e;
 @mixin white_box_shadow_top_inset { @include box-shadow(inset rgba(255, 255, 255, 1) 0 1px 0); }
 @mixin default_container_shadow { @include box-shadow(rgba(0, 0, 0, .2) 0 1px 5px); }
 @mixin default_container_shadow_hover { @include box-shadow(rgba(0, 0, 0, .5) 0 1px 6px); }
-@mixin default_container_inner_shadow { @include box-shadow(inset rgba(0, 0, 0, .25) 0 0 6px) }
-@mixin default_container_inner_shadow_hover { @include box-shadow(inset rgba(0, 0, 0, .4) 0 0 6px) }
+@mixin default_container_inner_shadow { @include box-shadow(inset rgba(0, 0, 0, .25) 0 1px 6px) }
+@mixin default_container_inner_shadow_hover { @include box-shadow(inset rgba(0, 0, 0, .4) 0 1px 6px) }
+
 
 //------------------------------------------------------------------
 //Transition
