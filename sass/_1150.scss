@@ -2,46 +2,46 @@
 .main_content_outer,
 .navigation,
 .footer_wrap {
-    padding-left: 7%;
-    padding-right: 7%; 
+  padding-left: 7%;
+  padding-right: 7%; 
 }
 
 .max_width {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 //------------------------------------------------------------------
 //Navigation
 //------------------------------------------------------------------
 .logo_wrap {
-    margin: 0 auto;        
-    max-width: 1200px;
+  margin: 0 auto;        
+  max-width: 1200px;
 }
 
 .logo_inner_wrap {
-    position: relative;
+  position: relative;
 }
 
 h1 {
-    top: 23px;
-    left: 0;
-    margin-right: 0;
+  top: 23px;
+  left: 0;
+  margin-right: 0;
 }
 
 .navigation .max_width nav {
-    float: right;
-    margin-right: -2px;
+  float: right;
+  margin-right: -2px;
 }
 
 .navigation nav ul.left { 
-    margin-left: 0;
-    width: 223px; 
+  margin-left: 0;
+  width: 223px; 
 }
 
 .navigation nav ul.right { 
-    margin-right: 0;
-    width: 241px;
+  margin-right: 0;
+  width: 241px;
 }
 
 .navigation .max_width nav ul.left li.nav_1 { margin-right: 7px; width: 65px; }
@@ -57,34 +57,34 @@ h1 {
 .navigation .max_width nav ul.right li.nav_4 a,
 .navigation .max_width nav ul.right li.nav_5 a,
 .navigation .max_width nav ul.right li.nav_6 a {
-    float: left;
+  float: left;
 }
 
 .before_header {
-    padding: 0 7%;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 0 7%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .before_header .charter {
-    line-height: 16px;   	
+  line-height: 16px;   	
 }
 
 .before_header ul {
-    float: right;
-    position: relative;
-    margin-right: -2px;
+  float: right;
+  position: relative;
+  margin-right: -2px;
 }
 
 .before_header_inner {
-    position: relative;
+  position: relative;
 }
 
 .charter {
-    font-size: 11px;
-    position: absolute;
-    left: 63px;
-    top: 54px;
+  font-size: 11px;
+  position: absolute;
+  left: 63px;
+  top: 54px;
 }
 
 //------------------------------------------------------------------
@@ -92,9 +92,9 @@ h1 {
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
-    margin: 0 10px 0 16px;    
+  margin: 0 10px 0 16px;    
 }
 
 .masonry_item {
-    width: 24.90%;
+  width: 24.90%;
 }

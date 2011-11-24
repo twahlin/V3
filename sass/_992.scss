@@ -2,8 +2,8 @@
 .before_header,
 .navigation,
 .footer_wrap {
-    padding-left: 5%;
-    padding-right: 5%; 
+  padding-left: 5%;
+  padding-right: 5%; 
 }
 
 .before_header ul { margin-right: 5%; }
@@ -25,17 +25,17 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
 .feed_home .home_dribbble_shots,
 .feed_home .home_connections,
 .feed_home section {
-    float: left;
-    margin: 2.4% 0 2.4% 2.4%;
-    width: 22%;
+  float: left;
+  margin: 2.4% 0 2.4% 2.4%;
+  width: 22%;
 }
 
 .feed_home .home_dribbble_shots li {
-    display: block;
+  display: block;
 }
 
 .feed_home .hr {
-    display: none;
+  display: none;
 }
 
 .home_connections .links_social .dribbble,
@@ -44,53 +44,53 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
 .home_connections .links_social .facebook,
 .home_connections .links_social .linkedin,
 .home_connections .links_social .twitter {
-    float: none;
+  float: none;
 }
 
 .home_connections .links_social li {
-    height: 34px;
-    float: none;
-    margin-bottom: 15px;
-    padding: 0;
-    position: relative;
-    width: 100%;
+  height: 34px;
+  float: none;
+  margin-bottom: 15px;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
 
 .home_connections .links_social li a {
-    display: table;
-    height: 34px; 
+  display: table;
+  height: 34px; 
 }
 
 .home_connections .links_social li a .button { 
-    height: 0;
-    left: 0;
-    overflow: hidden;
-    padding: 34px 0 0 0;
-    position: absolute;
-    top: 0;
-    width: 34px;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 34px 0 0 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
 }
 
 .home_connections .links_social li a:hover .button { 
-    @include button_hover
+  @include button_hover
 }
 
 .home_connections .links_social li a .button:after { 
-    background-image: image-url('png_master_sprite.png');    
-    content: "";
-    height: 34px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 34px;
-    z-index: 2;
-    
-    @include opacity(0.85);
-    @include transition_default;
+  background-image: image-url('global/png_master_sprite.png');    
+  content: "";
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+  z-index: 2;
+
+  @include opacity(0.85);
+  @include transition_default;
 }
 
 .home_connections .links_social li a:hover .button:after { 
-    @include opacity(1);
+  @include opacity(1);
 }
 
 .home_connections .links_social .dribbble a .button:after { background-position: 6px -90px; }
@@ -106,19 +106,19 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
 .home_connections .links_social .facebook span,
 .home_connections .links_social .linkedin span,
 .home_connections .links_social .twitter span {
-    background: none;
-    color: #555;
-    display: table-cell;    
-    font-size: 16px;
-    height: 36px;
-    left: 0;
-    padding: 0 0 0 46px;
-    position: relative;
-    top: 0;
-    vertical-align: middle;
-    width: 100%;
-    
-	@include white_text_shadow_bottom    
+  background: none;
+  color: #555;
+  display: table-cell;    
+  font-size: 16px;
+  height: 36px;
+  left: 0;
+  padding: 0 0 0 46px;
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+
+  @include white_text_shadow_bottom    
 }
 
 

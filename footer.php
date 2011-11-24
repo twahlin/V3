@@ -34,7 +34,7 @@
 <script type="text/javascript">
     $('.feed_lastfm').lastfm('twahlin','recenttracks','9b5045d6a52e5972cdf40e1193c1041f', {
         limit: 8,        
-        noimage: '<?php bloginfo('template_directory'); ?>/images/no_album_art.png',
+        noimage: '<?php bloginfo('template_directory'); ?>/images/global/no_album_art.png',
         imagesize: 'large'
     });
 </script>

@@ -32,13 +32,13 @@
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/modernizr-1.7.min.js"></script>
 
 <!-- For iPhone 4 -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/h/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/browser-and-device-icons/h/apple-touch-icon.png">
 <!-- For iPad 1-->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/m/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/images/browser-and-device-icons/m/apple-touch-icon.png">
 <!-- For iPhone 3G, iPod Touch and Android -->
-<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/l/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/browser-and-device-icons/l/apple-touch-icon-precomposed.png">
 <!-- For everything else -->
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/browser-and-device-icons/favicon.png">
 
 <!-- http://t.co/y1jPVnT -->
 <link rel="canonical" href="/">

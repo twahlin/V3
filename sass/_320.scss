@@ -3,72 +3,72 @@
 //------------------------------------------------------------------
 
 html {
-    background: #eee image-url('bg_light_source.jpg') top no-repeat;
-    color: #333;    
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow-y : scroll;
-    
-    -webkit-font-smoothing: antialiased;    
+  background: #eee image-url('global/bg_light_source.jpg') top no-repeat;
+  color: #333;    
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow-y : scroll;
+
+  -webkit-font-smoothing: antialiased;    
 }
 
 //Opera Fix for sticky footer
 body:before {
-    content:"";
-    height: 100%;
-    float:left;
-    width:0;
-    margin-top:-32767px;
+  content:"";
+  height: 100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;
 }
 
 a,
 a:visited {
-    color: $blue;
+  color: $blue;
 }
 
 h2, h3, h4, h5, h6 {
-    @include proxima_regular;
-    @include white_text_shadow_bottom;
+  @include proxima_regular;
+  @include white_text_shadow_bottom;
 }
 
 h2 { 
-    color: #666;
-    font-size: 60px;
-    line-height: 72px;
-    padding: 2.4% 0 0 2.4%; 
+  color: #666;
+  font-size: 60px;
+  line-height: 72px;
+  padding: 2.4% 0 0 2.4%; 
 }
 
 h5 {
-    border-bottom: 1px solid #bbb;
-    font-size: 30px;
-    line-height: 36px;
-    margin-bottom: 11px;
-    padding-bottom: 5px;
-      
-    @include proxima_light;
-    @include white_box_shadow_bottom;      
+  border-bottom: 1px solid #bbb;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 11px;
+  padding-bottom: 5px;
+
+  @include proxima_light;
+  @include white_box_shadow_bottom;      
 }
 
 h6 {
-    font-family: "Helvetica Neue", Arial, sans-serif;	
-	font-size: 13px;
-	line-height: 18px;
-	margin-bottom: 9px;
+  font-family: "Helvetica Neue", Arial, sans-serif;	
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 9px;
 }
 
 p {
-    font-size: 13px;
-    line-height: 18px;
-    margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 9px;
 }
 
 .small_caps {
-	font-style: normal;
-	font-weight: normal;
-	font-variant: small-caps;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
 }
 
 .main_content_inner {
-    overflow: visible;
+  overflow: visible;
 }
 
 //------------------------------------------------------------------
@@ -85,209 +85,196 @@ p {
 //------------------------------------------------------------------
 
 #page_wrap {
-    background: image-url('bg_noise_transparent.png') center;
-    min-height: 100%;
+  background: image-url('global/bg_noise_transparent.png') center;
+  min-height: 100%;
 }
 
 #page_content {
-    overflow: auto;
-	padding-bottom: 70px;
+  overflow: auto;
+  padding-bottom: 70px;
 }
 
 //------------------------------------------------------------------
 //Header / Logo
 //------------------------------------------------------------------
 .before_header {
-    background: #666;
-    border-bottom: 1px solid #444;
-    display: block;
-    color: #f0f0f0;
-    font-size: 10px;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 101;
+  background: #666;
+  border-bottom: 1px solid #444;
+  display: block;
+  color: #f0f0f0;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 101;
 
-    @include background(linear-gradient(rgba(112,112,112, 1), rgba(92,92,92, 1)));
- 	@include black_text_shadow_top;   
+  @include background(linear-gradient(rgba(112,112,112, 1), rgba(92,92,92, 1)));
+  @include black_text_shadow_top;   
 }
 
 .before_header .charter {
-    font-size: 10px;
-    line-height: 14px;
-    margin: 0;    
+  font-size: 10px;
+  line-height: 14px;
+  margin: 0;    
 }
 
 .before_header ul {
-    display: none;
+  display: none;
 }
 
 header {
-    background: #fff image-url('bg_diagonal_lines.png') center;
-    position: relative;
+  background: #fff image-url('global/bg_diagonal_lines.png') center;
+  position: relative;
 }
 
 h1 {
-	cursor: pointer;
-    height: 90px;
-    left: 50%;
-    margin: -50px 0 0 -50px;    
-    position: absolute;
-    top: 50%;
-    width: 90px;
-    z-index: 101;
-    
-	@include border-radius(80px);
-	
-	@include pie-element(absolute);
+  cursor: pointer;
+  height: 90px;
+  left: 50%;
+  margin: -50px 0 0 -50px;    
+  position: absolute;
+  top: 50%;
+  width: 90px;
+  z-index: 101;
+
+  @include border-radius(80px);
 }
 
 h1 a {
-    background: #fff;
-    display: block;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
-    text-indent: -6666px;
-    width: 100px;
-    
-	@include background(linear-gradient(rgba(white, 1), rgba(221,221,221, 1)));
-	@include border-radius(80px);
-	@include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px);
-	@include transition-property(box-shadow);
-  	@include transition-duration(0.3s);
-  	@include transition-timing-function(ease-in);
-	
-	@include pie-element(relative);
+  background: #fff;
+  display: block;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -6666px;
+  width: 100px;
+
+  @include background(linear-gradient(rgba(white, 1), rgba(221,221,221, 1)));
+  @include border-radius(80px);
+  @include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px);
+  @include transition-property(box-shadow);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-in);
 }
 
 h1 a:hover,
 h1 a:focus {
-    background: #f0f0f0;
+  background: #f0f0f0;
 
-	@include background(linear-gradient(rgba(255, 255, 255, 1), rgba(200, 200, 200, 1)));
-	@include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px, rgba(108, 173, 223, .5) 2px 4px 20px, rgba(108, 173, 223, .25) -9px -4px 20px);    
-
-
-	@include pie-element(relative);
+  @include background(linear-gradient(rgba(255, 255, 255, 1), rgba(200, 200, 200, 1)));
+  @include box-shadow(rgba(34, 34, 34, .7) 0 5px 5px, rgba(34, 34, 34, .2) 0 0 5px, rgba(108, 173, 223, .5) 2px 4px 20px, rgba(108, 173, 223, .25) -9px -4px 20px);    
 }
 
 h1 a:active {
-    margin-top: 1px;
+  margin-top: 1px;
 
-    @include box-shadow(rgba(34, 34, 34, .7) 0 3px 3px, rgba(34, 34, 34, .1) 0 0 5px, rgba(108, 173, 223, .65) 2px 4px 25px, rgba(108, 173, 223, .25) 2px -4px 25px, rgba(108, 173, 223, .1) 0 0 40px, rgba(108, 173, 223, .4) -9px -4px 30px);  
-    @include transition-property(box-shadow);
-  	@include transition-duration(0.01s);
-  	@include transition-timing-function(ease-in);
-
-	@include pie-element(relative);
+  @include box-shadow(rgba(34, 34, 34, .7) 0 3px 3px, rgba(34, 34, 34, .1) 0 0 5px, rgba(108, 173, 223, .65) 2px 4px 25px, rgba(108, 173, 223, .25) 2px -4px 25px, rgba(108, 173, 223, .1) 0 0 40px, rgba(108, 173, 223, .4) -9px -4px 30px);  
+  @include transition-property(box-shadow);
+  @include transition-duration(0.01s);
+  @include transition-timing-function(ease-in);
 }
 
 h1 a span {
-    background: image-url('png_master_sprite.png') 18px 31px;     
-    display: block;
-	position: relative;
-    height: 100px;
-    width: 100px;
-    
-    @include border-radius(50px);
-    
-	@include pie-element(relative);
+  background: image-url('global/png_master_sprite.png') 18px 31px;     
+  display: block;
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+  @include border-radius(50px);
 }
 
 
 //------------------------------------------------------------------
-//Navigation
+//navigation
 //------------------------------------------------------------------
 
 .navigation {
-    border-top: 1px solid #6caddf;
-    border-bottom: 1px solid #6caddf;
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 50px;
-    overflow: hidden;
-    text-transform: uppercase;
-    z-index: 100;
-    
-	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
-	@include proxima_semibold;    
-	@include white_text_shadow_bottom;
-	
-	@include pie-element(relative);
+  border-top: 1px solid #6caddf;
+  border-bottom: 1px solid #6caddf;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  overflow: hidden;
+  text-transform: uppercase;
+  z-index: 100;
+
+  @include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
+  @include proxima_semibold;    
+  @include white_text_shadow_bottom;
 }
 
 .navigation nav ul {
-    display: block;
-    overflow: hidden;
-    width: 50%;
+  display: block;
+  overflow: hidden;
+  width: 50%;
 }
 
 .navigation nav .left {
-    float: left;
+  float: left;
 }
 
 .navigation nav .right {
-    float: right;
-    text-align: right;
+  float: right;
+  text-align: right;
 }
 
 .navigation nav ul li {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #c9c9c9;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #c9c9c9;
 }
 
 .navigation nav .left li {
-    border-right: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
 }
 
 .navigation nav .right li {
-    border-left: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
 
 .navigation nav ul .nav_1,
 .navigation nav ul .nav_4 {
-    border-top: 0;
+  border-top: 0;
 }
 
 .navigation nav ul .nav_3,
 .navigation nav ul .nav_6 {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .navigation nav ul li a,
 .navigation nav ul li a:visited {
-	background: #f0f0f0;
-    display: block;
-    height: 50px;
+  background: #f0f0f0;
+  display: block;
+  height: 50px;
 
-	@include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
-	@include white_text_shadow_bottom;
+  @include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
+  @include white_text_shadow_bottom;
 }
 
 .navigation nav ul li a:hover, 
 .navigation nav ul li a:focus {
-	background-color: #e2e2e2;
+  background-color: #e2e2e2;
 
-	@include background(linear-gradient(rgba(255, 255, 255, .15), rgba(0, 0, 0, .15)));
+  @include background(linear-gradient(rgba(255, 255, 255, .15), rgba(0, 0, 0, .15)));
 }
 
 .navigation nav ul li a:active {
-    height: 49px;
-    padding-top: 1px;
-    
-	@include background(linear-gradient(rgba(0, 0, 0, .15), rgba(255, 255, 255, .15)));
+  height: 49px;
+  padding-top: 1px;
+
+  @include background(linear-gradient(rgba(0, 0, 0, .15), rgba(255, 255, 255, .15)));
 }
 
 .navigation nav .left li a {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .navigation nav .right li a {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 body.home .navigation nav .left li.nav_1 a,
@@ -312,16 +299,14 @@ body.single-blog .navigation nav .right li.nav_5 a:hover,
 body.page-blog .navigation nav .right li.nav_5 a:hover,
 body.single-post .navigation nav .right li.nav_5 a:hover,
 body.page-contact .navigation nav .right li.nav_6 a:hover {
-	background: #6caddf;
-	color: #fff;
-	height: 48px;
-    padding-top: 2px;
+  background: #6caddf;
+  color: #fff;
+  height: 48px;
+  padding-top: 2px;
 
-	@include background(linear-gradient(rgba(134,198,247, .7), rgba(108,173,223, .7)));
-	@include box-shadow(inset rgba(72, 110, 140, .8) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
-	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
-	
-	@include pie-element(relative);
+  @include background(linear-gradient(rgba(134,198,247, .7), rgba(108,173,223, .7)));
+  @include box-shadow(inset rgba(72, 110, 140, .8) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+  @include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
 }
 
 //------------------------------------------------------------------
@@ -329,16 +314,16 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //------------------------------------------------------------------
 
 .top_alert {
-    background: rgba(170, 0, 0, 1) image-url('bg_diagonal_lines_5_percent.png');
-    border: 1px solid #ff0000;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-    
-    @include box-shadow(inset rgba(0, 0, 0, 0.2)0 0 12px);
-	@include text-shadow(rgba(0, 0, 0, 0.8)0 1px 1px);    
+  background: rgba(170, 0, 0, 1) image-url('global/bg_diagonal_lines_5_percent.png');
+  border: 1px solid #ff0000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+
+  @include box-shadow(inset rgba(0, 0, 0, 0.2)0 0 12px);
+  @include text-shadow(rgba(0, 0, 0, 0.8)0 1px 1px);    
 }
 
 //------------------------------------------------------------------
@@ -346,127 +331,109 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //------------------------------------------------------------------
 
 .ribbon_new {
-    background: image-url('png_master_sprite.png') -118px -100px;
-    display: block;
-    height: 44px;
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    width: 44px;
+  background: image-url('global/png_master_sprite.png') -118px -100px;
+  display: block;
+  height: 44px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 44px;
 }
 
 .ribbon_new span {
-    color: #fff;
-    font-size: 10px;
-    position: absolute;
-    right: 6px;
-    top: 7px;
-    text-align: center;
-    text-transform: uppercase;
-    
-    @include rotate(45deg); 
-    @include blue_text_shadow_bottom;   
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  right: 6px;
+  top: 7px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include rotate(45deg); 
+  @include blue_text_shadow_bottom;   
 }
 
 //------------------------------------------------------------------
 //Global image borders and hover functionality
 //------------------------------------------------------------------
 
-//image needs a wrap with a z index. Maybe the shadow can be put on the img_wrap?
-
 .img_border {
-    background: #fff;
-    background-size: 100% 100%;
-    //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
-    border: 9px solid #fff;  
-    display: block; 
-    position: relative;  
-    
-    @include default_container_shadow;
-    @include transition_default;
+  background: #fff;
+  background-size: 100% 100%;
+  //a lot depends on this border, specifically, the "new ribbon" and upper left post icons on blog
+  border: 9px solid #fff;  
+  display: block; 
+  position: relative;  
+
+  @include default_container_shadow;
+  @include transition_default;
 }
 
 .img_border:before,
 .img_border:after {
-	background: rgba(0, 0, 0, .4);
-	content: '';
-	z-index: -1;
-	position: absolute;
-	left: 1px;
-	bottom: 5px;
-	width: 20%;
-	max-width: 300px;
-	height: 60%;
-	
-	@include transform(skew(-18deg) rotate(-16deg));
-	@include box-shadow(rgba(0, 0, 0, 0.8) 0 20px 30px);   
+  background: rgba(0, 0, 0, .4);
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 1px;
+  bottom: 5px;
+  width: 20%;
+  max-width: 300px;
+  height: 60%;
+
+  @include transform(skew(-18deg) rotate(-16deg));
+  @include box-shadow(rgba(0, 0, 0, 0.8) 0 20px 30px);   
 }
 
 .img_border:after {
-	left: auto;
-	right: 1px;
+  left: auto;
+  right: 1px;
 
-	@include transform(skew(18deg) rotate(16deg));
+  @include transform(skew(18deg) rotate(16deg));
 }
 
 .img_border:hover:before,
 .img_border:hover:after { @include box-shadow(rgba(0, 0, 0, 1) 0 17px 27px); }
 
 .img_border .ribbon_new {
-    right: -10px;
-    top: -10px;	
+  right: -10px;
+  top: -10px;	
 }
 
 .img_border .img_wrap {
-	overflow: hidden;	
-	position: relative;
-	
-    @include default_container_inner_shadow; 
-    @include transition_default; 	
+  overflow: hidden;	
+  position: relative;
+
+  @include default_container_inner_shadow; 
+  @include transition_default; 	
 }
 
 .img_border .img_wrap img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 
-    @include opacity(0);
+  @include opacity(0);
 }
 
 .img_border .img_wrap em {
-    border-top: 1px solid #6f9dc0;    
-    bottom: 0;
-    color: #fff;
-    display: inline-block;
-    font-style: normal;    
-    font-size: 11px;
-    left: 0; 
-  	right: 0;
-    padding: 6px;
-    position: absolute;
-    
-    @include blue_text_shadow_top;
-    @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
-    @include gradient_solid_standard;
-    @include transition_default;    
+  border-top: 1px solid #6f9dc0;    
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  font-style: normal;    
+  font-size: 11px;
+  left: 0; 
+  right: 0;
+  padding: 6px;
+  position: absolute;
+
+  @include blue_text_shadow_top;
+  @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
+  @include gradient_solid_standard;
+  @include transition_default;    
 }
 
-/*border-top: 1px solid #000;    
-bottom: 0;
-color: #fff;
-display: inline-block;
-font-style: normal;    
-font-size: 11px;
-left: 0; 
-right: 0;
-padding: 6px;
-position: absolute;
-
-@include text-shadow(#333 0 1px 0);
-@include box-shadow(inset rgba(255, 255, 255, .15) 0 1px 0);            
-@include gradient_solid_666_555;
-@include transition_default;*/
-
-//Hover States, need this because a.img_border may not always be an a tag
+/*Hover States, need this because a.img_border may not always be an a tag*/
 a.img_border:hover { @include default_container_shadow_hover; }
 a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
@@ -476,22 +443,22 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 /* this changes the height of the master slideshow.*/
 .dummy_slide {
-    width: 100%;
-    visibility: hidden;
+  width: 100%;
+  visibility: hidden;
 }
 
 .hero_slider_wrap {
-    position: relative;
+  position: relative;
 }
 
 .hero_slider li {
-    display: block;
+  display: block;
 }
 
 .dummy_slide,
 .hero_slider li .slide_wrap,
 .hero_slider li .slide_inner_wrap {
-    height: 241px;
+  height: 241px;
 }
 
 .hero_slider li .slide_inner_wrap {
@@ -499,7 +466,7 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 }
 
 .hero_slider li .slide_wrap {
-    border-bottom: 3px #fff solid;
+  border-bottom: 3px #fff solid;
 }
 
 .hero_slider {
@@ -513,121 +480,115 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   height: 0 !important;
 }
 
-.hero_slider .slide_wrap { background: image-url('bg_pattern_square.jpg') center; }
+.hero_slider .slide_wrap { background: image-url('slider-hero/bg_pattern_square.jpg') center; }
 
-/*.hero_slider .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(42, 83, 114, .3))); }*/
+.hero_slider .second .slide_wrap { background: image-url('slider-hero/bg_pattern_squiggle.jpg') center; }
 
-.hero_slider .second .slide_wrap { background: image-url('bg_pattern_squiggle.jpg') center; }
-
-/*.hero_slider .second .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }*/
-
-/*.hero_slider .third .slide_wrap .slide_inner_wrap { @include background(linear-gradient(rgba(255, 255, 255, .3), rgba(75, 76, 77, .3))); }*/
-
-.hero_slider .third .slide_wrap { background: image-url('bg_noise_transparent.png') center; }
+.hero_slider .third .slide_wrap { background: image-url('global/bg_noise_transparent.png') center; }
 
 .hero_slider_wrap .slides_nav {
-    bottom: 10px;
-    left: 50%;
-    margin-left: -150px;
-    position: absolute;
-    text-align: center;
-    width: 300px;
-    z-index: 100;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -150px;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  z-index: 100;
 }
 
 .hero_slider_wrap .slides_nav li {
-    display: inline;
-    text-align: center;
+  display: inline;
+  text-align: center;
 }
 
 .hero_slider_wrap .slides_nav li a {
-    background: #666;
-    display: inline-block;
-    text-align: center;
-    height: 0;
-    overflow: hidden;
-    margin: 0 10px;
-    padding-top: 10px;
-    width: 10px;
-    
-    @include border-radius(20px);
-    @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, inset rgba(0, 0, 0, .3) 0 1px 1px);
-	@include opacity(0.50);
-    @include transition_default;
+  background: #666;
+  display: inline-block;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  padding-top: 10px;
+  width: 10px;
+
+  @include border-radius(20px);
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, inset rgba(0, 0, 0, .3) 0 1px 1px);
+  @include opacity(0.50);
+  @include transition_default;
 }
 
 .hero_slider_wrap .slides_nav li a:hover,
 .hero_slider_wrap .slides_nav li a:active {
-	@include opacity(0.75);
+  @include opacity(0.75);
 }
 
 .hero_slider_wrap .slides_nav .activeSlide a {
-    background: #333;
+  background: #333;
 }
 
 .slide_inner_wrap {
-    border-bottom: 1px #ccc solid;      
-    position: relative;
+  border-bottom: 1px #ccc solid;      
+  position: relative;
 }
 
 .slide_inner_wrap .slide_ribbon {
-    bottom: 10%; 
-    position: absolute;
-    right: -8px;       
+  bottom: 10%; 
+  position: absolute;
+  right: -8px;       
 }
 
 .slide_inner_wrap .slide_ribbon a {
-    background: image-url('png_master_sprite.png') -56px -160px no-repeat;
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    height: 64px;
-    letter-spacing: 0.5px;
-    line-height: 70px;
-    margin-right: 8px;
-    padding: 0 12px 0 50px;
-    text-transform: uppercase;
-    
-    @include proxima_regular;
-    @include blue_text_shadow_top;
+  background: image-url('global/png_master_sprite.png') -56px -160px no-repeat;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  height: 64px;
+  letter-spacing: 0.5px;
+  line-height: 70px;
+  margin-right: 8px;
+  padding: 0 12px 0 50px;
+  text-transform: uppercase;
+
+  @include proxima_regular;
+  @include blue_text_shadow_top;
 }
 
 .slide_inner_wrap .slide_ribbon a:after,
 .slide_inner_wrap .slide_ribbon a:before {
-    position: absolute;    
-    content:"";
+  position: absolute;    
+  content:"";
 }
 
 .slide_inner_wrap .slide_ribbon a:after {
-    background: image-url('png_master_sprite.png') -950px -160px no-repeat;    
-    height: 64px;
-    right: -10px;
-    width: 18px;
+  background: image-url('global/png_master_sprite.png') -950px -160px no-repeat;    
+  height: 64px;
+  right: -10px;
+  width: 18px;
 }
 
 .slide_inner_wrap .slide_ribbon a:before {
-    background: image-url('png_master_sprite.png') -496px -122px no-repeat;
-    bottom: -4px;
-    position: absolute;
-    right: -2px;
-    height: 10px;
-    width: 10px;
+  background: image-url('global/png_master_sprite.png') -496px -122px no-repeat;
+  bottom: -4px;
+  position: absolute;
+  right: -2px;
+  height: 10px;
+  width: 10px;
 }
 
 .slide_inner_wrap .slide_ribbon a:hover {
-    background-position: -56px -224px;    
+  background-position: -56px -224px;    
 }
 
 .slide_inner_wrap .slide_ribbon a:hover:after {
-    background-position: -950px -224px;
+  background-position: -950px -224px;
 }
 
 .slide_inner_wrap .slide_ribbon a:active {
-    background-position: -56px -290px;    
+  background-position: -56px -290px;    
 }
 
 .slide_inner_wrap .slide_ribbon a:active:after {
-    background-position: -950px -290px;
+  background-position: -950px -290px;
 }
 
 //------------------------------------------------------------------
@@ -635,79 +596,79 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 //------------------------------------------------------------------
 
 .feed_home {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .feed_home .hr {
-    display: none;
+  display: none;
 }
 
 .feed_home section {
-    margin: 3%;
-    padding: 0 0 20px 0;
-    width: 94%;
+  margin: 3%;
+  padding: 0 0 20px 0;
+  width: 94%;
 }
 
 .feed_home section img {
-   display: block;
-   width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .home_recent_post .home_excerpt {
-	margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .home_dribbble_shots ol li {    
-    display: block;
-    margin-bottom: 18px;
+  display: block;
+  margin-bottom: 18px;
 }
 
 .home_tweets ul {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .home_connections .links_social li {
-	display: block;
-    margin-bottom: 15px; 
-	width: 100%;
-	
-	@include proxima_regular;
+  display: block;
+  margin-bottom: 15px; 
+  width: 100%;
+
+  @include proxima_regular;
 }
 
 .home_connections .links_social li a {
-    display: block;   
-    overflow: visible;
-	position: relative;
-    width: 100%;    
+  display: block;   
+  overflow: visible;
+  position: relative;
+  width: 100%;    
 }
 
 .home_connections .links_social li a .button { 
-    display: block;
-    font-size: 16px;
-    height: 36px;
-    line-height: 38px;
-    padding: 0 0 0 42px;
-    
-    @include proxima_regular;
+  display: block;
+  font-size: 16px;
+  height: 36px;
+  line-height: 38px;
+  padding: 0 0 0 42px;
+
+  @include proxima_regular;
 }
 
 .home_connections .links_social li a span {
-    background-image: image-url('png_master_sprite.png');
-	display: block;
-    height: 0;
-	left: 11px;
-	overflow: hidden;
-	padding: 22px 0 0 0;	
-	position: absolute;
-	top: 8px;
-	width: 22px;
-	
-	@include opacity(0.85);
-    @include transition_default;
+  background-image: image-url('global/png_master_sprite.png');
+  display: block;
+  height: 0;
+  left: 11px;
+  overflow: hidden;
+  padding: 22px 0 0 0;	
+  position: absolute;
+  top: 8px;
+  width: 22px;
+
+  @include opacity(0.85);
+  @include transition_default;
 }
 
 .home_connections .links_social li a:hover span {
-	@include opacity(1);
+  @include opacity(1);
 }
 
 .home_connections .links_social .dribbble span { background-position: 0px -95px; }
@@ -722,41 +683,41 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 //------------------------------------------------------------------
 
 .blog_cal {
-    background: image-url('png_master_sprite.png') -65px -100px;    
-    height: 49px;
-    overflow: hidden;
-    width: 44px;
+  background: image-url('global/png_master_sprite.png') -65px -100px;    
+  height: 49px;
+  overflow: hidden;
+  width: 44px;
 }
 
 .blog_cal strong,
 .blog_cal em {
-    display: block;
-    text-align: center;
-    font-weight: normal;
-    font-style: normal;
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .blog_cal strong {
-    color: #fff;
-    font-size: 14px;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    
-    @include blue_text_shadow_bottom;
-    @include proxima_semibold;
+  color: #fff;
+  font-size: 14px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+
+  @include blue_text_shadow_bottom;
+  @include proxima_semibold;
 }
 
 .blog_cal em {
-    color: #555;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 7px;
-    
-    @include white_text_shadow_bottom;        
+  color: #555;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 7px;
+
+  @include white_text_shadow_bottom;        
 }
 
 .blog_cal p {
-      padding-top: 20px;
+  padding-top: 20px;
 }
 
 //------------------------------------------------------------------
@@ -764,119 +725,119 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 //------------------------------------------------------------------
 
 .icon_post_format {
-    padding: 2px;
-    height: 40px;
-    width: 40px;
+  padding: 2px;
+  height: 40px;
+  width: 40px;
 }
 
 .format-standard .icon_post_format {
-    background: #fff image-url('png_master_sprite.png') -163px -91px;
-    content:"";
-    display: block;
-    height: 0;
-	overflow: hidden;
-	padding-top: 48px;
-    position: absolute;
-    left: -9px;
-    top: -9px;
-    width: 46px;
-    z-index: 100;
+  background: #fff image-url('global/png_master_sprite.png') -163px -91px;
+  content:"";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 48px;
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: 46px;
+  z-index: 100;
 }
 
 .post_wrap {
-    position: relative;
-    margin: 0 0 40px 0;
+  position: relative;
+  margin: 0 0 40px 0;
 }
 
 .post_wrap .blog_cal {
-    position: absolute;
-    top: 14px;
+  position: absolute;
+  top: 14px;
 }
 
 .post_wrap h3 {
-    border-top: 1px solid #bbb; 
-    font-size: 25px;
-    line-height: 25px;    
-    padding: 14px 0 13px 55px;
-    
-    @include proxima_light;
-    @include white_box_shadow_top_inset;      
-    @include white_text_shadow_bottom;
+  border-top: 1px solid #bbb; 
+  font-size: 25px;
+  line-height: 25px;    
+  padding: 14px 0 13px 55px;
+
+  @include proxima_light;
+  @include white_box_shadow_top_inset;      
+  @include white_text_shadow_bottom;
 }
 
 .post_wrap h3 em {
-    display: table;
-    font-style: normal;
-    height: 50px;
-    width: 75%;              
+  display: table;
+  font-style: normal;
+  height: 50px;
+  width: 75%;              
 }
 
 .post_wrap h3 em span {
-    display: table-cell; 
-    vertical-align: middle;              
+  display: table-cell; 
+  vertical-align: middle;              
 }
 
 .post_wrap h3 em a {  
-    color: #333; 
-    display: inline;
-    
-    @include transition_default;    
+  color: #333; 
+  display: inline;
+
+  @include transition_default;    
 }
 
 .post_wrap h3 em a:hover {
-     color: $blue;   
+  color: $blue;   
 }
 
 .format-quote {
-    background: #fff image-url('bg_diagonal_lines_5_percent.png');
-    overflow: visible;
-    
-    @include default_container_shadow;
+  background: #fff image-url('global/bg_diagonal_lines_5_percent.png');
+  overflow: visible;
+
+  @include default_container_shadow;
 }
 
 .format-quote aside {
-    background: #fff;
-    border-right: 1px solid #afadad;
-    bottom: 0;    
-    float: left;
-    position: absolute;
-    top: 0;    
-    height: 100%;
-    width: 50px;
-    
-	@include background(linear-gradient(rgba(255, 255, 255, 1), rgba(250, 250, 250, 1)));
-    @include box-shadow(rgba(0, 0, 0, .1) 0 0 8px);	    
+  background: #fff;
+  border-right: 1px solid #afadad;
+  bottom: 0;    
+  float: left;
+  position: absolute;
+  top: 0;    
+  height: 100%;
+  width: 50px;
+
+  @include background(linear-gradient(rgba(255, 255, 255, 1), rgba(250, 250, 250, 1)));
+  @include box-shadow(rgba(0, 0, 0, .1) 0 0 8px);	    
 }
 
 .format-quote aside em {
-    background: image-url('png_master_sprite.png') -356px -96px;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    margin: 5px 0 5px 5px;
-    padding-top: 40px;
-    width: 40px;    
+  background: image-url('global/png_master_sprite.png') -356px -96px;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  margin: 5px 0 5px 5px;
+  padding-top: 40px;
+  width: 40px;    
 }
 
 .quote_content {
-    border-left: 1px solid #fff;
-    overflow: visible;
-    margin-left: 53px;
-    padding: 22px 30px 26px 30px;
+  border-left: 1px solid #fff;
+  overflow: visible;
+  margin-left: 53px;
+  padding: 22px 30px 26px 30px;
 }
 
 .quote_content p {
-    color: #666;
-    font-size: 28px;
-    line-height: 36px;
-    
-    @include proxima_light;
-    @include white_text_shadow_bottom;
+  color: #666;
+  font-size: 28px;
+  line-height: 36px;
+
+  @include proxima_light;
+  @include white_text_shadow_bottom;
 }
 
 .quote_content .ribbon_new {
-    right: -1px;
-    top: -1px;
+  right: -1px;
+  top: -1px;
 }
 
 //------------------------------------------------------------------
@@ -884,37 +845,37 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 //------------------------------------------------------------------
 
 .hr {
-    background: #bbb;
-    display: block;
-    clear: both;
-    height: 1px;    
-    position: relative;
-    
-    @include white_box_shadow_bottom;      
+  background: #bbb;
+  display: block;
+  clear: both;
+  height: 1px;    
+  position: relative;
+
+  @include white_box_shadow_bottom;      
 }
 
 .hr a {
-    background: #c8c8c8 image-url('png_master_sprite.png') 0 -386px;
-    display: block;
-    height: 0;
-    left: 50%;
-    margin: -11px 0 0 -11px;
-    overflow: hidden;
-    padding-top: 22px;    
-    position: absolute;
-    top: 50%;
-    width: 22px;
-    
-    @include border-radius(20px);
-    @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, inset rgba(0, 0, 0, .3) 0 1px 1px);
-    @include transition_default;    
+  background: #c8c8c8 image-url('global/png_master_sprite.png') 0 -386px;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+  overflow: hidden;
+  padding-top: 22px;    
+  position: absolute;
+  top: 50%;
+  width: 22px;
+
+  @include border-radius(20px);
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, inset rgba(0, 0, 0, .3) 0 1px 1px);
+  @include transition_default;    
 }
 
 .hr a:hover,
 .hr a:active {
-    background-color: #bbb;
-    
-    @include box-shadow(rgba(255, 255, 255, 1) 0 2px 1px, inset rgba(0, 0, 0, .5) 0 1px 1px);   
+  background-color: #bbb;
+
+  @include box-shadow(rgba(255, 255, 255, 1) 0 2px 1px, inset rgba(0, 0, 0, .5) 0 1px 1px);   
 }
 
 //------------------------------------------------------------------
@@ -922,67 +883,65 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 //------------------------------------------------------------------
 
 footer {
-    background: #fff image-url('bg_diagonal_lines.png') center;
-    border-top: 1px solid #6caddf;
-    clear: both;
-    font-size: 16px;
-    height: 70px;
-    margin-top: -71px;
-    overflow: hidden;
-    position: relative;
-    
-	@include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
-	@include white_text_shadow_bottom;    
-    
-	@include pie-element(absolute);   
+  background: #fff image-url('global/bg_diagonal_lines.png') center;
+  border-top: 1px solid #6caddf;
+  clear: both;
+  font-size: 16px;
+  height: 70px;
+  margin-top: -71px;
+  overflow: hidden;
+  position: relative;
+
+  @include box-shadow(rgba(0, 0, 0, .2) 0 0 2px, rgba(0, 0, 0, .6) 0 0 10px);
+  @include white_text_shadow_bottom;    
 }
 
 .footer_wrap {
-	background: #f0f0f0;
-    height: 70px;
-    padding: 0 20px 0 20px;
-    
-	@include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
+  background: #f0f0f0;
+  height: 70px;
+  padding: 0 20px 0 20px;
+
+  @include background(linear-gradient(rgba(255, 255, 255, .10), rgba(0, 0, 0, .10)));
 }
 
 footer .copyright {
-    clear: both;
-    color: #666;
-    font-size: 12px;
-    padding-top: 18px;       
+  clear: both;
+  color: #666;
+  font-size: 12px;
+  padding-top: 18px;       
 
-	@include white_text_shadow_bottom;    
+  @include white_text_shadow_bottom;    
 }
 
 footer .footer_nav {
-    float: left;
-    font-size: 11px;  
-    padding-top: 6px; 
-         
-	@include white_text_shadow_bottom;   
+  float: left;
+  font-size: 11px;  
+  padding-top: 6px; 
+
+  @include white_text_shadow_bottom;   
 }
 
 footer .footer_nav li {
-    float: left;
-    border-right: 1px solid #6caddf;
-    border-left: 1px solid #fff;
-    padding: 0 8px 0 8px;
+  float: left;
+  border-right: 1px solid #6caddf;
+  border-left: 1px solid #fff;
+  padding: 0 8px 0 8px;
 }
 
 footer .footer_nav li:first-child {
-    border-left: 0;
-    padding-left: 0;
+  border-left: 0;
+  padding-left: 0;
 }
 
 footer .footer_nav li:last-child {
-    border-right: 0;
-    padding-right: 0;
+  border-right: 0;
+  padding-right: 0;
 }
 
 footer .footer_nav li a:hover,
 footer .footer_nav li a:focus,
 footer .footer_nav li a:active {
-    border-bottom: 1px dotted #6caddf;
+  border-bottom: 1px dotted #6caddf;
 }
 
 //------------------------------------------------------------------
@@ -990,71 +949,71 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .lastFMBody ul {
-    border-top: 1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
 
 .lastFMBody ul .itemRow {
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #fff; 
-    
-    @include background(linear-gradient(rgba(250,250,250, 1), rgba(230,230,230, 1)));        
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff; 
+
+  @include background(linear-gradient(rgba(250,250,250, 1), rgba(230,230,230, 1)));        
 }
 
 .lastFMBody ul .itemRow a {
-    display: block;
-    height: 79px;
-    overflow: hidden;
-    position: relative;
+  display: block;
+  height: 79px;
+  overflow: hidden;
+  position: relative;
 }
 
 .lastFMBody ul .itemRow a .artWrap {
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
-    border: 1px solid #fff;
-    color: #fff;
-    height: 60px;
-    left: 10px;
-    position: absolute;
-    top: 9px;
-    width: 60px; 
-    
-    @include border-radius(3px);
-    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  border: 1px solid #fff;
+  color: #fff;
+  height: 60px;
+  left: 10px;
+  position: absolute;
+  top: 9px;
+  width: 60px; 
+
+  @include border-radius(3px);
+  @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
 }
 
 .lastFMBody ul .itemRow a .artWrap img {
-    display: block;
-    height: 60px;
-    width: 60px;
-    
-    @include opacity(0);
+  display: block;
+  height: 60px;
+  width: 60px;
+
+  @include opacity(0);
 }
 
 .lastFMBody ul .itemRow a .track_info {
-    display: table;
-    height: 79px;  
-    width: 100%;
+  display: table;
+  height: 79px;  
+  width: 100%;
 }
 
 .lastFMBody ul .itemRow a .track_info p {
-    color: #444;
-    display: table-cell;
-    height: 79px;
-    font-size: 14px;
-    padding-left: 88px;
-    padding-right: 15%;
-    vertical-align: middle;    
+  color: #444;
+  display: table-cell;
+  height: 79px;
+  font-size: 14px;
+  padding-left: 88px;
+  padding-right: 15%;
+  vertical-align: middle;    
 
-    @include white_text_shadow_bottom;
+  @include white_text_shadow_bottom;
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName,
 .lastFMBody ul .itemRow a .track_info p .itemArtist {
-    font-style: normal;       
+  font-style: normal;       
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 //------------------------------------------------------------------
@@ -1062,35 +1021,35 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .progress_bar {
-    background: rgba(0, 0, 0, .05) image-url('bg_diagonal_lines_5_percent.png') center;
-    border: 1px solid #fff;    
-    height: 24px;
-    position: relative;
-    
-    @include border-radius(12px);
-	@include box-shadow(rgba(0, 0, 0, .55) 0 0 5px, inset rgba(0, 0, 0, .55) 0 0 5px);
+  background: rgba(0, 0, 0, .05) image-url('global/bg_diagonal_lines_5_percent.png') center;
+  border: 1px solid #fff;    
+  height: 24px;
+  position: relative;
+
+  @include border-radius(12px);
+  @include box-shadow(rgba(0, 0, 0, .55) 0 0 5px, inset rgba(0, 0, 0, .55) 0 0 5px);
 }
 
 .progress_bar:after {
-    background: #68afe5;
-    content: "";   
-    display: block;
-    height: 20px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 50%;
-    
-	@include gradient_solid_standard; 
-    @include border-radius(10px);
-	@include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 1px);    
+  background: #68afe5;
+  content: "";   
+  display: block;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 50%;
+
+  @include gradient_solid_standard; 
+  @include border-radius(10px);
+  @include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 1px);    
 }
 
 .progress_bar em {
-    font-size: 10px;
-    font-style: normal;
-    line-height: 24px;
-    margin-left: 10px;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 24px;
+  margin-left: 10px;
 }
 
 //------------------------------------------------------------------
@@ -1098,40 +1057,40 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .single_work_header {
-    
+
 }
 
 .work_post aside {
-    float: left;
-    width: 30%;
-    
-    @include global_wrap_margin_left_right;
+  float: left;
+  width: 30%;
+
+  @include global_wrap_margin_left_right;
 }
 
 .work_post aside h4 {
-    font-size: 13px;
-    font-variant: small-caps;
-    text-transform: lowercase;
+  font-size: 13px;
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 .work_post aside ul li ol li {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 .work_post aside ul li ol li a {
-    font-size: 12px;
-    line-height: 13px;
+  font-size: 12px;
+  line-height: 13px;
 }
 
 .work_post section {
-    float: left;
-    max-width: 800px;
-    width: 62.8%;
+  float: left;
+  max-width: 800px;
+  width: 62.8%;
 }
 
 .work_post section ul li img {
-    width: 100%;
-    
+  width: 100%;
+
 }
 
 //------------------------------------------------------------------
@@ -1139,18 +1098,18 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
-    margin: 0;
+  margin: 0;
 }
 
 .masonry_item {
-    float: left;  
-    width: 100%;
-    
-    @include transition_default;
+  float: left;  
+  width: 100%;
+
+  @include transition_default;
 }
 
 .masonry_item .img_border {
-    margin: 10px 20px;  	
+  margin: 10px 20px;  	
 }
 
 //------------------------------------------------------------------

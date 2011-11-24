@@ -5,7 +5,7 @@
 .dummy_slide,
 .hero_slider li .slide_wrap,
 .hero_slider li .slide_inner_wrap {
-    height: 300px;
+  height: 300px;
 }
 
 //------------------------------------------------------------------
@@ -13,31 +13,31 @@
 //------------------------------------------------------------------
 
 .feed_home section {
-    width: 44%;
+  width: 44%;
 }
 
 .feed_home .hr {
-    display: block;
+  display: block;
 }
 
 .feed_home .home_recent_post,
 .feed_home .home_tweets {
-    float: left;
-    margin: 3% 0 3% 3%;
+  float: left;
+  margin: 3% 0 3% 3%;
 }
 
 .feed_home .home_dribbble_shots,
 .feed_home .home_connections {
-    float: right;
-    margin: 3% 3% 3% 0;    
+  float: right;
+  margin: 3% 3% 3% 0;    
 }
 
 .feed_home .home_dribbble_shots li {
-    display: none;
+  display: none;
 }
 
 .feed_home .home_dribbble_shots li:first-child {
-   display: block;
+  display: block;
 }
 
 //------------------------------------------------------------------
@@ -45,16 +45,16 @@
 //------------------------------------------------------------------
 
 footer .footer_nav {
-    display: block;
-    float: right;
-	font-size: 12px;
-    padding-top: 28px;
+  display: block;
+  float: right;
+  font-size: 12px;
+  padding-top: 28px;
 }
 
 footer .copyright {
-    clear: none;
-    float: left;
-    padding-top: 28px;
+  clear: none;
+  float: left;
+  padding-top: 28px;
 }
 
 //------------------------------------------------------------------
@@ -62,14 +62,14 @@ footer .copyright {
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
-    margin: 0 10px 0 11px;
+  margin: 0 10px 0 11px;
 }
 
 .masonry_item {
-    float: left;
-    width: 49.9%;
+  float: left;
+  width: 49.9%;
 }
 
 .masonry_item .img_border {
-    margin: 10px;	
+  margin: 10px;	
 }

@@ -1,64 +1,64 @@
-    #page_content {
-	padding-top: 18px;
+#page_content {
+  padding-top: 18px;
 }
 
 .before_header {
-	background: transparent;
-	border: 0;
-	display: block;
-	height: 34px;
-	color: #777;
-	font-weight: normal;
-	padding-left: 3%;
-	position: relative;
-	text-align: left;
-	text-transform: uppercase;
-	
-	@include white_text_shadow_bottom;
+  background: transparent;
+  border: 0;
+  display: block;
+  height: 34px;
+  color: #777;
+  font-weight: normal;
+  padding-left: 3%;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+
+  @include white_text_shadow_bottom;
 }
 
 .before_header .charter {
-    font-size: 10px;
-	padding-bottom: 18px;    
-    margin: 0;	
+  font-size: 10px;
+  padding-bottom: 18px;    
+  margin: 0;	
 }
 
 .before_header ul {
-	display: block;
-	margin-right: 3%;
-	position: absolute;
-	right: 0;
-	top: -18px;
+  display: block;
+  margin-right: 3%;
+  position: absolute;
+  right: 0;
+  top: -18px;
 }
 
 .before_header ul li {
-	float: left;
-	margin-top: -14px;    
+  float: left;
+  margin-top: -14px;    
 }
 
 .before_header ul li a {
-	background: url('../images/png_master_sprite.png');    
-	display: block;
-	height: 0;
-	overflow: hidden;
-	padding-top: 42px;
-	position: relative;
-	width: 28px;
-	
-	@include opacity(0.4);
-	@include transition-property(margin);
-	@include transition-duration(0.1s);
-	@include transition-timing-function(ease-in);	
+  background: image-url('global/png_master_sprite.png');    
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 42px;
+  position: relative;
+  width: 28px;
+
+  @include opacity(0.4);
+  @include transition-property(margin);
+  @include transition-duration(0.1s);
+  @include transition-timing-function(ease-in);	
 }
 
 .before_header ul li a em {
-	display: none;
+  display: none;
 }
 
 
 .before_header ul li a:hover {
-	margin-top: 3px;
-	opacity: 1;
+  margin-top: 3px;
+  opacity: 1;
 }
 
 .before_header ul li.linkedin a { background-position: -85px 0px; }
@@ -76,19 +76,17 @@
 .before_header ul li.dribbble a:hover { background-position: -230px -48px; }                   
 
 .navigation {
-	height: 50px;
-	padding: 0 3%;
+  height: 50px;
+  padding: 0 3%;
 
-	@include background(linear-gradient(rgba(white, .10), rgba(black, .10)));
-
-	@include pie-element(relative);
+  @include background(linear-gradient(rgba(white, .10), rgba(black, .10)));
 }
 
 .navigation nav ul.left,
 .navigation nav ul.right {
-    padding: 10px 0 0 0;
-	text-align: center;
-	width: 40%;    
+  padding: 10px 0 0 0;
+  text-align: center;
+  width: 40%;    
 }
 
 .navigation nav ul.left { float: left; margin-left: -2px; }
@@ -101,9 +99,9 @@
 .navigation .max_width nav ul.right li.nav_4,
 .navigation .max_width nav ul.right li.nav_5,
 .navigation .max_width nav ul.right li.nav_6 {
-    border: 0;
-    display: block;
-    float: left;
+  border: 0;
+  display: block;
+  float: left;
 }
 
 .navigation .max_width nav ul.left li.nav_1 { width: 33.33%; }
@@ -119,22 +117,20 @@
 .navigation .max_width nav ul.right li.nav_4 a,
 .navigation .max_width nav ul.right li.nav_5 a,
 .navigation .max_width nav ul.right li.nav_6 a {
-    background: #eee;
-    border: 1px solid #fff;    
-    display: block;
-    font-size: 14px;       
-    height: 30px;
-    letter-spacing: 0;     
-    line-height: 33px;    
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-    
-    @include background(linear-gradient(rgba(white, 1) 45%, rgba(240,240,240, 1) 65%));
-    @include border-radius(4px);
-    @include box-shadow(inset rgba(162, 162, 162, 1) 0 1px 3px, rgba(240, 240, 240, 1) 0 1px 0px);
+  background: #eee;
+  border: 1px solid #fff;    
+  display: block;
+  font-size: 14px;       
+  height: 30px;
+  letter-spacing: 0;     
+  line-height: 33px;    
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
 
-    @include pie-element(relative);
+  @include background(linear-gradient(rgba(white, 1) 45%, rgba(240,240,240, 1) 65%));
+  @include border-radius(4px);
+  @include box-shadow(inset rgba(162, 162, 162, 1) 0 1px 3px, rgba(240, 240, 240, 1) 0 1px 0px);
 }
 
 .navigation .max_width nav ul.left li.nav_1 a:hover, 
@@ -143,11 +139,9 @@
 .navigation .max_width nav ul.right li.nav_4 a:hover,
 .navigation .max_width nav ul.right li.nav_5 a:hover,
 .navigation .max_width nav ul.right li.nav_6 a:hover {
-    background: #ccc;
+  background: #ccc;
 
-    @include background(linear-gradient(rgba(245,245,245, 1.0) 45%, rgba(230,230,230, 1.0) 65%));
-
-    @include pie-element(relative);
+  @include background(linear-gradient(rgba(245,245,245, 1.0) 45%, rgba(230,230,230, 1.0) 65%));
 }
 
 .navigation .max_width nav ul.left li.nav_1 a:active, 
@@ -156,11 +150,9 @@
 .navigation .max_width nav ul.right li.nav_4 a:active,
 .navigation .max_width nav ul.right li.nav_5 a:active,
 .navigation .max_width nav ul.right li.nav_6 a:active {
-    background: #ddd;
-        
-    @include background(linear-gradient(rgba(235,235,235, 1.0) 45%, rgba(220,220,220, 1.0) 65%));
-    
-    @include pie-element(relative);
+  background: #ddd;
+
+  @include background(linear-gradient(rgba(235,235,235, 1.0) 45%, rgba(220,220,220, 1.0) 65%));
 }
 
 .navigation .max_width nav ul.left li.nav_1 a { float:left; width: 65px; }
@@ -192,30 +184,28 @@ body.single-blog .navigation nav .right li.nav_5 a:hover,
 body.page-blog .navigation nav .right li.nav_5 a:hover,
 body.single-post .navigation nav .right li.nav_5 a:hover,
 body.page-contact .navigation nav .right li.nav_6 a:hover {
-    height: 30px;
-    padding: 0;
-    
-    @include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
-	@include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
-	@include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
+  height: 30px;
+  padding: 0;
+
+  @include background(linear-gradient(rgba(134,198,247, .8) 45%, rgba(108,173,223, .8) 65%));
+  @include box-shadow(inset rgba(72, 110, 140, 1) 0 1px 3px, inset rgba(72, 110, 140, .2) 0 3px 3px);
+  @include text-shadow(rgba(51, 93, 125, 1)0 1px 1px, rgba(51, 93, 125, .75) 0 0 10px);
 }
 
-/*------------------------------------------------------------------
-Main Content
-------------------------------------------------------------------*/
+//------------------------------------------------------------------
+//Main Content
+//------------------------------------------------------------------
 
 .main_content_outer {
-	padding-left: 3%;
-	padding-right: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .main_content {
-	background: #e2e2e2;
-	background: rgba(255, 255, 255, .5);
+  background: #e2e2e2;
+  background: rgba(255, 255, 255, .5);
 
-	@include box-shadow(rgba(0, 0, 0, .2) 0 0 5px);
-
-	@include pie-element(relative);
+  @include box-shadow(rgba(0, 0, 0, .2) 0 0 5px);
 }
 
 //------------------------------------------------------------------
@@ -225,39 +215,37 @@ Main Content
 .dummy_slide,
 .hero_slider li .slide_wrap,
 .hero_slider li .slide_inner_wrap {
-    height: 400px;
+  height: 400px;
 }
 
-.hero_slider li .slide_inner_wrap {
-  overflow: visible;
-}
+.hero_slider li .slide_inner_wrap { overflow: visible; }
 
 //------------------------------------------------------------------
 //Feed Home
 //------------------------------------------------------------------
 
 .home_connections .links_social li {
-	margin-bottom: 4%;
-	width: 48%;
+  margin-bottom: 4%;
+  width: 48%;
 }
 
 .home_connections .links_social .dribbble,
 .home_connections .links_social .flickr,
 .home_connections .links_social .last_fm {
-	float: left;
+  float: left;
 }
 
 .home_connections .links_social .facebook,
 .home_connections .links_social .linkedin,
 .home_connections .links_social .twitter {
-	float: right;
+  float: right;
 }
-/*------------------------------------------------------------------
-Footer
-------------------------------------------------------------------*/
+//------------------------------------------------------------------
+//Footer
+//------------------------------------------------------------------
 
 .footer_wrap {
-	padding: 0 3% 0 3%;
+  padding: 0 3% 0 3%;
 }
 
 //------------------------------------------------------------------
@@ -265,8 +253,8 @@ Footer
 //------------------------------------------------------------------
 
 .col_left {
-    margin: 0 2.4%;
-	max-width: 700px;
+  margin: 0 2.4%;
+  max-width: 700px;
 }
 
 //------------------------------------------------------------------
@@ -274,116 +262,116 @@ Footer
 //------------------------------------------------------------------
 
 .feed_lastfm {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .lastFMBody ul {
-    border-top: none; 
+  border-top: none; 
 }
 
 .lastFMBody ul .itemRow {
-    background: none;
-    border: none;
-    float: left;
-    height: 132px;
-    margin: 10px;
-    position: relative;
-    width: 132px;
+  background: none;
+  border: none;
+  float: left;
+  height: 132px;
+  margin: 10px;
+  position: relative;
+  width: 132px;
 }
 
 .lastFMBody ul .itemRow a {
-    display: block;
-    height: 122px;
-    left: 5px;
-    overflow: visible;
-    position: relative;
-    top: 5px;
-    width: 122px;
+  display: block;
+  height: 122px;
+  left: 5px;
+  overflow: visible;
+  position: relative;
+  top: 5px;
+  width: 122px;
 }
 
 .lastFMBody ul .itemRow a .artWrap {
-    background-repeat: no-repeat;
-    background-size: 120px 120px;
-    border: 1px solid #fff;
-    color: #fff;
-    height: 120px;
-    top: 0;
-    left: 0;
-    position: relative;
-    width: 120px; 
-    
-    @include border-radius(3px);
-    @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
+  background-repeat: no-repeat;
+  background-size: 120px 120px;
+  border: 1px solid #fff;
+  color: #fff;
+  height: 120px;
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 120px; 
+
+  @include border-radius(3px);
+  @include box-shadow(rgba(0, 0, 0, .2) 1px 0 5px, inset rgba(0, 0, 0, .5) 0 0 2px);
 }
 
 .lastFMBody ul .itemRow a .artWrap:before {
-    background: image-url('overlay_album_shine.png');
-    content: "";
-    height: 120px;
-    left: 0;
-    position: absolute;
-    top: 0;    
-    width: 120px;    
-    z-index: 1;
+  background: image-url('global/overlay_album_shine.png');
+  content: "";
+  height: 120px;
+  left: 0;
+  position: absolute;
+  top: 0;    
+  width: 120px;    
+  z-index: 1;
 }
 
 .lastFMBody ul .itemRow a .artWrap img {
-    height: 120px;
-    width: 120px;
+  height: 120px;
+  width: 120px;
 }
 
 .lastFMBody ul .itemRow a .track_info {
-    background: rgba(0, 0, 0, .7);
-    left: 6px;
-	overflow: hidden;
-    position: absolute;
-    top: 6px;
-    height: 120px;  
-    width: 120px;
-    
-    @include opacity(0);
+  background: rgba(0, 0, 0, .7);
+  left: 6px;
+  overflow: hidden;
+  position: absolute;
+  top: 6px;
+  height: 120px;  
+  width: 120px;
+
+  @include opacity(0);
 }
 
 .lastFMBody ul .itemRow a .track_info p {
-    color: #fff;
-    height: 120px;
-    padding: 0;
-    text-align: center;
-    width: 120px;
+  color: #fff;
+  height: 120px;
+  padding: 0;
+  text-align: center;
+  width: 120px;
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName,
 .lastFMBody ul .itemRow a .track_info p .itemArtist {
-    display: block;
-    font-size: 11px;
-    font-weight: normal;
-    overflow: hidden;
-    padding: 0 12px;
-    text-align: center;   
-    
-	@include black_text_shadow_bottom;         
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 0 12px;
+  text-align: center;   
+
+  @include black_text_shadow_bottom;         
 }
 
 .lastFMBody ul .itemRow a .track_info p .itemName {
-    height: 50px;
+  height: 50px;
 }
 
 
 .lastFMBody ul .itemRow a:hover {
-    left: 0;
-    top: 0;
+  left: 0;
+  top: 0;
 }
 
 .lastFMBody ul .itemRow a:hover .artWrap {
-    border: 6px solid #4ab0ff;
-    
-    @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);   
+  border: 6px solid #4ab0ff;
+
+  @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);   
 }
 
 .lastFMBody ul .itemRow a:hover .track_info {
-    @include opacity(1);
-    @include transition-property(opacity);
-    @include transition-duration(0.5s);
+  @include opacity(1);
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
 }
 
 //------------------------------------------------------------------
@@ -391,11 +379,11 @@ Footer
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
-    margin: 0 10px 0 11px; 
+  margin: 0 10px 0 11px; 
 }
 
 .masonry_item {
-    width: 33.29%;
+  width: 33.29%;
 }
 
 
