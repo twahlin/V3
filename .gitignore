@@ -12,3 +12,15 @@ images/browser-and-device-icons/l/.DS_Store
 images/l/.DS_Store
 
 images/browser-and-device-icons/.DS_Store
+
+scripts/php/timthumb/.DS_Store
+
+scripts/php/.DS_Store
+
+scripts/php/timthumb/cache/.DS_Store
+
+.DS_Store
+
+scripts/php/timthumb/cache/*.txt
+
+scripts/php/timthumb/cache/*.touch

@@ -98,8 +98,6 @@ $(window).load(function () {
       $container.masonry({
           itemSelector: '.masonry_item',
           isResizable: true,
-          // set columnWidth a fraction of the container width
-          // columnWidth: $container.width() / 4
       });
     // trigger resize to set up masonry on start-up
     }).resize();
