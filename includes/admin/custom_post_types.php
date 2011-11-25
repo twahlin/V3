@@ -20,6 +20,7 @@ function create_post_type() {
             ),
             'has_archive' => 'work',
             'menu_position' => 5,
+            'taxonomies' => array('category'),
             'rewrite' => array('slug' => 'work')
         )
     );

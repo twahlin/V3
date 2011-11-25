@@ -99,6 +99,7 @@ function metabox_link_save( $id )
 // NOT COMPLETE!!!!    
     
 //begin custom meta box work posts
+//Begin custom Meta Info per work piece
 add_action( 'add_meta_boxes', 'metabox_work_add' );  
 function metabox_work_add()  
 {  
@@ -130,13 +131,6 @@ function metabox_work( $post )
         <label for="work_company">Company</label>  
         <input type="text" class="widefat" id="work_company" name="work_company" value="<?php echo $work_company; ?>" />
     </p>
-    <!-- <p>
-        <label for="work_company">Color</label> 
-        <select name="work_company" id="work_company"> 
-            <option value="red" <?php //selected( $selected, 'red' ); ?>>Red</option> 
-            <option value="blue" <?php// selected( $selected, 'blue' ); ?>>Blue</option> 
-        </select>
-    </p>   -->
     <p>
         <label for="work_description">Description</label>  
         <textarea class="widefat" id="work_description" name="work_description"><?php echo $work_description; ?></textarea>  
@@ -170,6 +164,7 @@ function metabox_work_save( $id )
         update_post_meta( $id, 'work_description', esc_attr( strip_tags( $_POST['work_description'] ) ) );                
   
 }
+//End custom Meta Info per work piece
 //end custom meta box for work posts   
     
     

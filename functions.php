@@ -8,12 +8,15 @@
   */
 
 ?>
-
 <?php
 
-/*-----------------------------------------------------------------------------------
-  Functions
-  -----------------------------------------------------------------------------------*/
+//-----------------------------------------------------------------------------------
+//Functions
+//-----------------------------------------------------------------------------------
+
+//Post thumbnail functionality for featured images
+if ( function_exists( 'add_theme_support' ) ) { add_theme_support( 'post-thumbnails' ); }
+//End Post thumbnail functionality for featured images
 
 //Adding post formats for global use if needed
 add_theme_support( 'post-formats', array( 'gallery', 'link', 'image', 'quote', 'video' ) );
@@ -101,9 +104,19 @@ function modify_footer_admin () {
 add_filter('admin_footer_text', 'modify_footer_admin');
 // End Customize footer text
 
-/*-----------------------------------------------------------------------------------
-  Includes
-  -----------------------------------------------------------------------------------*/
+// Featured image url for timthumb
+function PostThumbURL() {
+	global $post, $posts;
+	$thumbnail = '';
+	ob_start();the_post_thumbnail();$toparse=ob_get_contents();ob_end_clean();
+	preg_match_all('/src=("[^"]*")/i', $toparse, $img_src); $thumbnail = str_replace("\"", "", $img_src[1][0]);
+	return $thumbnail;
+}
+// Featured image url for timthumb
+
+//-----------------------------------------------------------------------------------
+//Includes
+//-----------------------------------------------------------------------------------
 
 //Add custom post types
 include("includes/admin/custom_post_types.php");

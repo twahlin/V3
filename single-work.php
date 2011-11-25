@@ -10,8 +10,7 @@ get_header(); ?>
 <?php //this aggregates all the solitary projects of the client ?>
 
 <div class="single_work_header">
-    <h2>Buffalo Wild Wings</h2>
-    <?php //subnav of individual projects can go here ?>
+    <h2><?php the_title();?></h2>
 </div>
 
 <div class="work_post">
@@ -44,21 +43,36 @@ get_header(); ?>
                 <h4>Description:</h4>
                 <p><?php echo "$description" ?></p>
             </li>
-            <li>
-                <h4>Related Blog Posts:</h4>
-                <ol>
-                    <li><a href="#">FPO American Express Process</a></li>
-                    <li><a href="#">FPO Getting jQuery cycle plugin without multiple instances </a></li>    
-                </ol>    
-            </li>
         </ul>    
     </aside>
     <section>
-        <ul>
-            <li><img src="<?php bloginfo('template_directory'); ?>/images/tmp/fpo_800.png" alt=""/></li>
-            <li><img src="<?php bloginfo('template_directory'); ?>/images/tmp/fpo_800.png" alt=""/></li>
-            <li><img src="<?php bloginfo('template_directory'); ?>/images/tmp/fpo_800.png" alt=""/></li>   
-        </ul>    
+      
+      <ul>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
+
+       $args = array(
+         'post_type' => 'attachment',
+         'numberposts' => -1,
+         'post_status' => null,
+         'post_parent' => $post->ID,
+         'order' => 'ASC',
+         'orderby' => 'title'
+        );
+
+        $attachments = get_posts( $args );
+           if ( $attachments ) {
+              foreach ( $attachments as $attachment ) {
+                $img_attach = wp_get_attachment_url( $attachment->ID);
+                $alt = $attachment->post_title;
+                ?>
+                  <li><img src="<?php echo $img_attach ?>" alt="<?php echo $alt ?>" /></li>
+                <?php
+                }
+           }
+
+       endwhile; endif; ?>
+      </ul>
+
     </section>    
 </div>
     <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
