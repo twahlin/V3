@@ -13,10 +13,7 @@ get_header(); ?>
 
 <div id="masonry_responsive_grid" class="masonry_responsive_grid">
 
-<?php
-$args = array( 'post_type' => 'work' );
-$postslist = get_posts( $args );
-foreach ($postslist as $post) :  setup_postdata($post); ?> 
+<?php $args = array( 'post_type' => 'work' ); $postslist = get_posts( $args ); foreach ($postslist as $post) :  setup_postdata($post); ?> 
 <div class="masonry_item">
   <a title="View <?php the_title(); ?>" class="img_border" href="<?php the_permalink(); ?>" style="background-image: url(<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo PostThumbURL(); ?>&w=400)">
     <div class="img_wrap">

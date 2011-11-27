@@ -43,6 +43,8 @@ get_header(); ?>
     </li>  
   </ul>
   <div class="dummy_slide"><!-- sets height for responsive slideshow --></div>
+  <div id="slider_prev"></div>
+  <div id="slider_next"></div>
   <ol id="slidesNav" class="slides_nav"></ol>
 </div>
 
@@ -61,7 +63,7 @@ get_header(); ?>
     <div id="tweet">
       <p>Please wait while my tweets load</p>
     </div>
-    <a class="button" href="http://www.twitter.com/twahlin" rel="external">Visit Twitter</a>
+    <a class="button" href="http://twitter.com/twahlin" rel="external">Visit Twitter</a>
   </section>
   <section class="home_connections">
     <h5>Connections</h5>

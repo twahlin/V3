@@ -94,7 +94,7 @@ add_action('admin_menu', 'remove_menus');
 
 // Customize footer text
 function modify_footer_admin () {  
-  echo 'Created by <a href="http://www.tomwahlin.com/">Tom Wahlin</a>. Powered by <a href="http://www.wordpress.org">WordPress</a>.  •
+  echo 'Created by <a href="http://tomwahlin.com/">Tom Wahlin</a>. Powered by <a href="http://wordpress.org">WordPress</a>.  •
   <a href="http://codex.wordpress.org/">Documentation</a> •
   <a href="http://twimac.local:8888/V3/wp-admin/freedoms.php">Freedoms</a> •
   <a href="http://wordpress.org/support/forum/4">Feedback</a> •

@@ -71,6 +71,9 @@ p {
   overflow: hidden;
 }
 
+::-moz-selection { background: #6caddf; color: #fff; text-shadow: none; }
+::selection { background: #6caddf; color: #fff; text-shadow: none; }
+
 //------------------------------------------------------------------
 //Buttons
 //------------------------------------------------------------------
@@ -144,6 +147,24 @@ h1 {
   @include border-radius(80px);
 }
 
+/*@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 
+      0 0 10px 0 rgba(51,51,51,1),
+      0 0 10px 0 rgba(140,180,180,.9);
+  }
+  50% {
+    -webkit-box-shadow: 
+      0 0 2px 0 rgba(51,51,51,1),
+      0 0 2px 0 rgba(140,180,180,.8);
+  }
+  100% {
+    -webkit-box-shadow: 
+      0 0 10px 0 rgba(51,51,51,1),
+      0 0 10px 0 rgba(140,180,180,.9);
+  }
+}*/
+
 h1 a {
   background: #fff;
   display: block;
@@ -159,6 +180,12 @@ h1 a {
   @include transition-property(box-shadow);
   @include transition-duration(0.3s);
   @include transition-timing-function(ease-in);
+  
+/*  -webkit-animation-duration: 2s;
+  -webkit-animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;*/
+	
 }
 
 h1 a:hover,
@@ -488,6 +515,22 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 .hero_slider .hero_second .slide_wrap { background: image-url('slider-hero/bg_pattern_squiggle.jpg') center; }
 
 .hero_slider .hero_third .slide_wrap { background: image-url('global/bg_noise_transparent.png') center; }
+
+#slider_prev,
+#slider_next {
+  background: aqua;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  height: 50px;
+  width: 50px;
+  z-index: 200;
+}
+
+#slider_next {
+  right: 0;
+}
 
 .hero_slider_wrap .slides_nav {
   bottom: 10px;

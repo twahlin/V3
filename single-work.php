@@ -13,7 +13,7 @@ get_header(); ?>
     <h2><?php the_title();?></h2>
 </div>
 
-<div class="work_post">
+<div class="work_post" id="<?php $slug = basename(get_permalink()); echo $slug; ?>">
     <?php
         $project = get_post_meta( $post->ID, 'work_project', true );
         $role = get_post_meta( $post->ID, 'work_role', true );
@@ -45,11 +45,10 @@ get_header(); ?>
             </li>
         </ul>    
     </aside>
-    <section>
-      
+    <section>      
       <ul>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
-
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post();          
+        
        $args = array(
          'post_type' => 'attachment',
          'numberposts' => -1,
