@@ -368,40 +368,22 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
   height: 50px;
 }
 
+
 .lastFMBody ul .itemRow a:hover {
   left: 0;
   top: 0;
 }
 
 .lastFMBody ul .itemRow a:hover .artWrap {
-  border: 0;
-  padding: 6px;
+  border: 6px solid #4ab0ff;
 
-  @include border-radius(2px);   
-}
-
-.lastFMBody ul .itemRow a:hover .artWrap:after {
-  background: #fff;
-  content:"";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-  
-  @include gradient_solid_standard;
-  @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);
-  @include border-radius(6px);  
+  @include box-shadow(rgba(0, 0, 0, .5) 1px 0 5px, rgba(108, 173, 223, 1) 0 0 1px);   
 }
 
 .lastFMBody ul .itemRow a:hover .track_info {
   @include opacity(1);
   @include transition-property(opacity);
   @include transition-duration(0.5s);
-  @include border-radius(2px);   
-  
 }
 
 //------------------------------------------------------------------

@@ -2294,54 +2294,22 @@ footer .footer_nav li a:active {
     height: 50px;
   }
 
-  /* line 371, ../sass/_768.scss */
+  /* line 372, ../sass/_768.scss */
   .lastFMBody ul .itemRow a:hover {
     left: 0;
     top: 0;
   }
 
-  /* line 376, ../sass/_768.scss */
+  /* line 377, ../sass/_768.scss */
   .lastFMBody ul .itemRow a:hover .artWrap {
-    border: 0;
-    padding: 6px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
-  }
-
-  /* line 383, ../sass/_768.scss */
-  .lastFMBody ul .itemRow a:hover .artWrap:after {
-    background: #fff;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 0;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99ccf5), color-stop(100%, #81b5dc));
-    background: -webkit-linear-gradient(#99ccf5, #81b5dc);
-    background: -moz-linear-gradient(#99ccf5, #81b5dc);
-    background: -o-linear-gradient(#99ccf5, #81b5dc);
-    background: -ms-linear-gradient(#99ccf5, #81b5dc);
-    background: linear-gradient(#99ccf5, #81b5dc);
+    border: 6px solid #4ab0ff;
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
     -o-box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
     box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px, #6caddf 0 0 1px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -o-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -khtml-border-radius: 6px;
-    border-radius: 6px;
   }
 
-  /* line 399, ../sass/_768.scss */
+  /* line 383, ../sass/_768.scss */
   .lastFMBody ul .itemRow a:hover .track_info {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -2354,20 +2322,14 @@ footer .footer_nav li a:active {
     -webkit-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
   }
 
-  /* line 411, ../sass/_768.scss */
+  /* line 393, ../sass/_768.scss */
   .masonry_responsive_grid {
     margin: 0 10px 0 11px;
   }
 
-  /* line 415, ../sass/_768.scss */
+  /* line 397, ../sass/_768.scss */
   .masonry_item {
     width: 33.29%;
   }
