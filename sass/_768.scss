@@ -232,6 +232,67 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 
 .hero_slider li .slide_inner_wrap { overflow: visible; }
 
+.slide_inner_wrap .slide_ribbon {
+  bottom: 10%; 
+  display: block;
+  position: absolute;
+  right: -8px;       
+}
+
+.slide_inner_wrap .slide_ribbon a {
+  background: image-url('global/png_master_sprite.png') -56px -160px no-repeat;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  height: 64px;
+  letter-spacing: 0.5px;
+  line-height: 70px;
+  margin-right: 8px;
+  padding: 0 12px 0 50px;
+  text-transform: uppercase;
+
+  @include proxima_regular;
+  @include blue_text_shadow_top;
+}
+
+.slide_inner_wrap .slide_ribbon a:after,
+.slide_inner_wrap .slide_ribbon a:before {
+  position: absolute;    
+  content:"";
+}
+
+.slide_inner_wrap .slide_ribbon a:after {
+  background: image-url('global/png_master_sprite.png') -950px -160px no-repeat;    
+  height: 64px;
+  right: -10px;
+  width: 18px;
+}
+
+.slide_inner_wrap .slide_ribbon a:before {
+  background: image-url('global/png_master_sprite.png') -496px -122px no-repeat;
+  bottom: -4px;
+  position: absolute;
+  right: -2px;
+  height: 10px;
+  width: 10px;
+}
+
+.slide_inner_wrap .slide_ribbon a:hover {
+  background-position: -56px -224px;    
+}
+
+.slide_inner_wrap .slide_ribbon a:hover:after {
+  background-position: -950px -224px;
+}
+
+.slide_inner_wrap .slide_ribbon a:active {
+  background-position: -56px -290px;    
+}
+
+.slide_inner_wrap .slide_ribbon a:active:after {
+  background-position: -950px -290px;
+}
+
 //------------------------------------------------------------------
 //Feed Home
 //------------------------------------------------------------------
@@ -265,7 +326,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //------------------------------------------------------------------
 
 .col_left {
-  margin: 0 2.4%;
+/*  margin: 0 2.4%;*/
   max-width: 700px;
 }
 
