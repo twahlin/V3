@@ -12,5 +12,3 @@
   ?>
   </div>
 </a>
-
-    <!-- echo "<p>$quote<a href='$url' rel='external' title='Quote author link'>&mdash;$author</a></p>" -->

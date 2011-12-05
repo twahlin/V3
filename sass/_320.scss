@@ -1040,6 +1040,19 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   }
 }
 
+.single-format-quote .quote_content p a {
+  color: $link_blue;
+  font-style: normal;
+  font-size: 14px;
+  display: block;
+  padding-top: 9px;
+  @include transition_default;
+}
+
+.single-format-quote .quote_content p a:hover {
+  color: $blue;
+}
+
 .format-video {
  .video_wrap {
    border: 1px solid #fff;
