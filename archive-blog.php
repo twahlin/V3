@@ -18,16 +18,17 @@ get_header(); ?>
 
 <div class="col_left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-<?php
-// The following determines what the post format is and shows the correct file accordingly
-$format = get_post_format();
-get_template_part( 'includes/admin/post_formats/'.$format );
-
-if($format == '')
-  get_template_part( 'includes/admin/post_formats/standard' );
-
-?>
+  <div <?php post_class(post_wrap); ?> id="post-<?php the_ID(); ?>">
+    <div class="post_wrap_inner clearfix">
+    <?php
+    // The following determines what the post format is and shows the correct file accordingly
+    $format = get_post_format();
+    get_template_part( 'includes/admin/post_formats_feed/'.$format );
+    if($format == '')
+      get_template_part( 'includes/admin/post_formats_feed/standard' );
+    ?>
+  </div>
+</div>
 <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 <?php endwhile; else: ?>
 
@@ -37,9 +38,4 @@ if($format == '')
 
 </div>
 
-
-
 <?php get_footer(); ?>
-
-
-

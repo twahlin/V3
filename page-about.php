@@ -22,7 +22,7 @@ get_header(); ?>
   <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
   
   <section class="content_block">
-    <h3 class="cv"><a rel="external" href="http://last.fm/user/twahlin"><em class="button">cv icon<span></span></em>Skillset</a></h3>
+    <h3 class="cv"><a rel="external" href="#"><em class="button">cv icon<span></span></em>Skillset</a></h3>
     <ul class="skills_graph">
       <li class="skill_graph_visual_design"><p>Visual Design</p><div class="progress_bar"><em>70 out of 100</em></div></li>
       <li class="skill_graph_mobile_design"><p>Mobile Design</p><div class="progress_bar"><em>65 out of 100</em></div></li>
@@ -35,7 +35,7 @@ get_header(); ?>
   <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
   
   <section class="content_block">
-    <h3 class="cv"><a rel="external" href="http://last.fm/user/twahlin"><em class="button">cv icon<span></span></em>Experience</a></h3>
+    <h3 class="cv"><a rel="external" href="#"><em class="button">cv icon<span></span></em>Experience</a></h3>
     <ul class="workplaces">
       <li>
         <img src="<?php bloginfo('template_directory'); ?>/images/workplace_logos/logo_space150_v28.png">

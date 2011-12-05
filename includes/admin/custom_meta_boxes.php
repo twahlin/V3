@@ -213,11 +213,11 @@ function metabox_work_save( $id )
 
     
 //start JS for toggling meta boxes    
-    function toggle_meta_box_per_post_format() {
-       wp_register_script('toggle_meta_box_per_post_format', get_template_directory_uri() . '/scripts/admin/toggle_meta_box_per_post_format.js');
-       wp_enqueue_script('toggle_meta_box_per_post_format');
-    }
-    add_action('admin_enqueue_scripts', 'toggle_meta_box_per_post_format');
+    // function toggle_meta_box_per_post_format() {
+    //    wp_register_script('toggle_meta_box_per_post_format', get_template_directory_uri() . '/scripts/admin/toggle_meta_box_per_post_format.js');
+    //    wp_enqueue_script('toggle_meta_box_per_post_format');
+    // }
+    // add_action('admin_enqueue_scripts', 'toggle_meta_box_per_post_format');
 //end JS for toggling meta boxes
     
     

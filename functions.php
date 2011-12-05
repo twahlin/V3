@@ -37,22 +37,6 @@ function add_body_class( $classes ) {
 add_filter( 'body_class', 'add_body_class' );
 //end adds body classes to respective pages
 
-//post first single image
-function img_first() {
-  $files = get_children('post_parent='.get_the_ID().'&post_type=attachment&post_mime_type=image');
-  if($files) :
-  $keys = array_reverse(array_keys($files));
-  $j=0;
-  $num = $keys[$j];
-  $image=wp_get_attachment_image($num, 'large', false);
-  $imagepieces = explode('"', $image);
-  $imagepath = $imagepieces[1];
-  $thumb=wp_get_attachment_url($num);
-  echo "$thumb";
-  endif;
-}
-//end post first single image
-
 //new ribbon for blog posts -- goes over image
 function ribbon_new() {
   $current_date = date("Y-m-d G:i:s");
