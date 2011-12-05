@@ -8,10 +8,9 @@
   */
 
 ?>
-
-  <?php
-include_once(ABSPATH . WPINC . '/feed.php');
-include_once(ABSPATH . WPINC . '/rss.php');
+<?php
+  include_once(ABSPATH . WPINC . '/feed.php');
+  include_once(ABSPATH . WPINC . '/rss.php');
 ?>
 <!DOCTYPE html>
 <!--[if IE 6]><meta HTTP-EQUIV="REFRESH" content="0; url=<?php bloginfo('template_directory'); ?>/ie6"><![endif]-->

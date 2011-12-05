@@ -9,12 +9,17 @@
 
 get_header(); ?>
 
+<!-- Page header, consistent on all home pages except home page -->
+<section class="page_heading">
+  <h2>Blog</h2> 
+  <p>everyday activities &amp; projects</p>
+</section>
+<!-- End Page header, consistent on all home pages except home page -->
+
 <div class="col_left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-
 <?php
-
 // The following determines what the post format is and shows the correct file accordingly
 $format = get_post_format();
 get_template_part( 'includes/admin/post_formats/'.$format );
@@ -23,7 +28,7 @@ if($format == '')
   get_template_part( 'includes/admin/post_formats/standard' );
 
 ?>
-
+<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 <?php endwhile; else: ?>
 
   No post here, 404 page
@@ -34,7 +39,6 @@ if($format == '')
 
 
 
-  <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
 

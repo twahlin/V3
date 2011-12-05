@@ -22,6 +22,11 @@ body:before {
 
 a,
 a:visited {
+  color: $link_blue;
+}
+
+a:hover,
+a:focus {
   color: $blue;
 }
 
@@ -30,16 +35,17 @@ h2, h3, h4, h5, h6 {
   @include white_text_shadow_bottom;
 }
 
-h2 { 
-  color: #666;
-  font-size: 60px;
-  line-height: 72px;
-  padding: 2.4% 0 0 2.4%; 
+h3 {
+  color: #333;
+  font-size: 18px;
+  line-height: 18px; 
+  
+  @include white_text_shadow_bottom;  
 }
 
 h5 {
   border-bottom: 1px solid #bbb;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 36px;
   margin-bottom: 11px;
   padding-bottom: 5px;
@@ -56,6 +62,7 @@ h6 {
 }
 
 p {
+  color: #444;
   font-size: 13px;
   line-height: 18px;
   margin-bottom: 9px;
@@ -98,8 +105,57 @@ p {
 }
 
 //------------------------------------------------------------------
+//Page Headers
+//------------------------------------------------------------------
+
+.page_heading {
+  margin-bottom: 20px;
+  padding: 22px 20px 6px 20px;
+  
+  @include background(linear-gradient(rgba(255,255,255, .1), rgba(0,0,0, .1)));
+  @include default_border_bottom; 
+  @include white_text_shadow_bottom;
+  h2 {
+    font-size: 22px;
+    line-height: 22px;
+    @include proxima_semibold; 
+  }
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    @include proxima_regular;  
+  }
+}
+
+//------------------------------------------------------------------
+//Section Headers
+//------------------------------------------------------------------
+
+.page_explainer {
+  color: #333;
+  font-size: 16px;  
+  padding: 0 20px 0 20px;
+  line-height: 22px;
+  
+  @include proxima_regular;
+  @include white_text_shadow_bottom;
+  a {
+    @include transition_default;
+  }  
+}
+
+//------------------------------------------------------------------
+//Global Container - Content Wrap
+//------------------------------------------------------------------
+
+.content_wrap {
+  
+}
+
+//------------------------------------------------------------------
 //Header / Logo
 //------------------------------------------------------------------
+
 .before_header {
   background: #666;
   border-bottom: 1px solid #444;
@@ -119,6 +175,7 @@ p {
 }
 
 .before_header .charter {
+  color: #fff;
   font-size: 10px;
   line-height: 14px;
   margin: 0;    
@@ -147,24 +204,6 @@ h1 {
   @include border-radius(80px);
 }
 
-/*@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 
-      0 0 10px 0 rgba(51,51,51,1),
-      0 0 10px 0 rgba(140,180,180,.9);
-  }
-  50% {
-    -webkit-box-shadow: 
-      0 0 2px 0 rgba(51,51,51,1),
-      0 0 2px 0 rgba(140,180,180,.8);
-  }
-  100% {
-    -webkit-box-shadow: 
-      0 0 10px 0 rgba(51,51,51,1),
-      0 0 10px 0 rgba(140,180,180,.9);
-  }
-}*/
-
 h1 a {
   background: #fff;
   display: block;
@@ -180,12 +219,6 @@ h1 a {
   @include transition-property(box-shadow);
   @include transition-duration(0.3s);
   @include transition-timing-function(ease-in);
-  
-/*  -webkit-animation-duration: 2s;
-  -webkit-animation-name: pulse;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;*/
-	
 }
 
 h1 a:hover,
@@ -276,6 +309,7 @@ h1 a span {
 .navigation nav ul li a,
 .navigation nav ul li a:visited {
   background: #f0f0f0;
+  color: $blue;
   display: block;
   height: 50px;
 
@@ -286,6 +320,7 @@ h1 a span {
 .navigation nav ul li a:hover, 
 .navigation nav ul li a:focus {
   background-color: #e2e2e2;
+  text-decoration: none;
 
   @include background(linear-gradient(rgba(255, 255, 255, .15), rgba(0, 0, 0, .15)));
 }
@@ -642,7 +677,7 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   line-height: 38px;
   padding: 0 0 0 42px;
 
-  @include proxima_regular;
+  @include proxima_semibold;
 }
 
 .home_connections .links_social li a span {
@@ -656,13 +691,12 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   top: 8px;
   width: 22px;
 
-  @include opacity(0.85);
   @include transition_default;
 }
 
 .home_connections .links_social li a:hover span,
 .home_connections .links_social li a:focus span  {
-  @include opacity(1);
+  color: $blue;
 }
 
 .home_connections .links_social .dribbble span { background-position: 0px -95px; }
@@ -678,7 +712,7 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 .blog_cal {
   background: image-url('global/png_master_sprite.png') -65px -100px;    
-  height: 49px;
+  height: 50px;
   overflow: hidden;
   width: 44px;
 }
@@ -726,7 +760,6 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 .format-standard .icon_post_format {
   background: #fff image-url('global/png_master_sprite.png') -163px -91px;
-  content:"";
   display: block;
   height: 0;
   overflow: hidden;
@@ -740,23 +773,16 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 
 .post_wrap {
   position: relative;
-  margin: 0 0 40px 0;
 }
 
 .post_wrap .blog_cal {
   position: absolute;
-  top: 14px;
+  top: 2px;
+  left: 20px;
 }
 
 .post_wrap h3 {
-  border-top: 1px solid #bbb; 
-  font-size: 25px;
-  line-height: 25px;    
-  padding: 14px 0 13px 55px;
-
-  @include proxima_light;
-  @include white_box_shadow_top_inset;      
-  @include white_text_shadow_bottom;
+  padding: 0 0 20px 75px;
 }
 
 .post_wrap h3 em {
@@ -782,8 +808,13 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   color: $blue;   
 }
 
+.post_wrap .img_border {
+   margin: 0 10px;
+}
+
 .format-quote {
   background: #fff image-url('global/bg_diagonal_lines_5_percent.png');
+  display: block;
   overflow: visible;
 
   @include default_container_shadow;
@@ -842,7 +873,8 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   background: #bbb;
   display: block;
   clear: both;
-  height: 1px;    
+  height: 1px;
+  margin: 30px 0;    
   position: relative;
 
   @include white_box_shadow_bottom;      
@@ -917,7 +949,7 @@ footer .footer_nav {
 
 footer .footer_nav li {
   float: left;
-  border-right: 1px solid #6caddf;
+  border-right: 1px solid #bebebe;
   border-left: 1px solid #fff;
   padding: 0 8px 0 8px;
 }
@@ -941,6 +973,10 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 //Last.fm Icons and functionality.
 //------------------------------------------------------------------
+
+.lastFMHeader {
+  display: none;
+}
 
 .lastFMBody ul {
   border-top: 1px solid #ccc;
@@ -1014,36 +1050,158 @@ footer .footer_nav li a:active {
 //Skillset section and Functionality
 //------------------------------------------------------------------
 
-.progress_bar {
-  background: rgba(0, 0, 0, .05) image-url('global/bg_diagonal_lines_5_percent.png') center;
-  border: 1px solid #fff;    
-  height: 24px;
+.skills_graph {
+  padding: 0 10px;
+  p {
+    font-size: 15px;
+    padding: 0 10px;
+    margin-bottom: 4px;
+  }
+  li {
+    margin-bottom: 16px;
+  }
+  .progress_bar {
+    background: rgba(0, 0, 0, .05);
+    border: 1px solid #fff;    
+    height: 24px;
+    position: relative;
+
+    @include border-radius(12px);
+    @include box-shadow(rgba(0, 0, 0, .4) 0 0 5px, inset rgba(0, 0, 0, .4) 0 0 5px);
+    em {
+      font-size: 10px;
+      line-height: 24px;
+      margin-left: 4px;
+    }
+  }
+  .progress_bar:before,
+  .progress_bar:after {
+    content: "";
+    display: block;
+    height: 20px;
+    top: 2px;
+    left: 2px;    
+    position: absolute;    
+    width: 25%;  
+
+    @include border-radius(10px);  
+  }
+
+  .progress_bar:before {
+    background: #68afe5;  
+
+    @include gradient_solid_standard; 
+    @include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 0px);    
+  }
+
+  .progress_bar:after {
+    background: image-url('global/bg_bar_stripe.png');
+  }
+}
+
+.skill_graph_visual_design .progress_bar:before,
+.skill_graph_visual_design .progress_bar:after { width: 70%; }
+
+.skill_graph_mobile_design .progress_bar:before,
+.skill_graph_mobile_design .progress_bar:after { width: 65%; }
+
+.skill_graph_xhtml .progress_bar:before,
+.skill_graph_xhtml .progress_bar:after { width: 85%; }
+
+.skill_graph_jquery .progress_bar:before,
+.skill_graph_jquery .progress_bar:after { width: 55%; }
+
+.skill_graph_ux .progress_bar:before,
+.skill_graph_ux .progress_bar:after { width: 40%; }
+
+.skill_graph_php .progress_bar:before,
+.skill_graph_php .progress_bar:after { width: 30%; }
+
+//------------------------------------------------------------------
+//Workplaces
+//------------------------------------------------------------------
+.workplaces{
+  li {
+    background: #fff image-url('global/bg_diagonal_lines_5_percent.png');
+    padding: 20px;
+    position: relative;
+    margin: 0 10px 10px 10px;
+    @include default_container_shadow; 
+    img {
+      display: block;
+      height: 64px;
+      position: absolute;
+      width: 64px;
+    }
+    a {
+      display: inline-block;
+      padding: 18px 0 20px 84px;
+      h4 {
+        color: #444;
+        font-size: 16px;
+        @include proxima_semibold;
+      }
+      em {
+        color: #333;
+        font-size: 12px;
+        font-weight: normal;
+        @include proxima_regular
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------
+//About Page Styling
+//------------------------------------------------------------------
+
+.page-about h3 {
   position: relative;
-
-  @include border-radius(12px);
-  @include box-shadow(rgba(0, 0, 0, .55) 0 0 5px, inset rgba(0, 0, 0, .55) 0 0 5px);
+  margin: 0 0 20px 20px;
 }
 
-.progress_bar:after {
-  background: #68afe5;
-  content: "";   
+.page-about h3 a {
+  color: #333;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 0 0 46px;
+  
+  @include transition_default;
+}
+
+.page-about h3 a:hover {
+  color: $blue;
+}
+
+.page-about h3 a:hover .button {
+  @include button_hover;
+}
+
+.page-about h3 a em {
   display: block;
-  height: 20px;
+  height: 0;
+  padding: 34px 0 0 0;
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 50%;
-
-  @include gradient_solid_standard; 
-  @include border-radius(10px);
-  @include box-shadow(inset rgba(0, 0, 0, .3) 0 -1px 1px);    
+  overflow: hidden;
+  width: 34px;
 }
 
-.progress_bar em {
-  font-size: 10px;
-  font-style: normal;
-  line-height: 24px;
-  margin-left: 10px;
+.page-about h3 a em span {
+  background: image-url('global/png_master_sprite.png');
+  display: block;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+}
+
+.page-about h3.cv a em span {
+  background-position: 6px -425px;
+}
+
+.page-about h3.lastfm a em span {
+  background-position: 5px -279px;
 }
 
 //------------------------------------------------------------------

@@ -94,6 +94,40 @@ function metabox_link_save( $id )
         update_post_meta( $id, 'link_content', esc_attr( strip_tags( $_POST['link_content'] )) );  
 }
 //end custom meta box for link in blog post type
+
+//begin custom meta box for video in blog post type
+add_action( 'add_meta_boxes', 'metabox_video_add' );  
+function metabox_video_add()  
+{  
+    add_meta_box( 'format_blog_video', 'Video', 'metabox_video', 'blog', 'normal', 'high' );  
+}
+
+function metabox_video( $post )  
+{  
+    $video_url = get_post_meta( $post->ID, 'video_url', true ); 
+    wp_nonce_field( 'save_video_meta', 'video_nonce' );  
+    ?>  
+        <p>
+            <label for="video_url">Video Embed Code</label>  
+            <textarea class="widefat" id="video_url" name="video_url"><?php echo $video_url; ?></textarea>  
+        </p>
+    <?php  
+  
+}
+
+add_action( 'save_post', 'metabox_video_save' );  
+function metabox_video_save( $id )  
+{  
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;  
+  
+    if( !isset( $_POST['video_nonce'] ) || !wp_verify_nonce( $_POST['video_nonce'], 'save_video_meta' ) ) return;  
+  
+    if( !current_user_can( 'edit_post' ) ) return;  
+    
+    if( isset( $_POST['video_url'] ) )  
+        update_post_meta( $id, 'video_url', ( $_POST['video_url'] ) );
+}
+//end custom meta box for vido in blog post type
    
     
 // NOT COMPLETE!!!!    

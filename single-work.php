@@ -77,5 +77,4 @@ get_header(); ?>
     <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

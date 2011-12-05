@@ -1,29 +1,12 @@
 <div <?php post_class(post_wrap); ?> id="post-<?php the_ID(); ?>">
     
-    <div class="blog_cal">
-        <strong><?php the_time('M') ?></strong>
-        <em><?php the_time('j') ?></em>
-        <p><?php the_time('Y') ?></p>
-    </div>
-    
-    <h3>
-        <em>
-            <span>
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-            <span>
-        </em>
-    </h3>
-        <!-- <div class="img_border">
-            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-            <?php img_first(); ?>
-            <?php ribbon_new() ?>
-            </a>
-        </div> -->
+    <div class="blog_cal"><strong><?php the_time('M') ?></strong><em><?php the_time('j') ?></em><p><?php the_time('Y') ?></p></div>
+    <h3><em><span><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a><span></em></h3>
+
         
         <a class="img_border" href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>" style="background-size: 100%; background-image: url('<?php img_first(); ?>')">
             <span class="icon_post_format">This is a standard post</span>
             <div class="img_wrap">
-                <em>Here is the image title May want to remove from here, not sure tho</em>
                 <img src="<?php img_first(); ?>" />
             </div>
             <!-- <?php img_first(); ?> -->

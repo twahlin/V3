@@ -18,6 +18,4 @@ get_header(); ?>
 <h6>h6 Header 6</h6>
 
 <a href="#" class="button">Here is a Button</a>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
