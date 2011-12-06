@@ -38,12 +38,12 @@ get_header(); ?>
     <h3 class="cv"><a rel="external" href="#"><em class="button">cv icon<span></span></em>Experience</a></h3>
     <ul class="workplaces">
       <li>
-        <img src="<?php bloginfo('template_directory'); ?>/images/workplace_logos/logo_space150_v28.png">
+        <div class="workplace_logo_wrap"><img src="<?php bloginfo('template_directory'); ?>/images/workplace_logos/logo_space150_v28.png"></div>
         <a rel="external" href="http://space150.com">
           <h4>space150</h4>
           <em>Associate Designer</em>
         </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui eros, porta et cursus sit amet, aliquam luctus velit. Phasellus non tellus sem. Mauris ac ligu la nulla. Aenean vel laoreet orci. Duis ac lorem quis justo consectetur euismod ut eu tellus. Mauris malesuada feugiat tincidunt. rta et cursus sit.</p>
+        <p>a esdit. Phasellus non tellus sem. Mauris ac ligu la nulla. Aenean vel laoreet orci. Duis ac lorem quis justo consectetur euismod ut eu tellus. Mauris malesuada feugiat tincidunt. rta et cursus sit.</p>
       </li>
     </ul>
   </section>

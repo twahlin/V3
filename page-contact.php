@@ -26,6 +26,6 @@ get_header(); ?>
   </div>
 </div>
 
-<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>    
+<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>   
 
 <?php get_footer(); ?>

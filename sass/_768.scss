@@ -10,6 +10,10 @@
   padding-top: 18px;
 }
 
+.hr {
+  margin: 40px 0;       
+}
+
 //------------------------------------------------------------------
 //Navigation
 //------------------------------------------------------------------
@@ -222,6 +226,251 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
+//Section Headers
+//------------------------------------------------------------------
+
+.page_explainer {
+  color: #444;
+  font-size: 20px;  
+  padding: 0 40px 0 40px;
+  line-height: 27px;
+}
+
+//------------------------------------------------------------------
+//Page Headers
+//------------------------------------------------------------------
+
+.page_heading {
+  margin-bottom: 40px;
+  padding: 40px 40px 32px 40px;
+  h2 {
+    color: #666;
+    display: inline;
+    font-size: 30px;
+    line-height: 30px;
+    @include proxima_regular; 
+  }
+  p {
+    color: #666;
+    display: inline;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 6px;
+    @include proxima_light_italic;  
+  }
+}
+
+//------------------------------------------------------------------
+//Global post_wrap
+//------------------------------------------------------------------
+
+
+.post_wrap {
+  .blog_cal {
+    left: 40px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 25px;
+    padding: 0 0 40px 95px; 
+    @include proxima_light;         
+  }
+  h4, h5, h6 {
+    color: #333;
+    font-size: 22px;
+    margin: 0 40px 18px 40px;
+  }
+  ul, ol {
+    font-size: 14px;
+    margin: 0 40px 0 40px;
+    li {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.post_wrap {
+  .post_wrap_inner{
+    .img_border {
+       margin: 0 20px 40px 20px;
+    }
+    .continue_reading {
+      font-size: 13px;
+      margin: 0 40px 18px 40px;
+    }
+    p {
+       font-size: 14px;
+       line-height: 18px;
+       margin: 0 40px 18px 40px;
+     }
+     blockquote {
+       margin: 0 40px 18px 40px;
+       padding: 9px 0 1px 0;
+       @include proxima_regular_italic;
+       p {
+         color: #666;
+         font-size: 22px;
+         line-height: 25px; 
+         margin: 2px 40px 14px 20px; 
+       }
+     }
+  }
+}
+
+//------------------------------------------------------------------
+//Specific post format styling
+//------------------------------------------------------------------
+
+.format-gallery {
+  .img_list {
+    margin: 0 10px;
+    li {
+      width: 25%;
+      .img_border {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.single-format-gallery {
+  .img_list {
+    margin: 0 40px;
+    li {
+      float: none;
+      max-width: 640px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
+
+.format-link {
+  a {
+    margin: 0 40px;
+    em {
+      line-height: 27px;
+      padding: 20px 20px 20px 72px;
+      font-size: 25px;
+      @include proxima_regular;
+    }
+  }
+}
+
+.format-quote {
+  margin: 0 20px;
+  .quote_content {
+    p {
+      color: #666;
+      font-size: 26px;
+      line-height: 28px;
+      padding: 30px 30px 20px 36px;
+      margin: 0;
+      @include proxima_light_italic;
+      em {
+        color: #666;
+        font-style: normal;
+        font-size: 18px;
+        padding-top: 16px;
+        @include proxima_regular;
+      }
+    }
+  }
+}
+
+.single-format-quote .quote_content p a {
+  font-size: 18px;
+  display: block;
+  padding-top: 18px;
+}
+
+.format-video {
+ .video_wrap {
+    margin: 0 20px;
+   } 
+}
+
+//------------------------------------------------------------------
+//Workplaces
+//------------------------------------------------------------------
+
+.workplaces{
+  li {
+    padding: 40px 40px 40px 190px;
+    margin: 0 40px 20px 40px;
+    min-height: 90px;
+    .workplace_logo_wrap {
+      background: #fff;
+      border-right: 1px solid #bebebe;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 150px;
+    }
+    img {
+      height: 100px;
+      left: 25px;
+      top: 50%;
+      margin-top: -50px;
+      position: absolute;
+      width: 100px;
+    }
+    a {
+      display: inline-block;
+      padding: 0 0 20px 0;
+      h4 {
+        color: #444;
+        display: inline;
+        font-size: 18px;
+        @include proxima_semibold;
+        @include transition_default;
+      }
+      em {
+        color: #333;
+        font-size: 12px;
+        font-weight: normal;
+        @include proxima_regular;
+        @include transition_default;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//------------------------------------------------------------------
+//About Page Styling
+//------------------------------------------------------------------
+
+.page-about h3 {
+  margin: 0 0 20px 40px;
+}
+
+//------------------------------------------------------------------
+//Skillset section and Functionality
+//------------------------------------------------------------------
+
+.skills_graph {
+  padding: 0;
+  margin: 0 40px;
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 0 0 180px;
+  }
+  p {
+    font-size: 16px;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 3px;
+  }
+}
+
+
+//------------------------------------------------------------------
 //Hero Slider
 //------------------------------------------------------------------
 
@@ -327,7 +576,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //------------------------------------------------------------------
 
 .col_left {
-
+  
 }
 
 //------------------------------------------------------------------
@@ -339,7 +588,8 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 .lastFMBody ul {
-  border-top: none; 
+  border-top: none;
+  margin: 0 0 0 35px; 
 }
 
 .lastFMBody ul .itemRow {
@@ -347,9 +597,9 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
   border: none;
   float: left;
   height: 132px;
-  margin: 10px;
+  margin-bottom: 20px;
   position: relative;
-  width: 132px;
+  width: 24%;
 }
 
 .lastFMBody ul .itemRow a {
