@@ -11,13 +11,21 @@
 
 get_header(); ?>
 
-  <?php echo do_shortcode( '[contact-form 1 "Contact form 1"]' ); ?>
+<!-- Page header, consistent on all home pages except home page -->
+<section class="page_heading">
+  <h2>Contact</h2> 
+  <p>get in touch with me</p>
+</section>
+<!-- End Page header, consistent on all home pages except home page -->
+<div class="col_left">
+<p class="page_explainer">  Interested in getting in touch? Fill out the contact form below. Not a contact form person? Feel free to find me on <a rel="external" href="http://www.facebook.com/twahlin">Facebook</a>, <a rel="external" href="http://www.linkedin.com/in/tomwahlin">Linkedin</a>, or <a rel="external" href="http://twitter.com/twahlin">Twitter</a>.</p>  
+<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<div class="contact_form">
+    <?php echo do_shortcode( '[contact-form-7 id="229" title="Contact form 1"]' ); ?>
+  </div>
+</div>
 
-  <h3 class="entry-title"><?php the_title(); ?></h3>
-<?php the_content(); ?>
-
-<?php endwhile; // end of the loop. ?>
+<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>    
 
 <?php get_footer(); ?>

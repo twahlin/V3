@@ -525,7 +525,8 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
   bottom: 0;
   color: #fff;
   display: inline-block;
-  font-style: normal;    
+  font-style: normal;
+  font-weight: bold;    
   font-size: 11px;
   left: 0; 
   right: 0;
@@ -535,7 +536,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
   @include blue_text_shadow_top;
   @include box-shadow(inset rgba(207, 233, 254, 1) 0 1px 0);            
   @include gradient_solid_standard;
-  @include transition_default;    
+  @include transition_default;   
 }
 
 /*Hover States, need this because a.img_border may not always be an a tag*/
@@ -1354,13 +1355,21 @@ footer .footer_nav li a:active {
         color: #444;
         font-size: 16px;
         @include proxima_semibold;
+        @include transition_default;
       }
       em {
         color: #333;
         font-size: 12px;
         font-weight: normal;
-        @include proxima_regular
+        @include proxima_regular;
+        @include transition_default;
       }
+    }
+    a:hover h4, a:hover em {
+      color: $blue;
+    }
+    p {
+      margin-bottom: 0;
     }
   }
 }
@@ -1416,6 +1425,56 @@ footer .footer_nav li a:active {
 
 .page-about h3.lastfm a em span {
   background-position: 5px -279px;
+}
+
+//------------------------------------------------------------------
+//Contact From
+//------------------------------------------------------------------
+
+.contact_form {
+  padding: 0 20px;
+  p {
+    color: #333;
+    font-size: 15px;
+    @include proxima_regular;
+    @include white_text_shadow_bottom;
+  }
+  input, textarea {
+    border: 1px solid #999;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    @include box-shadow(inset rgba(0, 0, 0, .4) 0 1px 3px, rgba(255, 255, 255, 1) 0 1px 1px);
+    @include border-radius(3px);
+  }
+  input {
+    height: 30px;
+  }
+  .wpcf7-submit{
+    cursor: pointer;
+    @include button;
+    height: 40px;
+    line-height: 16px;
+  }
+  .wpcf7-submit:hover {
+    @include button_hover;
+    line-height: 16px;
+  }
+}
+
+.wpcf7-validation-errors {
+  color: #890000;
+  @include white_text_shadow_bottom;
+}
+
+.wpcf7-mail-sent-ok {
+  color: #008944;
+  @include white_text_shadow_bottom;  
 }
 
 //------------------------------------------------------------------
