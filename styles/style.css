@@ -3895,12 +3895,17 @@ footer .footer_nav li a:active {
   }
 
   /* line 163, ../sass/_992.scss */
+  .faux_sidebar {
+    background: red;
+  }
+
+  /* line 167, ../sass/_992.scss */
   .sidebar_tom {
     background-image: url('../images/global/bg_chevron.png?1323286347');
     display: block;
     border-bottom: 1px solid #bebebe;
   }
-  /* line 167, ../sass/_992.scss */
+  /* line 171, ../sass/_992.scss */
   .sidebar_tom img {
     display: block;
     margin-top: -120px;

@@ -160,6 +160,10 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
   }    
 }
 
+.faux_sidebar {
+  background: red;
+}
+
 .sidebar_tom {
   background-image: image-url('global/bg_chevron.png');    
   display: block;

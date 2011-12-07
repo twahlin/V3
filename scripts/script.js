@@ -69,6 +69,7 @@ $(window).load(function () {
 
   //functionlist for window.load
   autoWindowHeight();
+  autoSidebarHeight();
   //end functionlist for window.load
 
   //begin setting the height for main content div        
@@ -81,10 +82,21 @@ $(window).load(function () {
     $("#main_content_inner").css("padding-bottom", mainContentBottomPadding);
   }
   //end setting the height for main content div 
+  
+  //sidebar height functionality
+  function autoSidebarHeight() {
+    var colsWrapHeight = $('.cols_wrap').height();
+    var colsWrapDifference = colsWrapHeight - $('.global_sidebar').height();
+    if ($('.col_right').css('float') === 'right') {
+      $('.faux_sidebar').css("height", colsWrapDifference);
+    }
+  }
+  //end sidebar height functionality
 
   //window resize function    
   $(window).resize(function(){
     autoWindowHeight();
+    autoSidebarHeight();    
   });
   //end window resize function 
 
@@ -99,5 +111,4 @@ $(window).load(function () {
     // trigger resize to set up masonry on start-up
   }).resize();
   //End Masonry Functionality    
-
 });
