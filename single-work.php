@@ -9,9 +9,12 @@ get_header(); ?>
 
 <?php //this aggregates all the solitary projects of the client ?>
 
-<div class="single_work_header">
-    <h2><?php the_title();?></h2>
-</div>
+<!-- Page header, consistent on all home pages except home page -->
+<section class="page_heading">
+  <h2>Work</h2> 
+  <p>the portfolio of Tom Wahlin</p>
+</section>
+<!-- End Page header, consistent on all home pages except home page -->
 
 <div class="work_post" id="<?php $slug = basename(get_permalink()); echo $slug; ?>">
     <?php
@@ -69,7 +72,7 @@ get_header(); ?>
                   $img_preview = $preview_array[0]; // thumbnail or medium image to use for preview.
                   ?>
                   <li>
-                    <img src="<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo $img_preview ?>&w=800" alt="<?php echo $img_caption; ?>" title="<?php echo $img_title; ?>">
+                    <img src="<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo $img_preview ?>&w=850" alt="<?php echo $img_caption; ?>" title="<?php echo $img_title; ?>">
                   </li>
                   <?
                   }
@@ -86,7 +89,6 @@ get_header(); ?>
 
     </section>    
 </div>
-    <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 
 
 <?php get_footer(); ?>

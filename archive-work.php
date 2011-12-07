@@ -9,7 +9,12 @@
 
 get_header(); ?>
 
-<h2>[FPO: Representative pieces of work.]</h2>
+<!-- Page header, consistent on all home pages except home page -->
+<section class="page_heading">
+  <h2>Work</h2> 
+  <p>the portfolio of Tom Wahlin</p>
+</section>
+<!-- End Page header, consistent on all home pages except home page -->
 
 <div id="masonry_responsive_grid" class="masonry_responsive_grid">
 

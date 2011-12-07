@@ -195,7 +195,7 @@ function metabox_work_save( $id )
         update_post_meta( $id, 'work_company', esc_attr( strip_tags( $_POST['work_company'] ) ) );
         
     if( isset( $_POST['work_description'] ) )  
-        update_post_meta( $id, 'work_description', esc_attr( strip_tags( $_POST['work_description'] ) ) );                
+        update_post_meta( $id, 'work_description', $_POST['work_description'] );                
   
 }
 //End custom Meta Info per work piece

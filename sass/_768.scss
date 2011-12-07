@@ -241,7 +241,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 //------------------------------------------------------------------
 
 .page_heading {
-  margin-bottom: 40px;
+  margin-bottom: 0;
   padding: 40px 40px 32px 40px;
   h2 {
     color: #666;
@@ -697,10 +697,164 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
+//Work Single
+//------------------------------------------------------------------
+
+.work_post {
+  padding-top: 40px;
+  margin: 0 40px;
+  aside {
+    margin: 0;
+    float: left;
+    width: 30%;
+    ul {
+      li {
+        h4 {
+          color: #444;
+          font-size: 18px;
+          margin-bottom: 4px;
+          @include proxima_regular;
+        }
+        p {
+          font-size: 13px;
+          line-height: 17px;
+          color: #333;
+          @include white_text_shadow_bottom
+        }
+        a {
+          display: block;
+          @include transition_default;
+        }
+      }
+    }
+  }
+  section {
+    margin: 0;
+    float: left;
+    width: 70%;
+    ul {
+      padding-left: 40px;
+      li {
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+          @include default_container_shadow; 
+        }
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------
+//Column system
+//------------------------------------------------------------------
+
+.cols_wrap {
+  .col_left {
+   padding-top: 40px;
+  }    
+}
+
+//------------------------------------------------------------------
+//Sidebar connections
+//------------------------------------------------------------------
+
+.sidebar_connections .links_social .dribbble,
+.sidebar_connections .links_social .flickr,
+.sidebar_connections .links_social .last_fm,
+.sidebar_connections .links_social .facebook,
+.sidebar_connections .links_social .linkedin,
+.sidebar_connections .links_social .twitter {
+  float: none;
+}
+
+.sidebar_connections .links_social li {
+  height: 34px;
+  float: none;
+  margin-bottom: 15px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.sidebar_connections .links_social li a {
+  display: table;
+  height: 34px; 
+}
+
+.sidebar_connections .links_social li a .button { 
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 34px 0 0 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.sidebar_connections .links_social li a:hover .button { 
+  @include button_hover
+}
+
+.sidebar_connections .links_social li a .button:after { 
+  background-image: image-url('global/png_master_sprite.png');    
+  content: "";
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+  z-index: 2;
+
+  @include opacity(0.85);
+  @include transition_default;
+}
+
+.sidebar_connections .links_social li a:hover .button:after { 
+  @include opacity(1);
+}
+
+.sidebar_connections .links_social .dribbble a .button:after { background-position: 6px -90px; }
+.sidebar_connections .links_social .flickr a .button:after  { background-position: 6px -185px; }
+.sidebar_connections .links_social .last_fm a .button:after { background-position: 5px -279px; }
+.sidebar_connections .links_social .facebook a .button:after { background-position: 6px -137px; }
+.sidebar_connections .links_social .linkedin a .button:after { background-position: 5px -234px; }
+.sidebar_connections .links_social .twitter a .button:after { background-position: 6px -327px; }
+
+.sidebar_connections .links_social .dribbble span,
+.sidebar_connections .links_social .flickr span,
+.sidebar_connections .links_social .last_fm span,
+.sidebar_connections .links_social .facebook span,
+.sidebar_connections .links_social .linkedin span,
+.sidebar_connections .links_social .twitter span {
+  background: none;
+  color: #555;
+  display: table-cell;    
+  font-size: 16px;
+  height: 36px;
+  left: 0;
+  padding: 0 0 0 46px;
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+
+  @include white_text_shadow_bottom    
+}
+
+//------------------------------------------------------------------
+//Contact From
+//------------------------------------------------------------------
+
+.contact_form {
+  padding: 0 40px;
+}
+
+//------------------------------------------------------------------
 //Masonry responsive grid
 //------------------------------------------------------------------
 
-.masonry_responsive_grid {
+.masonry_responsive_grid { 
   margin: 0 10px 0 11px; 
 }
 

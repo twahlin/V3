@@ -122,7 +122,6 @@ p {
 //------------------------------------------------------------------
 
 .page_heading {
-  margin-bottom: 20px;
   padding: 22px 20px 6px 20px;
   
   @include background(linear-gradient(rgba(255,255,255, .1), rgba(0,0,0, .1)));
@@ -192,6 +191,14 @@ p {
       color: $blue;
     }
   }
+}
+
+.sidebar_dribbble li {
+  margin-bottom: 20px;
+}
+
+.sidebar_tom {
+  display: none;
 }
 
 //------------------------------------------------------------------
@@ -1495,41 +1502,54 @@ footer .footer_nav li a:active {
 //Work Single
 //------------------------------------------------------------------
 
-.single_work_header {
+.work_post {
+  padding-top: 20px;
+  overflow: hidden;
+  aside {
+    margin: 0 20px;
+    ul {
+      li {
+        margin-bottom: 19px;
+        h4 {
+          color: #444;
+          font-size: 16px;
+          margin-bottom: 4px;
+          @include proxima_semibold;
+        }
+        p {
+          font-size: 13px;
+          line-height: 17px;
+          color: #333;
+          @include white_text_shadow_bottom
+        }
+        a {
+          display: block;
+          @include transition_default;
+        }
+      }
+    }
+  }
+  section {
+    margin: 0 20px;
+    ul {
+      li {
+        margin-bottom: 20px;
+        img {
+          display: block;
+          width: 100%;
+          @include default_container_shadow; 
+        }
+      }
+    }
+  }
+} 
 
-}
+//------------------------------------------------------------------
+//Column system
+//------------------------------------------------------------------
 
-.work_post aside {
-  float: left;
-  width: 30%;
-
-  @include global_wrap_margin_left_right;
-}
-
-.work_post aside h4 {
-  font-size: 13px;
-  font-variant: small-caps;
-  text-transform: lowercase;
-}
-
-.work_post aside ul li ol li {
-  margin-bottom: 3px;
-}
-
-.work_post aside ul li ol li a {
-  font-size: 12px;
-  line-height: 13px;
-}
-
-.work_post section {
-  float: left;
-  max-width: 800px;
-  width: 62.8%;
-}
-
-.work_post section ul li img {
-  width: 100%;
-
+.col_left {
+  padding-top: 20px;
 }
 
 //------------------------------------------------------------------
@@ -1537,6 +1557,7 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
+  padding-top: 10px;
   margin: 0;
 }
 

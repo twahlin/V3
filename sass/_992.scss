@@ -126,36 +126,49 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
 //------------------------------------------------------------------
 
 .cols_wrap {
-  overflow: hidden;
   position: relative;
   .col_left {
    float: left;
+   padding-top: 40px;
    width: 70%;
   }
   .col_right {
-    background: none;
     float: right;
     position: relative;  
-    width: 30%;         
-  }
-  .faux_right_col {
-    background: aqua;
-    position: absolute;
-    float: right;
-    width: 30%; 
-    bottom: 0;
-    right: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;  
+    width: 30%;      
   }
   .global_sidebar {
-/*    background: #fff image-url('global/bg_carbon_fiber_white.png');*/
-    background: none;
-    position: relative;
-    z-index: 2;      
+    border-bottom: 1px solid #bebebe;
+    border-left: 1px solid #fff;
+    padding-bottom: 15px;
+    position: relative; 
+    @include box-shadow(inset rgba(0, 0, 0, .4) 2px 2px 4px); 
+    .sidebar_module_wrap {
+      padding: 10% 10% 0 10%;
+    } 
+    h6 { 
+      font-size: 22px;
+      border-bottom: 1px solid #bebebe;
+      color: #333;
+      margin-bottom: 10px;
+      padding-bottom: 12px;
+      @include proxima_light;
+      a {
+        font-size: 22px;
+      }
+    }    
   }    
+}
+
+.sidebar_tom {
+  background-image: image-url('global/bg_chevron.png');    
+  display: block;
+  border-bottom: 1px solid #bebebe;
+  img {
+    display: block;
+    margin-top: -120px;
+    width: 100%;
+  }
 }
 
 
