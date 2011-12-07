@@ -18,9 +18,9 @@ get_header(); ?>
           <img src="<?php bloginfo('template_directory'); ?>/images/slider-hero/intro/ipad.png" class="home_ipad" alt="tomwahlin.com on an ipad" />
           <img src="<?php bloginfo('template_directory'); ?>/images/slider-hero/intro/imac.png" class="home_imac" alt="tomwahlin.com on an imac" />
           <p>hi</p>
-          <div class="slide_ribbon">
+          <!-- <div class="slide_ribbon">
             <a href="#">Hi there, here is the ribbon link</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </li>

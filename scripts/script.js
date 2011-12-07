@@ -82,14 +82,16 @@ $(window).load(function () {
     $("#main_content_inner").css("padding-bottom", mainContentBottomPadding);
   }
   //end setting the height for main content div 
-  
+  var cols_wrap_height = $('.cols_wrap').height();
+  var sidebar_height =  $('.global_sidebar').height();
+  var faux_sidebar_height = cols_wrap_height - sidebar_height;
+  if ($('.col_right').css('float') === 'right') {
+    $('.faux_sidebar').css("height", faux_sidebar_height);
+  }
+  console.log (faux_sidebar_height);
   //sidebar height functionality
   function autoSidebarHeight() {
-    var colsWrapHeight = $('.cols_wrap').height();
-    var colsWrapDifference = colsWrapHeight - $('.global_sidebar').height();
-    if ($('.col_right').css('float') === 'right') {
-      $('.faux_sidebar').css("height", colsWrapDifference);
-    }
+
   }
   //end sidebar height functionality
 
