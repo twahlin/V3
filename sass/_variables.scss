@@ -14,10 +14,6 @@ $proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans
 @mixin proxima_semibold_italic { font-family: $proxima_stack; font-weight: 600; font-style: italic; }
 @mixin proxima_bold { font-family: $proxima_stack; font-weight: 700; font-style: normal; }
 @mixin proxima_bold_italic { font-family: $proxima_stack; font-weight: 700; font-style: italic; }
-@mixin proxima_extrabold { font-family: $proxima_stack; font-weight: 800; font-style: normal; }
-@mixin proxima_extrabold_italic { font-family: $proxima_stack; font-weight: 800; font-style: italic; }
-@mixin proxima_black { font-family: $proxima_stack; font-weight: 900; font-style: normal; }
-@mixin proxima_black_italic { font-family: $proxima_stack; font-weight: 900; font-style: italic; }
 
 
 @mixin white_text_shadow_bottom { @include text-shadow(#fff 0 1px 0); }

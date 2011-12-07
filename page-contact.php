@@ -22,7 +22,11 @@ get_header(); ?>
 <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
 
 <div class="contact_form">
-    <?php echo do_shortcode( '[contact-form-7 id="229" title="Contact form 1"]' ); ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php the_content(); ?>
+    <?php endwhile; else: ?>
+      <p>Sorry, the contact form does not seem to be working.</p>
+    <?php endif; ?>
   </div>
 </div>
 

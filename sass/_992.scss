@@ -121,7 +121,42 @@ a.img_border:hover .img_wrap em { @include opacity(100); bottom: 0; }
   @include white_text_shadow_bottom    
 }
 
+//------------------------------------------------------------------
+//Column system
+//------------------------------------------------------------------
 
+.cols_wrap {
+  overflow: hidden;
+  position: relative;
+  .col_left {
+   float: left;
+   width: 70%;
+  }
+  .col_right {
+    background: none;
+    float: right;
+    position: relative;  
+    width: 30%;         
+  }
+  .faux_right_col {
+    background: aqua;
+    position: absolute;
+    float: right;
+    width: 30%; 
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;  
+  }
+  .global_sidebar {
+/*    background: #fff image-url('global/bg_carbon_fiber_white.png');*/
+    background: none;
+    position: relative;
+    z-index: 2;      
+  }    
+}
 
 
 

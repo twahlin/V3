@@ -43,7 +43,7 @@ get_header(); ?>
           <h4>space150</h4>
           <em>Associate Designer</em>
         </a>
-        <p>a esdit. Phasellus non tellus sem. Mauris ac ligu la nulla. Aenean vel laoreet orci. Duis ac lorem quis justo consectetur euismod ut eu tellus. Mauris malesuada feugiat tincidunt. rta et cursus sit.</p>
+        <p>Destroy convention to create demand.</p>
       </li>
     </ul>
   </section>

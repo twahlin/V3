@@ -15,7 +15,7 @@ get_header(); ?>
   <p>everyday activities &amp; projects</p>
 </section>
 <!-- End Page header, consistent on all home pages except home page -->
-
+<div class="cols_wrap">
 <div class="col_left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <div <?php post_class(post_wrap); ?> id="post-<?php the_ID(); ?>">
@@ -30,18 +30,23 @@ get_header(); ?>
   </div>
 </div>
 <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
-<aside class="col_right">
-  <div class="global_sidebar">
-    <?php get_template_part( 'includes/snippets/sidebar/twitter' ); ?>
-    <?php get_template_part( 'includes/snippets/sidebar/dribbble' ); ?>
-    <?php get_template_part( 'includes/snippets/sidebar/connections' ); ?>    
-  </div>  
-</aside>
+<?php get_template_part('comments'); ?>
 <?php endwhile; else: ?>
 
   No post here, 404 page
 
 <?php endif; ?>
+
+</div>
+
+<aside class="col_right">
+  <div class="global_sidebar">
+    <?php get_template_part( 'includes/snippets/sidebar/twitter' ); ?>
+    <?php get_template_part( 'includes/snippets/sidebar/dribbble' ); ?>
+    <?php get_template_part( 'includes/snippets/sidebar/connections' ); ?>    
+  </div>
+  <div class="faux_right_col"></div>    
+</aside>
 
 </div>
 

@@ -76,6 +76,7 @@ p {
 
 .main_content_inner {
   overflow: hidden;
+  position: relative;
 }
 
 ::-moz-selection { background: #6caddf; color: #fff; text-shadow: none; }
@@ -170,10 +171,10 @@ p {
 
 .global_sidebar {
   @include box-shadow(inset rgba(0, 0, 0, .7) 0 5px 5px -5px);
+  background: #fff image-url('global/bg_carbon_fiber_white.png');
   .sidebar_module_wrap {
     padding: 20px 20px 0 20px;
   }
-  background: #fff image-url('global/bg_carbon_fiber_white.png');
   h6 { 
     border-bottom: 1px solid #bebebe;
     color: #333;
@@ -1476,6 +1477,18 @@ footer .footer_nav li a:active {
 .wpcf7-mail-sent-ok {
   color: #008944;
   @include white_text_shadow_bottom;  
+}
+
+//------------------------------------------------------------------
+//Disqus
+//------------------------------------------------------------------
+
+.disqus {
+  margin: 0 20px 20px 20px;
+}
+
+.dsq-sort-by select {
+  @include button;
 }
 
 //------------------------------------------------------------------
