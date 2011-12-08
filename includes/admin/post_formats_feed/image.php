@@ -5,6 +5,6 @@
   <span class="icon_post_format">This is a standard post</span>
   <div class="img_wrap">
     <img src="<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo PostThumbURL(); ?>&w=850" />
-  </div>
   <?php ribbon_new() ?>
+  </div>
 </a>

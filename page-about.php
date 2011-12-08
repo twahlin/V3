@@ -19,7 +19,7 @@ get_header(); ?>
 <div class="cols_wrap clearfix">
   <div class="col_left">
     <p class="page_explainer">Welcome to the portfolio of Tom Wahlin, a student of the aesthetically pleasing. Currently employed at <a href="http://www.space150.com/" rel="external">space150</a> focusing on design and front-end development. I believe in great ideas, but also following though on them and producing them. Would you like to get in touch? Find me on <a rel="external" href="http://twitter.com/twahlin">Twitter</a>, <a rel="external" href="http://www.facebook.com/twahlin">Facebook</a> and <a rel="external" href="http://www.linkedin.com/in/tomwahlin">Linkedin</a>.</p>
-    <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+    <?php get_template_part('includes/snippets/hr'); ?>
   
     <section class="content_block">
       <h3 class="cv"><a rel="external" href="#"><em class="button">cv icon<span></span></em>Skillset</a></h3>
@@ -32,7 +32,7 @@ get_header(); ?>
         <li class="skill_graph_ux"><p>UX</p><div class="progress_bar"><em>40 out of 100</em></div></li>
       </ul>
     </section>
-    <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+    <?php get_template_part('includes/snippets/hr'); ?>
   
     <section class="content_block">
       <h3 class="cv"><a rel="external" href="#"><em class="button">cv icon<span></span></em>Experience</a></h3>
@@ -47,12 +47,12 @@ get_header(); ?>
         </li>
       </ul>
     </section>
-    <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+    <?php get_template_part('includes/snippets/hr'); ?>
     <section class="content_block">
       <h3 class="lastfm"><a rel="external" href="http://last.fm/user/twahlin"><em class="button">lastfm icon<span></span></em>Currently Listening To</a></h3>
       <div class="feed_lastfm"><p class="js_off">Oops! JavaScript needs to be enabled to view <a href="http://last.fm/user/twahlin">last.fm feed.</a></p></div>
     </section>
-    <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+    <?php get_template_part('includes/snippets/hr'); ?>
   </div>
   <aside class="col_right">
     <div class="global_sidebar">

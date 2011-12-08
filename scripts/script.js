@@ -28,6 +28,13 @@ jQuery(document).ready(function($){
   });
   //end external links
 
+  //scroll to top HR functionality
+  $('.hr a').click(function() {
+    $.scrollTo('#top', 500); 
+    return false;
+  });
+  //scroll to top HR functionality
+
   //start hero slider
   $('.hero_slider').cycle({
     fx: 'fade',
@@ -69,7 +76,6 @@ $(window).load(function () {
 
   //functionlist for window.load
   autoWindowHeight();
-  autoSidebarHeight();
   //end functionlist for window.load
 
   //begin setting the height for main content div        
@@ -82,23 +88,10 @@ $(window).load(function () {
     $("#main_content_inner").css("padding-bottom", mainContentBottomPadding);
   }
   //end setting the height for main content div 
-  var cols_wrap_height = $('.cols_wrap').height();
-  var sidebar_height =  $('.global_sidebar').height();
-  var faux_sidebar_height = cols_wrap_height - sidebar_height;
-  if ($('.col_right').css('float') === 'right') {
-    $('.faux_sidebar').css("height", faux_sidebar_height);
-  }
-  console.log (faux_sidebar_height);
-  //sidebar height functionality
-  function autoSidebarHeight() {
-
-  }
-  //end sidebar height functionality
 
   //window resize function    
   $(window).resize(function(){
-    autoWindowHeight();
-    autoSidebarHeight();    
+    autoWindowHeight();  
   });
   //end window resize function 
 
@@ -112,5 +105,14 @@ $(window).load(function () {
     });
     // trigger resize to set up masonry on start-up
   }).resize();
-  //End Masonry Functionality    
+  //End Masonry Functionality 
+  
+  //sidebar height functionality
+  var cols_wrap_height = $('.cols_wrap').height();
+  var sidebar_height =  $('.global_sidebar').height();
+  var faux_sidebar_height = cols_wrap_height - sidebar_height - 150;
+  if ($('.col_right').css('float') === 'right') {
+    $('.faux_sidebar').css("height", faux_sidebar_height);
+  }
+  //end sidebar height functionality   
 });

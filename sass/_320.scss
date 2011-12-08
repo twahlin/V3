@@ -94,6 +94,30 @@ p {
 * html .clearfix { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
+.four_oh_four {
+  padding: 40px 40px 0 40px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+  }
+  h2 {
+    font-size: 80px;
+    line-height: 80px;
+    @include proxima_regular;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;    
+  }
+  p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
 //------------------------------------------------------------------
 //Buttons
 //------------------------------------------------------------------
@@ -454,7 +478,7 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
   right: -10px;
   top: -10px;
   width: 44px;
-  z-index: 9999;
+  z-index: 900;
 }
 
 .ribbon_new span {
@@ -1449,6 +1473,7 @@ footer .footer_nav li a:active {
   p {
     color: #333;
     font-size: 15px;
+    margin-bottom: 16px;
     @include proxima_regular;
     @include white_text_shadow_bottom;
   }
@@ -1457,6 +1482,7 @@ footer .footer_nav li a:active {
     color: #333;
     display: block;
     font-size: 12px;
+    margin-top: 5px;
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -1473,6 +1499,7 @@ footer .footer_nav li a:active {
     @include button;
     height: 40px;
     line-height: 16px;
+    margin-top: 9px;
   }
   .wpcf7-submit:hover {
     @include button_hover;
@@ -1561,7 +1588,6 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .masonry_responsive_grid {
-  padding-top: 10px;
   margin: 0;
 }
 

@@ -4,17 +4,11 @@
 
 $proxima_stack: "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Arial, sans-serif;
 
-@mixin proxima_thin { font-family: $proxima_stack; font-weight: 100; font-style: normal; }
-@mixin proxima_thin_italic { font-family: $proxima_stack; font-weight: 100; font-style: italic; }
 @mixin proxima_light { font-family: $proxima_stack; font-weight: 300; font-style: normal; }
 @mixin proxima_light_italic { font-family: $proxima_stack; font-weight: 300; font-style: italic; }
 @mixin proxima_regular { font-family: $proxima_stack; font-weight: 400; font-style: normal; }
 @mixin proxima_regular_italic { font-family: $proxima_stack; font-weight: 400; font-style: italic; }
 @mixin proxima_semibold { font-family: $proxima_stack; font-weight: 600; font-style: normal; }
-@mixin proxima_semibold_italic { font-family: $proxima_stack; font-weight: 600; font-style: italic; }
-@mixin proxima_bold { font-family: $proxima_stack; font-weight: 700; font-style: normal; }
-@mixin proxima_bold_italic { font-family: $proxima_stack; font-weight: 700; font-style: italic; }
-
 
 @mixin white_text_shadow_bottom { @include text-shadow(#fff 0 1px 0); }
 @mixin white_text_shadow_top { @include text-shadow(#fff 0 -1px 0); }
@@ -99,6 +93,3 @@ $link_blue: #00538e;
 @mixin global_wrap_margin { margin: 2.4%; }
 
 @mixin global_wrap_margin_left_right { margin: 0 2.4%; }
-
-
-

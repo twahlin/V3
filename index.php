@@ -46,8 +46,8 @@ get_header(); ?>
     </li> -->  
   </ul>
   <div class="dummy_slide"><!-- sets height for responsive slideshow --></div>
-  <div id="slider_prev"></div>
-  <div id="slider_next"></div>
+  <!-- <div id="slider_prev"></div>
+  <div id="slider_next"></div> -->
   <ol id="slidesNav" class="slides_nav"></ol>
 </div>
 
@@ -60,7 +60,7 @@ get_header(); ?>
     <h5>Dribbble</h5>
     <?php include "includes/snippets/dribbble-shots-two.php" ?>
   </section>
-  <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+  <?php get_template_part('includes/snippets/hr'); ?>
   <section class="home_tweets">
     <h5>Tweets</h5>
     <div id="tweet">

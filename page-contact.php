@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="cols_wrap clearfix">
 <div class="col_left">
 <p class="page_explainer"> Interested in getting in touch? Fill out the contact form below. Not a contact form person? Feel free to find me on <a rel="external" href="http://www.facebook.com/twahlin">Facebook</a>, <a rel="external" href="http://www.linkedin.com/in/tomwahlin">Linkedin</a>, or <a rel="external" href="http://twitter.com/twahlin">Twitter</a>.</p>  
-<div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>
+<?php get_template_part('includes/snippets/hr'); ?>
 
 <div class="contact_form">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -29,7 +29,7 @@ get_header(); ?>
       <p>Sorry, the contact form does not seem to be working.</p>
     <?php endif; ?>
   </div>
-  <div class="hr"><a href="#top" title="Back to Top">Back to Top</a></div>   
+  <?php get_template_part('includes/snippets/hr'); ?>   
 </div>
 
 <aside class="col_right">

@@ -37,6 +37,7 @@
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.zlastfm.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.cycle.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/google-tweet.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery-scollTo.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.fitvids.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/libs/jquery.masonry.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/scripts/plugins.js"></script>
