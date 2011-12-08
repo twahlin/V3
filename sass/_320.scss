@@ -1529,6 +1529,10 @@ footer .footer_nav li a:active {
   @include button;
 }
 
+.disqus a {
+  @include transition_default;
+}
+
 //------------------------------------------------------------------
 //Work Single
 //------------------------------------------------------------------

@@ -72,7 +72,7 @@ get_header(); ?>
                   $img_preview = $preview_array[0]; // thumbnail or medium image to use for preview.
                   ?>
                   <li>
-                    <img src="<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo $img_preview ?>&w=850" alt="<?php echo $img_caption; ?>" title="<?php echo $img_title; ?>">
+                    <img src="<?php bloginfo('template_directory'); ?>/scripts/php/timthumb/timthumb.php?src=<?php echo $img_preview ?>&w=850" alt="<?php echo $img_caption; ?>" title="<?php echo $img_caption; ?>">
                   </li>
                   <?
                   }
