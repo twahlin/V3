@@ -42,6 +42,7 @@ get_header(); ?>
   <div class="global_sidebar">
     <?php get_template_part( 'includes/snippets/sidebar/twitter' ); ?>
     <?php get_template_part( 'includes/snippets/sidebar/dribbble' ); ?>
+    <?php get_template_part( 'includes/snippets/sidebar/categories' ); ?>
     <?php get_template_part( 'includes/snippets/sidebar/connections' ); ?>
     <div class="faux_sidebar"></div>
   </div>

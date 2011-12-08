@@ -41,6 +41,37 @@
 }
 
 //------------------------------------------------------------------
+//Hero slider
+//------------------------------------------------------------------
+
+.hero_slider .hero_first .slide_wrap { 
+  h2 {
+    font-size: 22px;
+  }
+  img {
+    bottom: -10px;
+  } 
+  .home_iphone {
+    width: 80px;
+    max-width: 121px;
+    margin-left: -40px;
+    left: 12%;
+  }
+  .home_ipad {
+    width: 180px;
+    margin-left: -90px;
+    max-width: 271px;
+    left: 44%;
+  }
+  .home_imac {
+    width: 300px;
+    max-width: 475px;
+    margin-left: -150px;
+    left: 94%;
+  }
+}
+
+//------------------------------------------------------------------
 //Footer
 //------------------------------------------------------------------
 

@@ -14,10 +14,10 @@ get_header(); ?>
     <li class="hero_first pane">
       <div class="slide_wrap">
         <div class="slide_inner_wrap">
+          <h2>Version 3 has launched</h2>
           <img src="<?php bloginfo('template_directory'); ?>/images/slider-hero/intro/iphone.png" class="home_iphone" alt="tomwahlin.com on an iphone" />
           <img src="<?php bloginfo('template_directory'); ?>/images/slider-hero/intro/ipad.png" class="home_ipad" alt="tomwahlin.com on an ipad" />
           <img src="<?php bloginfo('template_directory'); ?>/images/slider-hero/intro/imac.png" class="home_imac" alt="tomwahlin.com on an imac" />
-          <p>hi</p>
           <!-- <div class="slide_ribbon">
             <a href="#">Hi there, here is the ribbon link</a>
           </div> -->

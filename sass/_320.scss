@@ -698,6 +698,41 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
   display: none;
 }
 
+.hero_slider .hero_first .slide_wrap { 
+  h2 {
+    position: absolute;
+    color: #333;
+    font-size: 18px;
+    top: 20px;
+    left: 20px;
+    @include white_text_shadow_bottom;
+    @include proxima_regular;
+  }
+  img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  } 
+  .home_iphone {
+    width: 60px;
+    max-width: 121px;
+    margin-left: -30px;
+    left: 12%;
+  }
+  .home_ipad {
+    width: 130px;
+    margin-left: -65px;
+    max-width: 271px;
+    left: 42%;
+  }
+  .home_imac {
+    width: 230px;
+    max-width: 475px;
+    margin-left: -115px;
+    left: 94%;
+  }
+}
+
 //------------------------------------------------------------------
 //Feed Home
 //------------------------------------------------------------------

@@ -210,6 +210,41 @@ body.page-contact .navigation nav .right li.nav_6 a:hover {
 }
 
 //------------------------------------------------------------------
+//Hero slider
+//------------------------------------------------------------------
+
+.hero_slider .hero_first .slide_wrap { 
+  overflow: hidden; 
+  h2 {
+    color: #666;
+    font-size: 40px;
+    top: 60px;
+    left: 40px;
+  }
+  img {
+    bottom: 0;
+  } 
+  .home_iphone {
+    width: 100px;
+    max-width: 121px;
+    margin-left: -50px;
+    left: 12%;
+  }
+  .home_ipad {
+    width: 220px;
+    margin-left: -110px;
+    max-width: 271px;
+    left: 44%;
+  }
+  .home_imac {
+    width: 360px;
+    max-width: 475px;
+    margin-left: -180px;
+    left: 94%;
+  }
+}
+
+//------------------------------------------------------------------
 //Main Content
 //------------------------------------------------------------------
 
