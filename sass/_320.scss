@@ -699,6 +699,8 @@ a.img_border:hover .img_wrap { @include default_container_inner_shadow_hover; }
 }
 
 .hero_slider .hero_first .slide_wrap { 
+border-bottom: 1px solid #fff; 
+background: image-url('slider-hero/bg_pattern_square.jpg') right; 
   h2 {
     position: absolute;
     color: #333;
@@ -1646,3 +1648,11 @@ footer .footer_nav li a:active {
 //------------------------------------------------------------------
 
 .twitterHeader { display: none; }
+
+//------------------------------------------------------------------
+//Specific Post Styling
+//------------------------------------------------------------------
+
+#buffalo-wild-wings-5-million-fans-trophy img {
+  max-width: 520px;
+}
