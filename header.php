@@ -24,8 +24,10 @@
   <meta charset="utf-8">
 
   <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta name="author" content="Tom Wahlin" />
+	<meta name="description" content="The Portfolio of Tom Wahlin | Creative Thinker & Problem Solver | Student of the Aesthetically Pleasing" />
+	<meta name="copyright" content="Copyright Tom Wahlin" />
+	<meta name="keywords" content="portfolio, web portfolio, interactive design, web design, web development, tom wahlin, tom walleen, tom wallin, walleen, wallin, space150" />
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
