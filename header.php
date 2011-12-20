@@ -23,7 +23,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+  <title><?php wp_title(''); ?></title>
 	<meta name="author" content="Tom Wahlin" />
 	<meta name="description" content="The Portfolio of Tom Wahlin | Creative Thinker & Problem Solver | Student of the Aesthetically Pleasing" />
 	<meta name="copyright" content="Copyright Tom Wahlin" />
